@@ -10,7 +10,7 @@
 	Deny from all
 </Files>
 
-# This denies access to all yml files, since developers might include sensitives
+# This denies access to all yml files, since developers might include sensitive
 # information in them. See the docs for work-arounds to serve some yaml files
 <Files *.yml>
 	Order allow,deny
