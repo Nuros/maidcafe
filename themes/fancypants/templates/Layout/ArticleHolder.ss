@@ -1,0 +1,51 @@
+    	<div id="main" class="clearfix">
+    	
+    		<div id="primaryContent" class="clearfix">
+    		        <ul id="NewsList" class="typography">
+        <% loop $PaginatedNews %>
+           
+            
+                $Title
+		$Author
+               $Date.Long
+		$Content
+ 
+
+        <% end_loop %>
+        </ul>
+        <div id="PageNumbers">
+            <% if $PaginatedNews.MoreThanOnePage %>
+                <p class="pageNumbers">
+                    <% if $PaginatedNews.NotFirstPage %>
+                        <a class="prev" href="$PaginatedNews.PrevLink">&lt; Prev</a>
+                    <% end_if %>
+
+                    <% loop $PaginatedNews.Pages %>
+                        <% if $CurrentBool %>
+                            <span class="selected">$PageNum</span>
+                        <% else %>
+                            <% if $Link %>
+                                <a href="$Link" title="Go to page $PageNum">$PageNum</a>
+                            <% else %>
+                                ...
+                            <% end_if %>
+                        <% end_if %>
+                    <% end_loop %>
+
+                    <% if $PaginatedNews.NotLastPage %>
+                        <a class="next" href="$PaginatedNews.NextLink">Next &gt;</a>
+                    <% end_if %>
+                </p>
+            <% end_if %>
+        </div>
+    		</div>
+                
+                
+                
+                
+    		<div id="secondaryContent">
+    			<div class="innerpad">
+					<% include SubNav %>
+    			</div>
+    		</div>
+    	</div>

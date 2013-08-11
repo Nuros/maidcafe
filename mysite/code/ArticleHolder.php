@@ -1,0 +1,48 @@
+<?php
+class ArticleHolder extends Page {
+    static $allowed_children = array('ArticleCategory');
+
+}
+class ArticleHolder_Controller extends Page_Controller{
+    function rss() {
+        $rss = new RSSFeed($this->Children(), $this->Link(), "Lucky Chocolate News");
+        $rss->outputToBrowser();
+    }
+
+    function init() {
+        Requirements::css('themes/fancypants/css/news.css');
+        parent::init();
+    }
+
+    public function PaginatedNews() {
+        $start = (isset($_GET['start'])) ? (int)$_GET['start'] : 0;
+        $length = 3;
+
+        $allCategorys = DataObject::get("ArticleCategory");
+        $allNews = new ArrayList();
+
+        if ($allCategorys->exists()) {
+            foreach($allCategorys as $category){
+                $articlePage = DataObject::get("ArticlePage", "ParentID = $category->ID", "Date DESC", "", (string)$start+","+ (string)$length);
+                if($articlePage->exists())
+                    $allNews->merge($articlePage);
+            }
+        }
+
+        $allNews->sort('Date', 'DESC');
+
+        $paginatedNewsList = new PaginatedList($allNews, $this->request ); 
+        $paginatedNewsList->setPageLength(3); 
+
+        return $paginatedNewsList; 
+    }
+
+    public function CategoryNames(){
+        $allCategorys = DataObject::get("ArticleCategory");
+
+        return ($allCategorys) ? $allCategorys : false;
+    }
+
+
+}
+?>
