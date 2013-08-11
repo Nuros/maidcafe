@@ -11,9 +11,11 @@
 		header=false" 
 		scrolling="no" 
 		frameborder="0" 
-		style="border:none; 
-		overflow:hidden; 
-		width:295px; 
-		height:558px;" 
-		allowTransparency="true">
-	</iframe>
+		style="border:solid;
+		/* background:#FF0080;
+		*/
+                overflow:hidden; 
+                width:295px; 
+                height:558px;" 
+                allowTransparency="true">
+        </iframe>
