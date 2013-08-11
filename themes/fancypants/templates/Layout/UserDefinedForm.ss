@@ -8,9 +8,5 @@
     			</div>
     		</div>
 
-    		<div id="secondaryContent">
-    			<div class="innerpad">
-					<% include SubNav %>
-    			</div>
-    		</div>
+    		
     	</div>
