@@ -1,4 +1,6 @@
     	<div id="main" class="clearfix">
+	<div id="primaryContent" class="clearfix">
+    			<div class="innerpad">
     	
     		<div id="primaryContent" class="clearfix">
     		        <ul id="NewsList" class="typography">
@@ -39,7 +41,8 @@
             <% end_if %>
         </div>
     		</div>
-                
+    			</div>
+    		</div>
                 
                 
                 

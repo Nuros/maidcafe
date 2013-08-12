@@ -7,6 +7,5 @@
 				$PageComments
     			</div>
     		</div>
+        </div>
 
-    		
-    	</div>

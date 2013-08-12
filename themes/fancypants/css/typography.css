@@ -30,21 +30,24 @@ blockquote { margin:0 0 0 0; padding-left:16px; font-size: 16px; line-height: 22
 
 /*-----Columns-----*/
 #primaryContent {clear:both;float:left;position:relative;}
+#primaryContent2 {clear:both;float:left;position:relative;}
 
 #secondaryContent {float:left;width:330px;margin:0 0 0 -100px;display:none;}
 	
 #primaryContent {width:630px;margin:0 330px 0 0;}
+#primaryContent2 {width:1150px;margin:0 330px 0 0;}
 #secondaryContent {display:block;}
 
 #primaryContenthp {clear:both;float:left;position:relative;}
 
-#secondaryContenthp {float:left;width:330px;margin:0 0 0 -100px;display:none;}
+#secondaryContenthp {float:left;width:330px;margin:0 0 0 -150px;display:none;}
 	
 #primaryContenthp {width:630px;margin:0 330px 0 0;}
 #secondaryContenthp {display:block;}
 
 /*-----Column 'padding'-----*/
 #primaryContent div.innerpad { margin:50px; }
+#primaryContent2 div.innerpad { margin:50px; }
 #secondaryContent div.innerpad { margin:60px 40px 50px 40px; }
 #primaryContenthp div.innerpad { margin:50px; }
 #secondaryContenthp div.innerpad { margin:60px 40px 50px 40px; }
