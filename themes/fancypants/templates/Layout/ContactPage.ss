@@ -1,5 +1,6 @@
 <div id="main" class="clearfix">
 <div id="primaryContent" class="clearfix">
+<div class="innerpad">
 $Content
  
 <% if $Children %>
@@ -10,6 +11,6 @@ $Content
 </a>
 <% end_loop %>
 <% end_if %>
-
+</div>
  </div>    
 </div>
