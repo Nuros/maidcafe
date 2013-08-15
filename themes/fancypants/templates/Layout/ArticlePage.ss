@@ -1,3 +1,4 @@
+<div id="main" class="clearfix">
 
 <div id="primaryContent" class="clearfix">
 		<div class="innerpad">
@@ -15,3 +16,4 @@ $Date.Long  $Author
 					<% include SubNav %>
     			</div>
     		</div>
+		</div>

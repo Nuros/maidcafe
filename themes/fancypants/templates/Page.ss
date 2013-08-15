@@ -15,6 +15,7 @@
 	<![endif]-->
 	</head>
 	<body>
+		<div id="outerheader">
    		<div id="header" class="clearfix">
 			<div id="branding">
 	   			<h1><a href="#">$SiteConfig.Title</a></h1>
@@ -23,21 +24,24 @@
 	   		<div id="nav">
 	   			<% include MainNav %>
 	   		</div>
-	   			
+	   		<div align="center">
+$SkitterSlidesRecursive
+</div>
+			</div>
    		</div>
     <div id="outerwrapper">
     <div id="wrapper">
 	$Layout
    </div>
-   </div>
+  
     	<div id="footer" class="clearfix">
 	    	<div id="credits">
 		    	 <p>Design & Code by Nuros</p>
 		    	 	    	</div>	    		
 	    	<div id="footernav">
-				<p><imp><a href="Impressum">§</a></imp>Impressum</p>
+				<p><imp>§<a href="/maidcafe/Impressum">Impressum</a></imp></p>
 	    	</div>
     	</div>
-    
+    </div>
 </body>
 </html>
