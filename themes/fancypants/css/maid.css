@@ -1,0 +1,32 @@
+#topline{
+   	height: 250px;
+	margin-bottom: 00px;
+        display: table;
+}
+#profilbild{
+/*	width: 400px;
+
+border-style: double;
+border-width: 30px;
+border-color: $mcolour
+*/
+}
+#ProfileImageContainer{
+width: 300px;
+	padding: 0 30px;
+	float: left;
+	overflow: hidden;
+	height: 490px;
+
+
+
+}
+#info{
+ 	position: relative;
+	width: 300px;
+	padding: 0 30px;
+	display: table-cell;
+	padding-top: 35px;
+	height: 490px;
+	vertical-align: top;
+}

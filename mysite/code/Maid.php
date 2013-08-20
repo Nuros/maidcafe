@@ -19,6 +19,10 @@ class Maid extends Page {
         'funfairlocation' => 'Text',
         'wish' => 'Text',
         'aboutme' => 'Text',
+        'mcolour' => 'Text',
+
+
+
     );
     static $has_one = array(
         'maidphoto' => 'Image'
@@ -38,6 +42,7 @@ class Maid extends Page {
                 $title = 'ProfilBild'
                 )
                 );
+        $UploadField->setFolderName('MaidProfilbilder');
         $UploadField->getValidator()->setAllowedExtensions(array('jpg', 'jpeg', 'png'));
         $UploadField->setConfig('allowedMaxFileNumber', 1);
         
@@ -60,7 +65,7 @@ class Maid extends Page {
                 "1"
             )
         );
-        $fields->addFieldToTab('Root.Main', new TextField('colour', 'Maid-Farbe:'));
+        $fields->addFieldToTab('Root.Main', new TextField('colour', 'Lieblingsfarbe:'));
         $fields->addFieldToTab('Root.Main', new TextField('since', 'Dabei seit:'));
         $fields->addFieldToTab('Root.Main', new TextField('maidreason', 'Warum ich Maid geworden bin:'));
         $fields->addFieldToTab('Root.Main', $dateField = new DateField('BDay', 'Geburtstag:'));
@@ -80,9 +85,14 @@ class Maid extends Page {
         $fields->addFieldToTab('Root.Main', new TextField('funfairlocation', 'An welchem Ort w&uumlrde man mich in einem Vergn&uumlgungspark finden?'));
         $fields->addFieldToTab('Root.Main', new TextField('wish', 'Wenn mir eine Fee einen Wunsch erf&uumlllen w&uumlrde, w&uumlnsche ich mir:'));
         $fields->addFieldToTab('Root.Main', new TextField('aboutme', '&Uumlber mich:'));
+        $fields->addFieldToTab('Root.Main', new TextField('mcolour', 'Maidfarbe'));
         
         return $fields;
     }
 }
  class Maid_Controller extends Page_Controller {
+      	public function init() {
+		parent::init();
+		Requirements::themedCSS('maid'); 
+}
 }

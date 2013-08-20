@@ -10,10 +10,8 @@
 </div>
                     
                         <a href="$Link">
-						
-						  $maidphoto.SetWidth(150)
-						  
-                        </a>
+			$maidphoto.SetWidth(150)
+			</a>
 						
 						<p>$Type</p>
 						</div>
