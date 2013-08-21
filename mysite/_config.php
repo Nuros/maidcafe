@@ -24,3 +24,5 @@ i18n::set_locale('de_DE');
 
 // Enable nested URLs for this site (e.g. page/sub-page/)
 if (class_exists('SiteTree')) SiteTree::enable_nested_urls();
+
+SS_Log::add_writer(new SS_LogFileWriter('ss_errors.txt'), SS_Log::ERR);
