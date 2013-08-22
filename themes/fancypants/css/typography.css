@@ -82,12 +82,18 @@ blockquote { margin:0 0 0 0; padding-left:16px; font-size: 16px; line-height: 22
 box-shadow: 3px 3px 3px #000;
 }
 
+#contact {display: inline;width:1000px; height: 208px; margin:0 auto;background:url(../images/post.jp);text-align:center; display: inline;}
+#contact div.mail {display: inline-block; width:300px; height:208px;background: url(../images/post.jpg)}
+#contact div.mail a {display:block; padding:25px 0; font-size: xx-large; font-family: 'Buxton Sketch';}
+
+
+
 /*secondary nav*/
 #secondarynav{text-align:center; margin-bottom: 36px;border-style: solid;}
 #secondarynav ul { text-indent:none;margin:0; padding:0;margin:0; border-top: 1px solid #c0bbb0;}
 #secondarynav ul li {text-indent:none; list-style: none; padding:0;margin:0;}
 #secondarynav ul li a {margin:0; padding:0; border-bottom: 1px solid #c0bbb0; display:block; padding:8px 0;}
-#secondarynav ul li a:hover {background:#ded8cc;}
+#secondarynav ul li a:hover {background:url(../images/post.jpg);}
 #secondarynav ul li.current, #secondarynav ul li.section { color:#313131;text-shadow:1px 1px 1px #cbc5ba;}
 #secondarynav ul li.current a, #secondarynav ul li.section a{color:#313131; background:#c0bbb0;}
 #secondarynav ul li.current a:hover, #secondarynav ul li.section a:hover{background:#aea99f;}

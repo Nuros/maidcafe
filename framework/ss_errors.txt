@@ -11,3 +11,17 @@ LIMIT 1
 
 Unknown column 'SiteConfig.maxskitter_interval' in 'field list' (http://localhost/maidcafe/Security/login?BackURL=%2Fmaidcafe%2Fadmin%2Fpages)
 [21-Aug-2013 12:49:58] Error at \framework\security\PasswordEncryptor.php line 59: Uncaught PasswordEncryptor_NotFoundException: No implementation found for "" (http://localhost/maidcafe/Security/LoginForm)
+[21-Aug-2013 13:14:05] Error at \framework\model\MySQLDatabase.php line 580: Couldn't run query: 
+
+							
+SELECT COUNT(*)
+FROM "cwsFolderGalleryPage_versions"
+							
+LEFT JOIN "Page_versions" 
+									ON "Page_versions"."RecordID" = "cwsFolderGalleryPage_versions"."RecordID"
+									AND "Page_versions"."Version" = "cwsFolderGalleryPage_versions"."Version"
+							
+WHERE "Page_versions"."ID" IS NULL
+							 
+
+Table 'maidcafe.page_versions' doesn't exist (http://localhost/maidcafe/dev/build?flush=1)
