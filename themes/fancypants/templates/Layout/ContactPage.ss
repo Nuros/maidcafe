@@ -5,7 +5,7 @@
 $Content
  
 
-
+<div align="center">
 <div id="contact">
 <div class="mail">
 <a href="http://localhost/maidcafe/kontakt/kontakt">Kontakt</a>
@@ -17,7 +17,7 @@ $Content
  <a href="http://localhost/maidcafe/kontakt/buchen">Buchen</a>
 </div>
 </div>
-
+</div>
 
 
 </div>

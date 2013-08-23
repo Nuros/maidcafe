@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 22. Aug 2013 um 15:11
+-- Erstellungszeit: 23. Aug 2013 um 13:02
 -- Server Version: 5.6.12-log
 -- PHP-Version: 5.4.16
 
@@ -128,7 +128,7 @@ CREATE TABLE IF NOT EXISTS `cwsfoldergallerypage_versions` (
   UNIQUE KEY `RecordID_Version` (`RecordID`,`Version`),
   KEY `RecordID` (`RecordID`),
   KEY `Version` (`Version`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -155,7 +155,7 @@ CREATE TABLE IF NOT EXISTS `editableformfield` (
   PRIMARY KEY (`ID`),
   KEY `ParentID` (`ParentID`),
   KEY `ClassName` (`ClassName`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
 
 --
 -- Daten für Tabelle `editableformfield`
@@ -165,13 +165,12 @@ INSERT INTO `editableformfield` (`ID`, `ClassName`, `Created`, `LastEdited`, `Na
 (1, 'EditableTextField', '2013-08-11 16:03:03', '2013-08-22 12:46:48', 'EditableTextField1', 'Name', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 1, 13),
 (2, 'EditableEmailField', '2013-08-11 16:03:09', '2013-08-22 12:46:48', 'EditableEmailField2', 'E-Mail Adresse', NULL, 2, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 1, 13),
 (3, 'EditableTextField', '2013-08-11 16:03:13', '2013-08-22 12:46:48', 'EditableTextField3', 'Kommentar', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"3";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 1, 13),
-(4, 'EditableTextField', '2013-08-11 16:08:21', '2013-08-22 12:46:03', 'EditableTextField4', 'Realname', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 3, 15),
-(5, 'EditableTextField', '2013-08-11 16:08:30', '2013-08-22 12:46:03', 'EditableTextField5', 'Maidname', NULL, 2, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 3, 15),
-(6, 'EditableTextField', '2013-08-11 16:08:35', '2013-08-22 12:46:03', 'EditableTextField6', 'Alter', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:1:"3";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 3, 15),
-(7, 'EditableTextField', '2013-08-11 16:08:38', '2013-08-22 12:46:03', 'EditableTextField7', 'Wohnort', NULL, 4, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 3, 15),
-(8, 'EditableEmailField', '2013-08-11 16:08:42', '2013-08-22 12:46:04', 'EditableEmailField8', 'E-Mail Adresse', NULL, 5, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 3, 15),
-(9, 'EditableTextField', '2013-08-11 16:08:48', '2013-08-22 12:46:04', 'EditableTextField9', 'Über dich', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"9";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 3, 15),
-(10, 'EditableFileField', '2013-08-11 16:09:05', '2013-08-22 12:46:04', 'EditableFileField10', 'Bilder ( Bitte Name in der Datei angeben)', NULL, 7, 0, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 3, 15),
+(4, 'EditableTextField', '2013-08-11 16:08:21', '2013-08-23 12:31:11', 'EditableTextField4', 'Realname', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 20, 15),
+(5, 'EditableTextField', '2013-08-11 16:08:30', '2013-08-23 12:31:11', 'EditableTextField5', 'Maidname', NULL, 2, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 20, 15),
+(6, 'EditableTextField', '2013-08-11 16:08:35', '2013-08-23 12:31:11', 'EditableTextField6', 'Alter', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:1:"3";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 20, 15),
+(7, 'EditableTextField', '2013-08-11 16:08:38', '2013-08-23 12:31:12', 'EditableTextField7', 'Wohnort', NULL, 4, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 20, 15),
+(8, 'EditableEmailField', '2013-08-11 16:08:42', '2013-08-23 12:31:12', 'EditableEmailField8', 'E-Mail Adresse', NULL, 5, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 20, 15),
+(9, 'EditableTextField', '2013-08-11 16:08:48', '2013-08-23 12:31:12', 'EditableTextField9', 'Über dich', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"9";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 20, 15),
 (16, 'EditableTextField', '2013-08-11 16:16:49', '2013-08-22 12:46:22', 'EditableTextField16', 'Firma/Convention', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 1, 14),
 (17, 'EditableTextField', '2013-08-11 16:16:52', '2013-08-22 12:46:22', 'EditableTextField17', 'Ansprechpartner', NULL, 2, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 1, 14),
 (18, 'EditableEmailField', '2013-08-11 16:16:55', '2013-08-22 12:46:22', 'EditableEmailField18', 'E-Mail Adresse', NULL, 3, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 1, 14),
@@ -179,7 +178,10 @@ INSERT INTO `editableformfield` (`ID`, `ClassName`, `Created`, `LastEdited`, `Na
 (20, 'EditableTextField', '2013-08-11 16:17:03', '2013-08-22 12:46:22', 'EditableTextField20', 'Veranstaltungsort', NULL, 5, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 1, 14),
 (22, 'EditableTextField', '2013-08-11 16:17:13', '2013-08-22 12:46:22', 'EditableTextField22', 'Aufgaben', NULL, 7, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 1, 14),
 (23, 'EditableTextField', '2013-08-11 16:17:17', '2013-08-22 12:46:23', 'EditableTextField23', 'Weiter Infos', NULL, 8, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"9";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 1, 14),
-(25, 'EditableTextField', '2013-08-11 16:24:36', '2013-08-22 12:46:22', 'EditableTextField25', 'Datum', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"10";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 1, 14);
+(25, 'EditableTextField', '2013-08-11 16:24:36', '2013-08-22 12:46:22', 'EditableTextField25', 'Datum', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"10";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 1, 14),
+(26, 'EditableFileField', '2013-08-22 16:04:13', '2013-08-23 12:31:12', 'EditableFileField26', 'Bilder (Bitte den Namen in Datei angeben)', NULL, 8, 0, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:30:"Bilder nicht größer als 2MB!";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 17, 15),
+(29, 'EditableFileField', '2013-08-23 12:11:34', '2013-08-23 12:31:12', 'EditableFileField29', NULL, NULL, 9, 0, NULL, 'a:1:{i:0;a:4:{s:7:"Display";s:4:"Show";s:14:"ConditionField";s:19:"EditableFileField26";s:15:"ConditionOption";s:10:"IsNotBlank";s:5:"Value";s:0:"";}}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 9, 15),
+(30, 'EditableFileField', '2013-08-23 12:23:34', '2013-08-23 12:31:12', 'EditableFileField30', NULL, NULL, 10, 0, NULL, 'a:1:{i:0;a:4:{s:7:"Display";s:4:"Show";s:14:"ConditionField";s:19:"EditableFileField29";s:15:"ConditionOption";s:10:"IsNotBlank";s:5:"Value";s:0:"";}}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 7, 15);
 
 -- --------------------------------------------------------
 
@@ -206,7 +208,7 @@ CREATE TABLE IF NOT EXISTS `editableformfield_live` (
   PRIMARY KEY (`ID`),
   KEY `ParentID` (`ParentID`),
   KEY `ClassName` (`ClassName`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
 
 --
 -- Daten für Tabelle `editableformfield_live`
@@ -216,13 +218,12 @@ INSERT INTO `editableformfield_live` (`ID`, `ClassName`, `Created`, `LastEdited`
 (1, 'EditableTextField', '2013-08-11 16:03:03', '2013-08-22 12:46:49', 'EditableTextField1', 'Name', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 1, 13),
 (2, 'EditableEmailField', '2013-08-11 16:03:09', '2013-08-22 12:46:49', 'EditableEmailField2', 'E-Mail Adresse', NULL, 2, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 1, 13),
 (3, 'EditableTextField', '2013-08-11 16:03:13', '2013-08-22 12:46:49', 'EditableTextField3', 'Kommentar', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"3";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 1, 13),
-(4, 'EditableTextField', '2013-08-11 16:08:21', '2013-08-22 12:46:05', 'EditableTextField4', 'Realname', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 3, 15),
-(5, 'EditableTextField', '2013-08-11 16:08:30', '2013-08-22 12:46:05', 'EditableTextField5', 'Maidname', NULL, 2, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 3, 15),
-(6, 'EditableTextField', '2013-08-11 16:08:35', '2013-08-22 12:46:05', 'EditableTextField6', 'Alter', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:1:"3";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 3, 15),
-(7, 'EditableTextField', '2013-08-11 16:08:38', '2013-08-22 12:46:05', 'EditableTextField7', 'Wohnort', NULL, 4, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 3, 15),
-(8, 'EditableEmailField', '2013-08-11 16:08:42', '2013-08-22 12:46:05', 'EditableEmailField8', 'E-Mail Adresse', NULL, 5, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 3, 15),
-(9, 'EditableTextField', '2013-08-11 16:08:48', '2013-08-22 12:46:05', 'EditableTextField9', 'Über dich', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"9";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 3, 15),
-(10, 'EditableFileField', '2013-08-11 16:09:05', '2013-08-22 12:46:05', 'EditableFileField10', 'Bilder ( Bitte Name in der Datei angeben)', NULL, 7, 0, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 3, 15),
+(4, 'EditableTextField', '2013-08-11 16:08:21', '2013-08-23 12:31:14', 'EditableTextField4', 'Realname', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 20, 15),
+(5, 'EditableTextField', '2013-08-11 16:08:30', '2013-08-23 12:31:14', 'EditableTextField5', 'Maidname', NULL, 2, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 20, 15),
+(6, 'EditableTextField', '2013-08-11 16:08:35', '2013-08-23 12:31:14', 'EditableTextField6', 'Alter', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:1:"3";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 20, 15),
+(7, 'EditableTextField', '2013-08-11 16:08:38', '2013-08-23 12:31:14', 'EditableTextField7', 'Wohnort', NULL, 4, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 20, 15),
+(8, 'EditableEmailField', '2013-08-11 16:08:42', '2013-08-23 12:31:14', 'EditableEmailField8', 'E-Mail Adresse', NULL, 5, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 20, 15),
+(9, 'EditableTextField', '2013-08-11 16:08:48', '2013-08-23 12:31:14', 'EditableTextField9', 'Über dich', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"9";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 20, 15),
 (16, 'EditableTextField', '2013-08-11 16:16:49', '2013-08-22 12:46:24', 'EditableTextField16', 'Firma/Convention', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 1, 14),
 (17, 'EditableTextField', '2013-08-11 16:16:52', '2013-08-22 12:46:24', 'EditableTextField17', 'Ansprechpartner', NULL, 2, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 1, 14),
 (18, 'EditableEmailField', '2013-08-11 16:16:55', '2013-08-22 12:46:24', 'EditableEmailField18', 'E-Mail Adresse', NULL, 3, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 1, 14),
@@ -230,7 +231,10 @@ INSERT INTO `editableformfield_live` (`ID`, `ClassName`, `Created`, `LastEdited`
 (20, 'EditableTextField', '2013-08-11 16:17:03', '2013-08-22 12:46:24', 'EditableTextField20', 'Veranstaltungsort', NULL, 5, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 1, 14),
 (22, 'EditableTextField', '2013-08-11 16:17:13', '2013-08-22 12:46:24', 'EditableTextField22', 'Aufgaben', NULL, 7, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 1, 14),
 (23, 'EditableTextField', '2013-08-11 16:17:17', '2013-08-22 12:46:24', 'EditableTextField23', 'Weiter Infos', NULL, 8, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"9";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 1, 14),
-(25, 'EditableTextField', '2013-08-11 16:24:36', '2013-08-22 12:46:24', 'EditableTextField25', 'Datum', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"10";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 1, 14);
+(25, 'EditableTextField', '2013-08-11 16:24:36', '2013-08-22 12:46:24', 'EditableTextField25', 'Datum', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"10";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 1, 14),
+(26, 'EditableFileField', '2013-08-22 16:04:13', '2013-08-23 12:31:14', 'EditableFileField26', 'Bilder (Bitte den Namen in Datei angeben)', NULL, 8, 0, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:30:"Bilder nicht größer als 2MB!";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 17, 15),
+(29, 'EditableFileField', '2013-08-23 12:11:34', '2013-08-23 12:31:14', 'EditableFileField29', NULL, NULL, 9, 0, NULL, 'a:1:{i:0;a:4:{s:7:"Display";s:4:"Show";s:14:"ConditionField";s:19:"EditableFileField26";s:15:"ConditionOption";s:10:"IsNotBlank";s:5:"Value";s:0:"";}}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 9, 15),
+(30, 'EditableFileField', '2013-08-23 12:23:34', '2013-08-23 12:31:14', 'EditableFileField30', NULL, NULL, 10, 0, NULL, 'a:1:{i:0;a:4:{s:7:"Display";s:4:"Show";s:14:"ConditionField";s:19:"EditableFileField29";s:15:"ConditionOption";s:10:"IsNotBlank";s:5:"Value";s:0:"";}}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 7, 15);
 
 -- --------------------------------------------------------
 
@@ -266,7 +270,7 @@ CREATE TABLE IF NOT EXISTS `editableformfield_versions` (
   KEY `PublisherID` (`PublisherID`),
   KEY `ParentID` (`ParentID`),
   KEY `ClassName` (`ClassName`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=33 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=181 ;
 
 --
 -- Daten für Tabelle `editableformfield_versions`
@@ -304,7 +308,156 @@ INSERT INTO `editableformfield_versions` (`ID`, `RecordID`, `Version`, `WasPubli
 (29, 23, 1, 1, 1, 1, 'EditableTextField', '2013-08-11 16:17:17', '2013-08-22 12:46:23', 'EditableTextField23', 'Weiter Infos', NULL, 8, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"9";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 14),
 (30, 1, 1, 1, 1, 1, 'EditableTextField', '2013-08-11 16:03:03', '2013-08-22 12:46:48', 'EditableTextField1', 'Name', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 13),
 (31, 2, 1, 1, 1, 1, 'EditableEmailField', '2013-08-11 16:03:09', '2013-08-22 12:46:48', 'EditableEmailField2', 'E-Mail Adresse', NULL, 2, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 13),
-(32, 3, 1, 1, 1, 1, 'EditableTextField', '2013-08-11 16:03:13', '2013-08-22 12:46:48', 'EditableTextField3', 'Kommentar', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"3";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 13);
+(32, 3, 1, 1, 1, 1, 'EditableTextField', '2013-08-11 16:03:13', '2013-08-22 12:46:48', 'EditableTextField3', 'Kommentar', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"3";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 13),
+(33, 4, 4, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:21', '2013-08-22 16:01:37', 'EditableTextField4', 'Realname', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(34, 5, 4, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:30', '2013-08-22 16:01:38', 'EditableTextField5', 'Maidname', NULL, 2, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(35, 6, 4, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:35', '2013-08-22 16:01:38', 'EditableTextField6', 'Alter', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:1:"3";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(36, 7, 4, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:38', '2013-08-22 16:01:38', 'EditableTextField7', 'Wohnort', NULL, 4, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(37, 8, 4, 1, 1, 1, 'EditableEmailField', '2013-08-11 16:08:42', '2013-08-22 16:01:38', 'EditableEmailField8', 'E-Mail Adresse', NULL, 5, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(38, 9, 4, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:48', '2013-08-22 16:01:38', 'EditableTextField9', 'Über dich', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"9";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(39, 10, 4, 1, 1, 1, 'EditableFileField', '2013-08-11 16:09:05', '2013-08-22 16:01:38', 'EditableFileField10', 'Bilder ( Bitte Name in der Datei angeben)', NULL, 7, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(40, 4, 5, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:21', '2013-08-22 16:02:17', 'EditableTextField4', 'Realname', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(41, 5, 5, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:30', '2013-08-22 16:02:17', 'EditableTextField5', 'Maidname', NULL, 2, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(42, 6, 5, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:35', '2013-08-22 16:02:17', 'EditableTextField6', 'Alter', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:1:"3";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(43, 7, 5, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:38', '2013-08-22 16:02:17', 'EditableTextField7', 'Wohnort', NULL, 4, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(44, 8, 5, 1, 1, 1, 'EditableEmailField', '2013-08-11 16:08:42', '2013-08-22 16:02:18', 'EditableEmailField8', 'E-Mail Adresse', NULL, 5, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(45, 9, 5, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:48', '2013-08-22 16:02:18', 'EditableTextField9', 'Über dich', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"9";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(46, 10, 5, 1, 1, 1, 'EditableFileField', '2013-08-11 16:09:05', '2013-08-22 16:02:18', 'EditableFileField10', 'Bilder ( Bitte Name in der Datei angeben)', NULL, 7, 0, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(47, 26, 1, 0, 1, 0, 'EditableFileField', '2013-08-22 16:04:13', '2013-08-22 16:04:13', NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0),
+(48, 26, 2, 0, 1, 0, 'EditableFileField', '2013-08-22 16:04:13', '2013-08-22 16:04:13', 'EditableFileField26', NULL, NULL, 8, 0, NULL, NULL, NULL, NULL, 15),
+(49, 4, 6, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:21', '2013-08-22 16:04:34', 'EditableTextField4', 'Realname', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(50, 5, 6, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:30', '2013-08-22 16:04:34', 'EditableTextField5', 'Maidname', NULL, 2, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(51, 6, 6, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:35', '2013-08-22 16:04:34', 'EditableTextField6', 'Alter', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:1:"3";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(52, 7, 6, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:38', '2013-08-22 16:04:34', 'EditableTextField7', 'Wohnort', NULL, 4, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(53, 8, 6, 1, 1, 1, 'EditableEmailField', '2013-08-11 16:08:42', '2013-08-22 16:04:34', 'EditableEmailField8', 'E-Mail Adresse', NULL, 5, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(54, 9, 6, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:48', '2013-08-22 16:04:35', 'EditableTextField9', 'Über dich', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"9";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(55, 26, 3, 1, 1, 1, 'EditableFileField', '2013-08-22 16:04:13', '2013-08-22 16:04:35', 'EditableFileField26', 'Bilder ( Bitte Name in der Datei angeben)', NULL, 8, 0, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(56, 4, 7, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:21', '2013-08-22 16:06:16', 'EditableTextField4', 'Realname', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(57, 5, 7, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:30', '2013-08-22 16:06:17', 'EditableTextField5', 'Maidname', NULL, 2, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(58, 6, 7, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:35', '2013-08-22 16:06:17', 'EditableTextField6', 'Alter', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:1:"3";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(59, 7, 7, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:38', '2013-08-22 16:06:17', 'EditableTextField7', 'Wohnort', NULL, 4, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(60, 8, 7, 1, 1, 1, 'EditableEmailField', '2013-08-11 16:08:42', '2013-08-22 16:06:17', 'EditableEmailField8', 'E-Mail Adresse', NULL, 5, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(61, 9, 7, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:48', '2013-08-22 16:06:17', 'EditableTextField9', 'Über dich', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"9";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(62, 26, 4, 1, 1, 1, 'EditableFileField', '2013-08-22 16:04:13', '2013-08-22 16:06:17', 'EditableFileField26', 'Bilder ( Bitte Name in der Datei angeben)', NULL, 8, 0, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(63, 4, 8, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:21', '2013-08-22 16:07:46', 'EditableTextField4', 'Realname', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(64, 5, 8, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:30', '2013-08-22 16:07:46', 'EditableTextField5', 'Maidname', NULL, 2, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(65, 6, 8, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:35', '2013-08-22 16:07:46', 'EditableTextField6', 'Alter', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:1:"3";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(66, 7, 8, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:38', '2013-08-22 16:07:46', 'EditableTextField7', 'Wohnort', NULL, 4, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(67, 8, 8, 1, 1, 1, 'EditableEmailField', '2013-08-11 16:08:42', '2013-08-22 16:07:46', 'EditableEmailField8', 'E-Mail Adresse', NULL, 5, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(68, 9, 8, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:48', '2013-08-22 16:07:46', 'EditableTextField9', 'Über dich', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"9";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(69, 26, 5, 1, 1, 1, 'EditableFileField', '2013-08-22 16:04:13', '2013-08-22 16:07:47', 'EditableFileField26', 'Bilder ( Bitte Name in der Datei angeben)', NULL, 8, 0, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(70, 27, 1, 0, 1, 0, 'EditableFileField', '2013-08-23 11:56:14', '2013-08-23 11:56:14', NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0),
+(71, 27, 2, 0, 1, 0, 'EditableFileField', '2013-08-23 11:56:14', '2013-08-23 11:56:14', 'EditableFileField27', NULL, NULL, 9, 0, NULL, NULL, NULL, NULL, 15),
+(72, 4, 9, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:21', '2013-08-23 11:56:56', 'EditableTextField4', 'Realname', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(73, 5, 9, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:30', '2013-08-23 11:56:56', 'EditableTextField5', 'Maidname', NULL, 2, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(74, 6, 9, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:35', '2013-08-23 11:56:56', 'EditableTextField6', 'Alter', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:1:"3";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(75, 7, 9, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:38', '2013-08-23 11:56:56', 'EditableTextField7', 'Wohnort', NULL, 4, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(76, 8, 9, 1, 1, 1, 'EditableEmailField', '2013-08-11 16:08:42', '2013-08-23 11:56:56', 'EditableEmailField8', 'E-Mail Adresse', NULL, 5, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(77, 9, 9, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:48', '2013-08-23 11:56:56', 'EditableTextField9', 'Über dich', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"9";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(78, 26, 6, 1, 1, 1, 'EditableFileField', '2013-08-22 16:04:13', '2013-08-23 11:56:56', 'EditableFileField26', 'Bilder ( Bitte Name in der Datei angeben)', NULL, 8, 0, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(79, 27, 3, 1, 1, 1, 'EditableFileField', '2013-08-23 11:56:14', '2013-08-23 11:56:56', 'EditableFileField27', 'Bild 2', NULL, 9, 0, NULL, 'a:1:{i:0;a:4:{s:7:"Display";s:4:"Show";s:14:"ConditionField";s:19:"EditableFileField26";s:15:"ConditionOption";s:10:"IsNotBlank";s:5:"Value";s:0:"";}}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Hide";}', NULL, 15),
+(80, 28, 1, 0, 1, 0, 'EditableFileField', '2013-08-23 11:57:22', '2013-08-23 11:57:22', NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0),
+(81, 28, 2, 0, 1, 0, 'EditableFileField', '2013-08-23 11:57:22', '2013-08-23 11:57:22', 'EditableFileField28', NULL, NULL, 10, 0, NULL, NULL, NULL, NULL, 15),
+(82, 4, 10, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:21', '2013-08-23 11:57:59', 'EditableTextField4', 'Realname', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(83, 5, 10, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:30', '2013-08-23 11:57:59', 'EditableTextField5', 'Maidname', NULL, 2, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(84, 6, 10, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:35', '2013-08-23 11:57:59', 'EditableTextField6', 'Alter', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:1:"3";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(85, 7, 10, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:38', '2013-08-23 11:58:00', 'EditableTextField7', 'Wohnort', NULL, 4, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(86, 8, 10, 1, 1, 1, 'EditableEmailField', '2013-08-11 16:08:42', '2013-08-23 11:58:00', 'EditableEmailField8', 'E-Mail Adresse', NULL, 5, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(87, 9, 10, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:48', '2013-08-23 11:58:00', 'EditableTextField9', 'Über dich', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"9";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(88, 26, 7, 1, 1, 1, 'EditableFileField', '2013-08-22 16:04:13', '2013-08-23 11:58:00', 'EditableFileField26', 'Bilder ( Bitte Name in der Datei angeben)', NULL, 8, 0, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(89, 27, 4, 1, 1, 1, 'EditableFileField', '2013-08-23 11:56:14', '2013-08-23 11:58:00', 'EditableFileField27', 'Bild 2', NULL, 9, 0, NULL, 'a:1:{i:0;a:4:{s:7:"Display";s:4:"Show";s:14:"ConditionField";s:19:"EditableFileField26";s:15:"ConditionOption";s:10:"IsNotBlank";s:5:"Value";s:0:"";}}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Hide";}', NULL, 15),
+(90, 28, 3, 1, 1, 1, 'EditableFileField', '2013-08-23 11:57:22', '2013-08-23 11:58:00', 'EditableFileField28', 'Bild 3', NULL, 10, 0, NULL, 'a:1:{i:0;a:4:{s:7:"Display";s:4:"Show";s:14:"ConditionField";s:19:"EditableFileField27";s:15:"ConditionOption";s:10:"IsNotBlank";s:5:"Value";s:0:"";}}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(91, 4, 11, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:21', '2013-08-23 11:58:26', 'EditableTextField4', 'Realname', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(92, 5, 11, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:30', '2013-08-23 11:58:26', 'EditableTextField5', 'Maidname', NULL, 2, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(93, 6, 11, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:35', '2013-08-23 11:58:26', 'EditableTextField6', 'Alter', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:1:"3";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(94, 7, 11, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:38', '2013-08-23 11:58:26', 'EditableTextField7', 'Wohnort', NULL, 4, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(95, 8, 11, 1, 1, 1, 'EditableEmailField', '2013-08-11 16:08:42', '2013-08-23 11:58:26', 'EditableEmailField8', 'E-Mail Adresse', NULL, 5, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(96, 9, 11, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:48', '2013-08-23 11:58:26', 'EditableTextField9', 'Über dich', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"9";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(97, 26, 8, 1, 1, 1, 'EditableFileField', '2013-08-22 16:04:13', '2013-08-23 11:58:26', 'EditableFileField26', 'Bilder ( Bitte Name in der Datei angeben)', NULL, 8, 0, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(98, 27, 5, 1, 1, 1, 'EditableFileField', '2013-08-23 11:56:14', '2013-08-23 11:58:26', 'EditableFileField27', NULL, NULL, 9, 0, NULL, 'a:1:{i:0;a:4:{s:7:"Display";s:4:"Show";s:14:"ConditionField";s:19:"EditableFileField26";s:15:"ConditionOption";s:10:"IsNotBlank";s:5:"Value";s:0:"";}}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Hide";}', NULL, 15),
+(99, 28, 4, 1, 1, 1, 'EditableFileField', '2013-08-23 11:57:22', '2013-08-23 11:58:27', 'EditableFileField28', NULL, NULL, 10, 0, NULL, 'a:1:{i:0;a:4:{s:7:"Display";s:4:"Show";s:14:"ConditionField";s:19:"EditableFileField27";s:15:"ConditionOption";s:10:"IsNotBlank";s:5:"Value";s:0:"";}}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(100, 4, 12, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:21', '2013-08-23 11:59:48', 'EditableTextField4', 'Realname', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(101, 5, 12, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:30', '2013-08-23 11:59:48', 'EditableTextField5', 'Maidname', NULL, 2, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(102, 6, 12, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:35', '2013-08-23 11:59:48', 'EditableTextField6', 'Alter', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:1:"3";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(103, 7, 12, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:38', '2013-08-23 11:59:48', 'EditableTextField7', 'Wohnort', NULL, 4, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(104, 8, 12, 1, 1, 1, 'EditableEmailField', '2013-08-11 16:08:42', '2013-08-23 11:59:48', 'EditableEmailField8', 'E-Mail Adresse', NULL, 5, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(105, 9, 12, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:48', '2013-08-23 11:59:48', 'EditableTextField9', 'Über dich', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"9";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(106, 26, 9, 1, 1, 1, 'EditableFileField', '2013-08-22 16:04:13', '2013-08-23 11:59:48', 'EditableFileField26', 'Bilder ( Bitte Name in der Datei angeben)', NULL, 8, 0, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(107, 27, 6, 1, 1, 1, 'EditableFileField', '2013-08-23 11:56:14', '2013-08-23 11:59:49', 'EditableFileField27', NULL, NULL, 9, 0, NULL, 'a:1:{i:0;a:4:{s:7:"Display";s:4:"Show";s:14:"ConditionField";s:19:"EditableFileField26";s:15:"ConditionOption";s:10:"IsNotBlank";s:5:"Value";s:0:"";}}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Hide";}', NULL, 15),
+(108, 28, 5, 1, 1, 1, 'EditableFileField', '2013-08-23 11:57:22', '2013-08-23 11:59:49', 'EditableFileField28', NULL, NULL, 10, 0, NULL, 'a:1:{i:0;a:4:{s:7:"Display";s:4:"Show";s:14:"ConditionField";s:19:"EditableFileField27";s:15:"ConditionOption";s:10:"IsNotBlank";s:5:"Value";s:0:"";}}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(109, 4, 13, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:21', '2013-08-23 12:01:13', 'EditableTextField4', 'Realname', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(110, 5, 13, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:30', '2013-08-23 12:01:13', 'EditableTextField5', 'Maidname', NULL, 2, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(111, 6, 13, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:35', '2013-08-23 12:01:13', 'EditableTextField6', 'Alter', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:1:"3";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(112, 7, 13, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:38', '2013-08-23 12:01:13', 'EditableTextField7', 'Wohnort', NULL, 4, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(113, 8, 13, 1, 1, 1, 'EditableEmailField', '2013-08-11 16:08:42', '2013-08-23 12:01:14', 'EditableEmailField8', 'E-Mail Adresse', NULL, 5, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(114, 9, 13, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:48', '2013-08-23 12:01:14', 'EditableTextField9', 'Über dich', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"9";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(115, 26, 10, 1, 1, 1, 'EditableFileField', '2013-08-22 16:04:13', '2013-08-23 12:01:14', 'EditableFileField26', 'Bilder ( Bitte Name in der Datei angeben)', NULL, 8, 0, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(116, 29, 1, 0, 1, 0, 'EditableFileField', '2013-08-23 12:11:34', '2013-08-23 12:11:34', NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0),
+(117, 29, 2, 0, 1, 0, 'EditableFileField', '2013-08-23 12:11:34', '2013-08-23 12:11:34', 'EditableFileField29', NULL, NULL, 9, 0, NULL, NULL, NULL, NULL, 15),
+(118, 4, 14, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:21', '2013-08-23 12:11:46', 'EditableTextField4', 'Realname', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(119, 5, 14, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:30', '2013-08-23 12:11:46', 'EditableTextField5', 'Maidname', NULL, 2, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(120, 6, 14, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:35', '2013-08-23 12:11:46', 'EditableTextField6', 'Alter', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:1:"3";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(121, 7, 14, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:38', '2013-08-23 12:11:46', 'EditableTextField7', 'Wohnort', NULL, 4, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(122, 8, 14, 1, 1, 1, 'EditableEmailField', '2013-08-11 16:08:42', '2013-08-23 12:11:46', 'EditableEmailField8', 'E-Mail Adresse', NULL, 5, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(123, 9, 14, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:48', '2013-08-23 12:11:46', 'EditableTextField9', 'Über dich', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"9";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(124, 26, 11, 1, 1, 1, 'EditableFileField', '2013-08-22 16:04:13', '2013-08-23 12:11:47', 'EditableFileField26', 'Bilder ( Bitte Name in der Datei angeben)', NULL, 8, 0, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(125, 29, 3, 1, 1, 1, 'EditableFileField', '2013-08-23 12:11:34', '2013-08-23 12:11:47', 'EditableFileField29', NULL, NULL, 9, 0, NULL, 'a:1:{i:0;a:4:{s:7:"Display";s:4:"Show";s:14:"ConditionField";s:19:"EditableFileField26";s:15:"ConditionOption";s:10:"IsNotBlank";s:5:"Value";s:0:"";}}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(126, 4, 15, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:21', '2013-08-23 12:13:20', 'EditableTextField4', 'Realname', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(127, 5, 15, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:30', '2013-08-23 12:13:20', 'EditableTextField5', 'Maidname', NULL, 2, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(128, 6, 15, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:35', '2013-08-23 12:13:20', 'EditableTextField6', 'Alter', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:1:"3";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(129, 7, 15, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:38', '2013-08-23 12:13:20', 'EditableTextField7', 'Wohnort', NULL, 4, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(130, 8, 15, 1, 1, 1, 'EditableEmailField', '2013-08-11 16:08:42', '2013-08-23 12:13:20', 'EditableEmailField8', 'E-Mail Adresse', NULL, 5, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(131, 9, 15, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:48', '2013-08-23 12:13:20', 'EditableTextField9', 'Über dich', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"9";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(132, 26, 12, 1, 1, 1, 'EditableFileField', '2013-08-22 16:04:13', '2013-08-23 12:13:21', 'EditableFileField26', 'Bilder ( Bitte Name in der Datei angeben)', NULL, 8, 0, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(133, 29, 4, 1, 1, 1, 'EditableFileField', '2013-08-23 12:11:34', '2013-08-23 12:13:21', 'EditableFileField29', NULL, NULL, 9, 0, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(134, 30, 1, 0, 1, 0, 'EditableFileField', '2013-08-23 12:23:34', '2013-08-23 12:23:34', NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0),
+(135, 30, 2, 0, 1, 0, 'EditableFileField', '2013-08-23 12:23:34', '2013-08-23 12:23:35', 'EditableFileField30', NULL, NULL, 10, 0, NULL, NULL, NULL, NULL, 15),
+(136, 4, 16, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:21', '2013-08-23 12:24:01', 'EditableTextField4', 'Realname', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(137, 5, 16, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:30', '2013-08-23 12:24:01', 'EditableTextField5', 'Maidname', NULL, 2, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(138, 6, 16, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:35', '2013-08-23 12:24:01', 'EditableTextField6', 'Alter', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:1:"3";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(139, 7, 16, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:38', '2013-08-23 12:24:02', 'EditableTextField7', 'Wohnort', NULL, 4, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(140, 8, 16, 1, 1, 1, 'EditableEmailField', '2013-08-11 16:08:42', '2013-08-23 12:24:02', 'EditableEmailField8', 'E-Mail Adresse', NULL, 5, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(141, 9, 16, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:48', '2013-08-23 12:24:02', 'EditableTextField9', 'Über dich', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"9";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(142, 26, 13, 1, 1, 1, 'EditableFileField', '2013-08-22 16:04:13', '2013-08-23 12:24:02', 'EditableFileField26', 'Bilder (Nicht mehr als 2MB!!)', NULL, 8, 0, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(143, 29, 5, 1, 1, 1, 'EditableFileField', '2013-08-23 12:11:34', '2013-08-23 12:24:02', 'EditableFileField29', NULL, NULL, 9, 0, NULL, 'a:1:{i:0;a:4:{s:7:"Display";s:4:"Show";s:14:"ConditionField";s:19:"EditableFileField26";s:15:"ConditionOption";s:10:"IsNotBlank";s:5:"Value";s:0:"";}}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(144, 30, 3, 1, 1, 1, 'EditableFileField', '2013-08-23 12:23:34', '2013-08-23 12:24:02', 'EditableFileField30', NULL, NULL, 10, 0, NULL, 'a:1:{i:0;a:4:{s:7:"Display";s:4:"Show";s:14:"ConditionField";s:19:"EditableFileField29";s:15:"ConditionOption";s:10:"IsNotBlank";s:5:"Value";s:0:"";}}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(145, 4, 17, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:21', '2013-08-23 12:25:35', 'EditableTextField4', 'Realname', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(146, 5, 17, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:30', '2013-08-23 12:25:35', 'EditableTextField5', 'Maidname', NULL, 2, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(147, 6, 17, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:35', '2013-08-23 12:25:36', 'EditableTextField6', 'Alter', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:1:"3";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(148, 7, 17, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:38', '2013-08-23 12:25:36', 'EditableTextField7', 'Wohnort', NULL, 4, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(149, 8, 17, 1, 1, 1, 'EditableEmailField', '2013-08-11 16:08:42', '2013-08-23 12:25:36', 'EditableEmailField8', 'E-Mail Adresse', NULL, 5, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(150, 9, 17, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:48', '2013-08-23 12:25:36', 'EditableTextField9', 'Über dich', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"9";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(151, 26, 14, 1, 1, 1, 'EditableFileField', '2013-08-22 16:04:13', '2013-08-23 12:25:36', 'EditableFileField26', 'Bilder (Nicht mehr als 2MB!!)', NULL, 8, 0, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:3:"2mb";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(152, 29, 6, 1, 1, 1, 'EditableFileField', '2013-08-23 12:11:34', '2013-08-23 12:25:36', 'EditableFileField29', NULL, NULL, 9, 0, NULL, 'a:1:{i:0;a:4:{s:7:"Display";s:4:"Show";s:14:"ConditionField";s:19:"EditableFileField26";s:15:"ConditionOption";s:10:"IsNotBlank";s:5:"Value";s:0:"";}}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(153, 30, 4, 1, 1, 1, 'EditableFileField', '2013-08-23 12:23:34', '2013-08-23 12:25:36', 'EditableFileField30', NULL, NULL, 10, 0, NULL, 'a:1:{i:0;a:4:{s:7:"Display";s:4:"Show";s:14:"ConditionField";s:19:"EditableFileField29";s:15:"ConditionOption";s:10:"IsNotBlank";s:5:"Value";s:0:"";}}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(154, 4, 18, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:21', '2013-08-23 12:27:37', 'EditableTextField4', 'Realname', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(155, 5, 18, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:30', '2013-08-23 12:27:37', 'EditableTextField5', 'Maidname', NULL, 2, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(156, 6, 18, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:35', '2013-08-23 12:27:37', 'EditableTextField6', 'Alter', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:1:"3";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(157, 7, 18, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:38', '2013-08-23 12:27:37', 'EditableTextField7', 'Wohnort', NULL, 4, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(158, 8, 18, 1, 1, 1, 'EditableEmailField', '2013-08-11 16:08:42', '2013-08-23 12:27:38', 'EditableEmailField8', 'E-Mail Adresse', NULL, 5, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(159, 9, 18, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:48', '2013-08-23 12:27:38', 'EditableTextField9', 'Über dich', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"9";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(160, 26, 15, 1, 1, 1, 'EditableFileField', '2013-08-22 16:04:13', '2013-08-23 12:27:38', 'EditableFileField26', 'Bilder (Bitte den Namen in Datei angeben)', NULL, 8, 0, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:30:"Bilder nicht größer als 2MB!";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(161, 29, 7, 1, 1, 1, 'EditableFileField', '2013-08-23 12:11:34', '2013-08-23 12:27:38', 'EditableFileField29', NULL, NULL, 9, 0, NULL, 'a:1:{i:0;a:4:{s:7:"Display";s:4:"Show";s:14:"ConditionField";s:19:"EditableFileField26";s:15:"ConditionOption";s:10:"IsNotBlank";s:5:"Value";s:0:"";}}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(162, 30, 5, 1, 1, 1, 'EditableFileField', '2013-08-23 12:23:34', '2013-08-23 12:27:38', 'EditableFileField30', NULL, NULL, 10, 0, NULL, 'a:1:{i:0;a:4:{s:7:"Display";s:4:"Show";s:14:"ConditionField";s:19:"EditableFileField29";s:15:"ConditionOption";s:10:"IsNotBlank";s:5:"Value";s:0:"";}}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(163, 4, 19, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:21', '2013-08-23 12:30:31', 'EditableTextField4', 'Realname', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(164, 5, 19, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:30', '2013-08-23 12:30:31', 'EditableTextField5', 'Maidname', NULL, 2, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(165, 6, 19, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:35', '2013-08-23 12:30:31', 'EditableTextField6', 'Alter', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:1:"3";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15);
+INSERT INTO `editableformfield_versions` (`ID`, `RecordID`, `Version`, `WasPublished`, `AuthorID`, `PublisherID`, `ClassName`, `Created`, `LastEdited`, `Name`, `Title`, `Default`, `Sort`, `Required`, `CustomErrorMessage`, `CustomRules`, `CustomSettings`, `CustomParameter`, `ParentID`) VALUES
+(166, 7, 19, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:38', '2013-08-23 12:30:31', 'EditableTextField7', 'Wohnort', NULL, 4, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(167, 8, 19, 1, 1, 1, 'EditableEmailField', '2013-08-11 16:08:42', '2013-08-23 12:30:31', 'EditableEmailField8', 'E-Mail Adresse', NULL, 5, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(168, 9, 19, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:48', '2013-08-23 12:30:31', 'EditableTextField9', 'Über dich', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"9";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(169, 26, 16, 1, 1, 1, 'EditableFileField', '2013-08-22 16:04:13', '2013-08-23 12:30:31', 'EditableFileField26', 'Bilder (Bitte den Namen in Datei angeben)', NULL, 8, 0, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:30:"Bilder nicht größer als 2MB!";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(170, 29, 8, 1, 1, 1, 'EditableFileField', '2013-08-23 12:11:34', '2013-08-23 12:30:31', 'EditableFileField29', NULL, NULL, 9, 0, NULL, 'a:1:{i:0;a:4:{s:7:"Display";s:4:"Show";s:14:"ConditionField";s:19:"EditableFileField26";s:15:"ConditionOption";s:10:"IsNotBlank";s:5:"Value";s:0:"";}}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(171, 30, 6, 1, 1, 1, 'EditableFileField', '2013-08-23 12:23:34', '2013-08-23 12:30:31', 'EditableFileField30', NULL, NULL, 10, 0, NULL, 'a:1:{i:0;a:4:{s:7:"Display";s:4:"Show";s:14:"ConditionField";s:19:"EditableFileField29";s:15:"ConditionOption";s:10:"IsNotBlank";s:5:"Value";s:0:"";}}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(172, 4, 20, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:21', '2013-08-23 12:31:11', 'EditableTextField4', 'Realname', NULL, 1, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(173, 5, 20, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:30', '2013-08-23 12:31:11', 'EditableTextField5', 'Maidname', NULL, 2, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(174, 6, 20, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:35', '2013-08-23 12:31:11', 'EditableTextField6', 'Alter', NULL, 3, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:1:"3";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(175, 7, 20, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:38', '2013-08-23 12:31:12', 'EditableTextField7', 'Wohnort', NULL, 4, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:2:"20";s:4:"Rows";s:1:"1";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(176, 8, 20, 1, 1, 1, 'EditableEmailField', '2013-08-11 16:08:42', '2013-08-23 12:31:12', 'EditableEmailField8', 'E-Mail Adresse', NULL, 5, 1, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(177, 9, 20, 1, 1, 1, 'EditableTextField', '2013-08-11 16:08:48', '2013-08-23 12:31:12', 'EditableTextField9', 'Über dich', NULL, 6, 1, NULL, 'a:0:{}', 'a:6:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:9:"MinLength";s:0:"";s:9:"MaxLength";s:0:"";s:4:"Rows";s:1:"9";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(178, 26, 17, 1, 1, 1, 'EditableFileField', '2013-08-22 16:04:13', '2013-08-23 12:31:12', 'EditableFileField26', 'Bilder (Bitte den Namen in Datei angeben)', NULL, 8, 0, NULL, 'a:0:{}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:30:"Bilder nicht größer als 2MB!";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(179, 29, 9, 1, 1, 1, 'EditableFileField', '2013-08-23 12:11:34', '2013-08-23 12:31:12', 'EditableFileField29', NULL, NULL, 9, 0, NULL, 'a:1:{i:0;a:4:{s:7:"Display";s:4:"Show";s:14:"ConditionField";s:19:"EditableFileField26";s:15:"ConditionOption";s:10:"IsNotBlank";s:5:"Value";s:0:"";}}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15),
+(180, 30, 7, 1, 1, 1, 'EditableFileField', '2013-08-23 12:23:34', '2013-08-23 12:31:12', 'EditableFileField30', NULL, NULL, 10, 0, NULL, 'a:1:{i:0;a:4:{s:7:"Display";s:4:"Show";s:14:"ConditionField";s:19:"EditableFileField29";s:15:"ConditionOption";s:10:"IsNotBlank";s:5:"Value";s:0:"";}}', 'a:3:{s:10:"ExtraClass";s:0:"";s:10:"RightTitle";s:0:"";s:10:"ShowOnLoad";s:4:"Show";}', NULL, 15);
 
 -- --------------------------------------------------------
 
@@ -456,7 +609,7 @@ CREATE TABLE IF NOT EXISTS `errorpage_versions` (
   UNIQUE KEY `RecordID_Version` (`RecordID`,`Version`),
   KEY `RecordID` (`RecordID`),
   KEY `Version` (`Version`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -480,7 +633,7 @@ CREATE TABLE IF NOT EXISTS `file` (
   KEY `ParentID` (`ParentID`),
   KEY `OwnerID` (`OwnerID`),
   KEY `ClassName` (`ClassName`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=82 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=97 ;
 
 --
 -- Daten für Tabelle `file`
@@ -567,7 +720,22 @@ INSERT INTO `file` (`ID`, `ClassName`, `Created`, `LastEdited`, `Name`, `Title`,
 (78, 'Folder', '2013-08-21 14:55:13', '2013-08-21 14:55:13', 'icons', 'icons', 'assets/icons/', NULL, 1, 0, 1),
 (79, 'Image', '2013-08-21 14:55:13', '2013-08-21 14:55:13', 'articleconsicon.png', 'articleconsicon.png', 'assets/icons/articleconsicon.png', NULL, 1, 78, 1),
 (80, 'Image', '2013-08-21 14:55:13', '2013-08-21 14:55:13', 'articleeventicon.png', 'articleeventicon.png', 'assets/icons/articleeventicon.png', NULL, 1, 78, 1),
-(81, 'Image', '2013-08-21 14:55:13', '2013-08-21 14:55:13', 'articlenewsicon.png', 'articlenewsicon.png', 'assets/icons/articlenewsicon.png', NULL, 1, 78, 1);
+(81, 'Image', '2013-08-21 14:55:13', '2013-08-21 14:55:13', 'articlenewsicon.png', 'articlenewsicon.png', 'assets/icons/articlenewsicon.png', NULL, 1, 78, 1),
+(82, 'File', '2013-08-22 16:03:08', '2013-08-22 16:03:08', 'brief.jpg', 'brief', 'assets/Uploads/brief.jpg', NULL, 0, 17, 1),
+(83, 'File', '2013-08-22 16:03:53', '2013-08-22 16:03:53', 'brief2.jpg', 'brief2', 'assets/Uploads/brief2.jpg', NULL, 0, 17, 1),
+(84, 'File', '2013-08-22 16:05:00', '2013-08-22 16:05:00', 'brief3.jpg', 'brief3', 'assets/Uploads/brief3.jpg', NULL, 0, 17, 1),
+(85, 'File', '2013-08-22 16:06:43', '2013-08-22 16:06:43', 'brief4.jpg', 'brief4', 'assets/Uploads/brief4.jpg', NULL, 0, 17, 1),
+(86, 'File', '2013-08-22 16:08:14', '2013-08-22 16:08:14', 'brief5.jpg', 'brief5', 'assets/Uploads/brief5.jpg', NULL, 0, 17, 1),
+(87, 'File', '2013-08-22 16:09:46', '2013-08-22 16:09:46', 'brief6.jpg', 'brief6', 'assets/Uploads/brief6.jpg', NULL, 0, 17, 1),
+(88, 'File', '2013-08-23 12:04:46', '2013-08-23 12:04:46', 'gqHijMWpkcX27hj5ObtXcqwvyGALv5Dla1A5JLgg-bM.jpg', 'gqHijMWpkcX27hj5ObtXcqwvyGALv5Dla1A5JLgg bM', 'assets/Uploads/gqHijMWpkcX27hj5ObtXcqwvyGALv5Dla1A5JLgg-bM.jpg', NULL, 0, 17, 1),
+(89, 'File', '2013-08-23 12:21:14', '2013-08-23 12:21:14', 'dumpt2.txt', 'dumpt2', 'assets/Uploads/dumpt2.txt', NULL, 0, 17, 1),
+(90, 'File', '2013-08-23 12:24:38', '2013-08-23 12:24:38', 'brief7.jpg', 'brief7', 'assets/Uploads/brief7.jpg', NULL, 0, 17, 1),
+(91, 'File', '2013-08-23 12:24:38', '2013-08-23 12:24:38', 'brief8.jpg', 'brief8', 'assets/Uploads/brief8.jpg', NULL, 0, 17, 1),
+(92, 'File', '2013-08-23 12:24:39', '2013-08-23 12:24:39', 'brief9.jpg', 'brief9', 'assets/Uploads/brief9.jpg', NULL, 0, 17, 1),
+(93, 'File', '2013-08-23 12:26:10', '2013-08-23 12:26:10', 'brief10.jpg', 'brief10', 'assets/Uploads/brief10.jpg', NULL, 0, 17, 1),
+(94, 'File', '2013-08-23 12:28:12', '2013-08-23 12:28:12', 'brief11.jpg', 'brief11', 'assets/Uploads/brief11.jpg', NULL, 0, 17, 1),
+(95, 'File', '2013-08-23 12:28:12', '2013-08-23 12:28:12', 'brief12.jpg', 'brief12', 'assets/Uploads/brief12.jpg', NULL, 0, 17, 1),
+(96, 'File', '2013-08-23 12:28:13', '2013-08-23 12:28:13', 'brief13.jpg', 'brief13', 'assets/Uploads/brief13.jpg', NULL, 0, 17, 1);
 
 -- --------------------------------------------------------
 
@@ -832,7 +1000,7 @@ CREATE TABLE IF NOT EXISTS `member` (
 --
 
 INSERT INTO `member` (`ID`, `ClassName`, `Created`, `LastEdited`, `FirstName`, `Surname`, `Email`, `Password`, `RememberLoginToken`, `NumVisit`, `LastVisited`, `Bounced`, `AutoLoginHash`, `AutoLoginExpired`, `PasswordEncryption`, `Salt`, `PasswordExpiry`, `LockedOutUntil`, `Locale`, `FailedLoginCount`, `DateFormat`, `TimeFormat`) VALUES
-(1, 'Member', '2013-08-21 12:48:05', '2013-08-22 12:19:46', 'Standardadmin', NULL, 'admin', '$2y$10$effe9adc22281361577d4OOcChlOi./7IG4Pu7rJ9HT3igcGBojW6', '$2y$10$effe9adc22281361577d4OWB0gMDdhwY5ai/nzKs57GrZfld04Txm', 4, '2013-08-22 17:09:21', 0, NULL, NULL, 'blowfish', '10$effe9adc22281361577d4b', NULL, NULL, 'de_DE', 0, NULL, NULL);
+(1, 'Member', '2013-08-21 12:48:05', '2013-08-22 12:19:46', 'Standardadmin', NULL, 'admin', '$2y$10$effe9adc22281361577d4OOcChlOi./7IG4Pu7rJ9HT3igcGBojW6', '$2y$10$effe9adc22281361577d4OWB0gMDdhwY5ai/nzKs57GrZfld04Txm', 4, '2013-08-23 14:33:39', 0, NULL, NULL, 'blowfish', '10$effe9adc22281361577d4b', NULL, NULL, 'de_DE', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1015,7 +1183,7 @@ CREATE TABLE IF NOT EXISTS `page_versions` (
   UNIQUE KEY `RecordID_Version` (`RecordID`,`Version`),
   KEY `RecordID` (`RecordID`),
   KEY `Version` (`Version`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
 
 --
 -- Daten für Tabelle `page_versions`
@@ -1040,7 +1208,9 @@ INSERT INTO `page_versions` (`ID`, `RecordID`, `Version`, `maxskitter_interval`,
 (16, 15, 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
 (17, 15, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
 (18, 14, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(19, 13, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0);
+(19, 13, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
+(20, 15, 6, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
+(21, 15, 7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -1311,7 +1481,7 @@ INSERT INTO `sitetree` (`ID`, `ClassName`, `Created`, `LastEdited`, `URLSegment`
 (12, 'ContactPage', '2013-08-22 12:23:58', '2013-08-22 12:34:59', 'kontakt', 'Kontakt', NULL, '<p> </p>\n<p> Habt ihr Fragen, Wünsche oder Anregungen?</p>\n<p> Möchtet ihr uns für eure Convention buchen?</p>\n<p> Oder möchtet ihr sogar selber eine Maid werden?</p>\n<p> Dann seid ihr hier richtig! Schreibt uns euer Anliegen und wir werden euch so schnell wie möglich antworten! :D</p>', NULL, NULL, NULL, NULL, 1, 1, 8, 0, 0, NULL, 'Inherit', 'Inherit', 5, 0),
 (13, 'UserDefinedForm', '2013-08-22 12:26:01', '2013-08-22 12:46:49', 'kontakt', 'Kontakt', NULL, '<p>Wenn dir etwas ganz besonders am Herzen liegt, schick uns einfach deine Nachricht :) Ob allgemeine Fragen, Feedback, Verbesserungsvorschläge bezüglich unseres Maidcafes, etc. - wir freuen uns immer auf deine Meinung :D!</p>\n<p>$UserDefinedForm</p>', NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 3, 12),
 (14, 'UserDefinedForm', '2013-08-22 12:26:15', '2013-08-22 12:46:23', 'buchen', 'Buchen', NULL, '<p>Bucht das Lucky Chocolate Team jetzt für eure Convention, Firmenfeier oder andere Events!<br>Wir leiten oder sind Teil eures Maid Cafes, können frei in der Bedienung oder Küche einsetzbar sein.<br>Ihr braucht noch Werbestände für eure Convention? Wir kommen gerne bei euch vorbei um zu werben!<br>Auch auf der Bühne sind wir einsetzbar! Wir lernen jedes Jahr einen Maidtanz für die DoKomi, den wir auch bei euch präsentieren können! Andere Ideen? Schreibe in das freie Feld einfach deine Wünsche an uns!<br>Du möchtest bestimmte Maids? Frage nach ob unsere Maids für dein Event frei sind und buche deine Traummaids!<br>Wir bitten darum besonders bei Conventions anzugeben, ob es ein Budget für Fahrtkosten, Eintrittskarten, Übernachtung und Leistung geben wird.<br>Da wir uns selber finanzieren, ist es uns sonst evtl. nicht möglich euch euren Maidwunsch zu erfüllen! &lt;3<br>Liebe Grüße, euer Maidteam<br><br></p>\n<p>$UserDefinedForm</p>', NULL, NULL, NULL, NULL, 1, 1, 2, 0, 0, NULL, 'Inherit', 'Inherit', 3, 12),
-(15, 'UserDefinedForm', '2013-08-22 12:26:31', '2013-08-22 12:46:04', 'bewerben', 'Bewerben', NULL, '<p>Du wolltest schon immer mal in einem Maid Cafe arbeiten?<br> Dann bist du bei uns genau richtig!<br><br>Wir bieten Dir:<br>- ein großes, freundliches Cafe auf der Dokomi mit Terasse<br> - ein süßes Team, das zwar etwas chaotisch aber total liebenswert ist<br> - von Zeit zur Zeit Jobangebote für Privatfirmen oder andere Conventions<br> - aktive Mitarbeit im Internet für unser Cafe<br> - Lernseminare, Besprechungsseminare, Fotoshootings und frei Kuchen ;D<br> - ein Wochenendticket für die Dokomi und Vergünstigungen beim Hotel<br> - eine gute Zusammenarbeit mit unserem Host Cafe der Dokomi<br> - die Gelegenheit auf der Bühne und im Cafe vor Publikum zu performen<br> - Zusammenarbeit mit erfahrenen Maids und Gastronomiearbeitern<br> - Spaß, Stress, Schweiß X''D</p>\n<p>Unsere Voraussetzungen: <br>- Du wohnst in Deutschland, vorzugsweise im NRW Bereich <br> - Du bist bereit 2~3x im Jahr zum Seminar oder Fotoshooting nach NRW zu reisen<br> (Unser Hauptstützpunkt liegt im VRR Bereich, Nähe Düsseldorf)<br> - Du bist freundlich, teamfähig und unterhaltsam<br> - Du bist bereit die Maiderstausstattung zu zahlen (ca. 60,00 €)<br> - Du erklärst Dich damit einverstanden, dass du als Maid auf der Dokomi kein <br> Geld als Bezahlung erhälst. Nur bei gebuchten Events ist es möglich bezahlt zu werden<br> - Du bist mindestens 16 Jahre alt<br> - Du hast einen Facebookaccount</p>\n<p>$UserDefinedForm</p>', NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 5, 12);
+(15, 'UserDefinedForm', '2013-08-22 12:26:31', '2013-08-23 12:31:13', 'bewerben', 'Bewerben', NULL, '<p>Du wolltest schon immer mal in einem Maid Cafe arbeiten?<br> Dann bist du bei uns genau richtig!<br><br>Wir bieten Dir:<br>- ein großes, freundliches Cafe auf der Dokomi mit Terasse<br> - ein süßes Team, das zwar etwas chaotisch aber total liebenswert ist<br> - von Zeit zur Zeit Jobangebote für Privatfirmen oder andere Conventions<br> - aktive Mitarbeit im Internet für unser Cafe<br> - Lernseminare, Besprechungsseminare, Fotoshootings und frei Kuchen ;D<br> - ein Wochenendticket für die Dokomi und Vergünstigungen beim Hotel<br> - eine gute Zusammenarbeit mit unserem Host Cafe der Dokomi<br> - die Gelegenheit auf der Bühne und im Cafe vor Publikum zu performen<br> - Zusammenarbeit mit erfahrenen Maids und Gastronomiearbeitern<br> - Spaß, Stress, Schweiß X''D</p>\n<p>Unsere Voraussetzungen: <br>- Du wohnst in Deutschland, vorzugsweise im NRW Bereich <br> - Du bist bereit 2~3x im Jahr zum Seminar oder Fotoshooting nach NRW zu reisen<br> (Unser Hauptstützpunkt liegt im VRR Bereich, Nähe Düsseldorf)<br> - Du bist freundlich, teamfähig und unterhaltsam<br> - Du bist bereit die Maiderstausstattung zu zahlen (ca. 60,00 €)<br> - Du erklärst Dich damit einverstanden, dass du als Maid auf der Dokomi kein <br> Geld als Bezahlung erhälst. Nur bei gebuchten Events ist es möglich bezahlt zu werden<br> - Du bist mindestens 16 Jahre alt<br> - Du hast einen Facebookaccount</p>\n<p>$UserDefinedForm</p>', NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 7, 12);
 
 -- --------------------------------------------------------
 
@@ -1410,7 +1580,7 @@ INSERT INTO `sitetree_live` (`ID`, `ClassName`, `Created`, `LastEdited`, `URLSeg
 (12, 'ContactPage', '2013-08-22 12:23:58', '2013-08-22 12:34:59', 'kontakt', 'Kontakt', NULL, '<p> </p>\n<p> Habt ihr Fragen, Wünsche oder Anregungen?</p>\n<p> Möchtet ihr uns für eure Convention buchen?</p>\n<p> Oder möchtet ihr sogar selber eine Maid werden?</p>\n<p> Dann seid ihr hier richtig! Schreibt uns euer Anliegen und wir werden euch so schnell wie möglich antworten! :D</p>', NULL, NULL, NULL, NULL, 1, 1, 8, 0, 0, NULL, 'Inherit', 'Inherit', 5, 0),
 (13, 'UserDefinedForm', '2013-08-22 12:26:01', '2013-08-22 12:46:49', 'kontakt', 'Kontakt', NULL, '<p>Wenn dir etwas ganz besonders am Herzen liegt, schick uns einfach deine Nachricht :) Ob allgemeine Fragen, Feedback, Verbesserungsvorschläge bezüglich unseres Maidcafes, etc. - wir freuen uns immer auf deine Meinung :D!</p>\n<p>$UserDefinedForm</p>', NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 3, 12),
 (14, 'UserDefinedForm', '2013-08-22 12:26:15', '2013-08-22 12:46:25', 'buchen', 'Buchen', NULL, '<p>Bucht das Lucky Chocolate Team jetzt für eure Convention, Firmenfeier oder andere Events!<br>Wir leiten oder sind Teil eures Maid Cafes, können frei in der Bedienung oder Küche einsetzbar sein.<br>Ihr braucht noch Werbestände für eure Convention? Wir kommen gerne bei euch vorbei um zu werben!<br>Auch auf der Bühne sind wir einsetzbar! Wir lernen jedes Jahr einen Maidtanz für die DoKomi, den wir auch bei euch präsentieren können! Andere Ideen? Schreibe in das freie Feld einfach deine Wünsche an uns!<br>Du möchtest bestimmte Maids? Frage nach ob unsere Maids für dein Event frei sind und buche deine Traummaids!<br>Wir bitten darum besonders bei Conventions anzugeben, ob es ein Budget für Fahrtkosten, Eintrittskarten, Übernachtung und Leistung geben wird.<br>Da wir uns selber finanzieren, ist es uns sonst evtl. nicht möglich euch euren Maidwunsch zu erfüllen! &lt;3<br>Liebe Grüße, euer Maidteam<br><br></p>\n<p>$UserDefinedForm</p>', NULL, NULL, NULL, NULL, 1, 1, 2, 0, 0, NULL, 'Inherit', 'Inherit', 3, 12),
-(15, 'UserDefinedForm', '2013-08-22 12:26:31', '2013-08-22 12:46:06', 'bewerben', 'Bewerben', NULL, '<p>Du wolltest schon immer mal in einem Maid Cafe arbeiten?<br> Dann bist du bei uns genau richtig!<br><br>Wir bieten Dir:<br>- ein großes, freundliches Cafe auf der Dokomi mit Terasse<br> - ein süßes Team, das zwar etwas chaotisch aber total liebenswert ist<br> - von Zeit zur Zeit Jobangebote für Privatfirmen oder andere Conventions<br> - aktive Mitarbeit im Internet für unser Cafe<br> - Lernseminare, Besprechungsseminare, Fotoshootings und frei Kuchen ;D<br> - ein Wochenendticket für die Dokomi und Vergünstigungen beim Hotel<br> - eine gute Zusammenarbeit mit unserem Host Cafe der Dokomi<br> - die Gelegenheit auf der Bühne und im Cafe vor Publikum zu performen<br> - Zusammenarbeit mit erfahrenen Maids und Gastronomiearbeitern<br> - Spaß, Stress, Schweiß X''D</p>\n<p>Unsere Voraussetzungen: <br>- Du wohnst in Deutschland, vorzugsweise im NRW Bereich <br> - Du bist bereit 2~3x im Jahr zum Seminar oder Fotoshooting nach NRW zu reisen<br> (Unser Hauptstützpunkt liegt im VRR Bereich, Nähe Düsseldorf)<br> - Du bist freundlich, teamfähig und unterhaltsam<br> - Du bist bereit die Maiderstausstattung zu zahlen (ca. 60,00 €)<br> - Du erklärst Dich damit einverstanden, dass du als Maid auf der Dokomi kein <br> Geld als Bezahlung erhälst. Nur bei gebuchten Events ist es möglich bezahlt zu werden<br> - Du bist mindestens 16 Jahre alt<br> - Du hast einen Facebookaccount</p>\n<p>$UserDefinedForm</p>', NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 5, 12);
+(15, 'UserDefinedForm', '2013-08-22 12:26:31', '2013-08-23 12:31:15', 'bewerben', 'Bewerben', NULL, '<p>Du wolltest schon immer mal in einem Maid Cafe arbeiten?<br> Dann bist du bei uns genau richtig!<br><br>Wir bieten Dir:<br>- ein großes, freundliches Cafe auf der Dokomi mit Terasse<br> - ein süßes Team, das zwar etwas chaotisch aber total liebenswert ist<br> - von Zeit zur Zeit Jobangebote für Privatfirmen oder andere Conventions<br> - aktive Mitarbeit im Internet für unser Cafe<br> - Lernseminare, Besprechungsseminare, Fotoshootings und frei Kuchen ;D<br> - ein Wochenendticket für die Dokomi und Vergünstigungen beim Hotel<br> - eine gute Zusammenarbeit mit unserem Host Cafe der Dokomi<br> - die Gelegenheit auf der Bühne und im Cafe vor Publikum zu performen<br> - Zusammenarbeit mit erfahrenen Maids und Gastronomiearbeitern<br> - Spaß, Stress, Schweiß X''D</p>\n<p>Unsere Voraussetzungen: <br>- Du wohnst in Deutschland, vorzugsweise im NRW Bereich <br> - Du bist bereit 2~3x im Jahr zum Seminar oder Fotoshooting nach NRW zu reisen<br> (Unser Hauptstützpunkt liegt im VRR Bereich, Nähe Düsseldorf)<br> - Du bist freundlich, teamfähig und unterhaltsam<br> - Du bist bereit die Maiderstausstattung zu zahlen (ca. 60,00 €)<br> - Du erklärst Dich damit einverstanden, dass du als Maid auf der Dokomi kein <br> Geld als Bezahlung erhälst. Nur bei gebuchten Events ist es möglich bezahlt zu werden<br> - Du bist mindestens 16 Jahre alt<br> - Du hast einen Facebookaccount</p>\n<p>$UserDefinedForm</p>', NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 7, 12);
 
 -- --------------------------------------------------------
 
@@ -1454,7 +1624,7 @@ CREATE TABLE IF NOT EXISTS `sitetree_versions` (
   KEY `ParentID` (`ParentID`),
   KEY `URLSegment` (`URLSegment`),
   KEY `ClassName` (`ClassName`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=35 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=37 ;
 
 --
 -- Daten für Tabelle `sitetree_versions`
@@ -1494,7 +1664,9 @@ INSERT INTO `sitetree_versions` (`ID`, `RecordID`, `Version`, `WasPublished`, `A
 (31, 15, 4, 1, 1, 1, 'UserDefinedForm', '2013-08-22 12:26:31', '2013-08-22 12:45:19', 'bewerben', 'Bewerben', NULL, '<p>Du wolltest schon immer mal in einem Maid Cafe arbeiten?<br> Dann bist du bei uns genau richtig!<br><br>Wir bieten Dir:<br>- ein großes, freundliches Cafe auf der Dokomi mit Terasse<br> - ein süßes Team, das zwar etwas chaotisch aber total liebenswert ist<br> - von Zeit zur Zeit Jobangebote für Privatfirmen oder andere Conventions<br> - aktive Mitarbeit im Internet für unser Cafe<br> - Lernseminare, Besprechungsseminare, Fotoshootings und frei Kuchen ;D<br> - ein Wochenendticket für die Dokomi und Vergünstigungen beim Hotel<br> - eine gute Zusammenarbeit mit unserem Host Cafe der Dokomi<br> - die Gelegenheit auf der Bühne und im Cafe vor Publikum zu performen<br> - Zusammenarbeit mit erfahrenen Maids und Gastronomiearbeitern<br> - Spaß, Stress, Schweiß X''D</p>\n<p>Unsere Voraussetzungen: <br>- Du wohnst in Deutschland, vorzugsweise im NRW Bereich <br> - Du bist bereit 2~3x im Jahr zum Seminar oder Fotoshooting nach NRW zu reisen<br> (Unser Hauptstützpunkt liegt im VRR Bereich, Nähe Düsseldorf)<br> - Du bist freundlich, teamfähig und unterhaltsam<br> - Du bist bereit die Maiderstausstattung zu zahlen (ca. 60,00 €)<br> - Du erklärst Dich damit einverstanden, dass du als Maid auf der Dokomi kein <br> Geld als Bezahlung erhälst. Nur bei gebuchten Events ist es möglich bezahlt zu werden<br> - Du bist mindestens 16 Jahre alt<br> - Du hast einen Facebookaccount</p>\n<p>$UserDefinedForm</p>', NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 12),
 (32, 15, 5, 1, 1, 1, 'UserDefinedForm', '2013-08-22 12:26:31', '2013-08-22 12:45:34', 'bewerben', 'Bewerben', NULL, '<p>Du wolltest schon immer mal in einem Maid Cafe arbeiten?<br> Dann bist du bei uns genau richtig!<br><br>Wir bieten Dir:<br>- ein großes, freundliches Cafe auf der Dokomi mit Terasse<br> - ein süßes Team, das zwar etwas chaotisch aber total liebenswert ist<br> - von Zeit zur Zeit Jobangebote für Privatfirmen oder andere Conventions<br> - aktive Mitarbeit im Internet für unser Cafe<br> - Lernseminare, Besprechungsseminare, Fotoshootings und frei Kuchen ;D<br> - ein Wochenendticket für die Dokomi und Vergünstigungen beim Hotel<br> - eine gute Zusammenarbeit mit unserem Host Cafe der Dokomi<br> - die Gelegenheit auf der Bühne und im Cafe vor Publikum zu performen<br> - Zusammenarbeit mit erfahrenen Maids und Gastronomiearbeitern<br> - Spaß, Stress, Schweiß X''D</p>\n<p>Unsere Voraussetzungen: <br>- Du wohnst in Deutschland, vorzugsweise im NRW Bereich <br> - Du bist bereit 2~3x im Jahr zum Seminar oder Fotoshooting nach NRW zu reisen<br> (Unser Hauptstützpunkt liegt im VRR Bereich, Nähe Düsseldorf)<br> - Du bist freundlich, teamfähig und unterhaltsam<br> - Du bist bereit die Maiderstausstattung zu zahlen (ca. 60,00 €)<br> - Du erklärst Dich damit einverstanden, dass du als Maid auf der Dokomi kein <br> Geld als Bezahlung erhälst. Nur bei gebuchten Events ist es möglich bezahlt zu werden<br> - Du bist mindestens 16 Jahre alt<br> - Du hast einen Facebookaccount</p>\n<p>$UserDefinedForm</p>', NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 12),
 (33, 14, 3, 1, 1, 1, 'UserDefinedForm', '2013-08-22 12:26:15', '2013-08-22 12:46:23', 'buchen', 'Buchen', NULL, '<p>Bucht das Lucky Chocolate Team jetzt für eure Convention, Firmenfeier oder andere Events!<br>Wir leiten oder sind Teil eures Maid Cafes, können frei in der Bedienung oder Küche einsetzbar sein.<br>Ihr braucht noch Werbestände für eure Convention? Wir kommen gerne bei euch vorbei um zu werben!<br>Auch auf der Bühne sind wir einsetzbar! Wir lernen jedes Jahr einen Maidtanz für die DoKomi, den wir auch bei euch präsentieren können! Andere Ideen? Schreibe in das freie Feld einfach deine Wünsche an uns!<br>Du möchtest bestimmte Maids? Frage nach ob unsere Maids für dein Event frei sind und buche deine Traummaids!<br>Wir bitten darum besonders bei Conventions anzugeben, ob es ein Budget für Fahrtkosten, Eintrittskarten, Übernachtung und Leistung geben wird.<br>Da wir uns selber finanzieren, ist es uns sonst evtl. nicht möglich euch euren Maidwunsch zu erfüllen! &lt;3<br>Liebe Grüße, euer Maidteam<br><br></p>\n<p>$UserDefinedForm</p>', NULL, NULL, NULL, NULL, 1, 1, 2, 0, 0, NULL, 'Inherit', 'Inherit', 12),
-(34, 13, 3, 1, 1, 1, 'UserDefinedForm', '2013-08-22 12:26:01', '2013-08-22 12:46:49', 'kontakt', 'Kontakt', NULL, '<p>Wenn dir etwas ganz besonders am Herzen liegt, schick uns einfach deine Nachricht :) Ob allgemeine Fragen, Feedback, Verbesserungsvorschläge bezüglich unseres Maidcafes, etc. - wir freuen uns immer auf deine Meinung :D!</p>\n<p>$UserDefinedForm</p>', NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 12);
+(34, 13, 3, 1, 1, 1, 'UserDefinedForm', '2013-08-22 12:26:01', '2013-08-22 12:46:49', 'kontakt', 'Kontakt', NULL, '<p>Wenn dir etwas ganz besonders am Herzen liegt, schick uns einfach deine Nachricht :) Ob allgemeine Fragen, Feedback, Verbesserungsvorschläge bezüglich unseres Maidcafes, etc. - wir freuen uns immer auf deine Meinung :D!</p>\n<p>$UserDefinedForm</p>', NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 12),
+(35, 15, 6, 1, 1, 1, 'UserDefinedForm', '2013-08-22 12:26:31', '2013-08-23 12:30:32', 'bewerben', 'Bewerben', NULL, '<p>Du wolltest schon immer mal in einem Maid Cafe arbeiten?<br> Dann bist du bei uns genau richtig!<br><br>Wir bieten Dir:<br>- ein großes, freundliches Cafe auf der Dokomi mit Terasse<br> - ein süßes Team, das zwar etwas chaotisch aber total liebenswert ist<br> - von Zeit zur Zeit Jobangebote für Privatfirmen oder andere Conventions<br> - aktive Mitarbeit im Internet für unser Cafe<br> - Lernseminare, Besprechungsseminare, Fotoshootings und frei Kuchen ;D<br> - ein Wochenendticket für die Dokomi und Vergünstigungen beim Hotel<br> - eine gute Zusammenarbeit mit unserem Host Cafe der Dokomi<br> - die Gelegenheit auf der Bühne und im Cafe vor Publikum zu performen<br> - Zusammenarbeit mit erfahrenen Maids und Gastronomiearbeitern<br> - Spaß, Stress, Schweiß X''D</p>\n<p>Unsere Voraussetzungen: <br>- Du wohnst in Deutschland, vorzugsweise im NRW Bereich <br> - Du bist bereit 2~3x im Jahr zum Seminar oder Fotoshooting nach NRW zu reisen<br> (Unser Hauptstützpunkt liegt im VRR Bereich, Nähe Düsseldorf)<br> - Du bist freundlich, teamfähig und unterhaltsam<br> - Du bist bereit die Maiderstausstattung zu zahlen (ca. 60,00 €)<br> - Du erklärst Dich damit einverstanden, dass du als Maid auf der Dokomi kein <br> Geld als Bezahlung erhälst. Nur bei gebuchten Events ist es möglich bezahlt zu werden<br> - Du bist mindestens 16 Jahre alt<br> - Du hast einen Facebookaccount</p>\n<p>$UserDefinedForm</p>', NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 12),
+(36, 15, 7, 1, 1, 1, 'UserDefinedForm', '2013-08-22 12:26:31', '2013-08-23 12:31:13', 'bewerben', 'Bewerben', NULL, '<p>Du wolltest schon immer mal in einem Maid Cafe arbeiten?<br> Dann bist du bei uns genau richtig!<br><br>Wir bieten Dir:<br>- ein großes, freundliches Cafe auf der Dokomi mit Terasse<br> - ein süßes Team, das zwar etwas chaotisch aber total liebenswert ist<br> - von Zeit zur Zeit Jobangebote für Privatfirmen oder andere Conventions<br> - aktive Mitarbeit im Internet für unser Cafe<br> - Lernseminare, Besprechungsseminare, Fotoshootings und frei Kuchen ;D<br> - ein Wochenendticket für die Dokomi und Vergünstigungen beim Hotel<br> - eine gute Zusammenarbeit mit unserem Host Cafe der Dokomi<br> - die Gelegenheit auf der Bühne und im Cafe vor Publikum zu performen<br> - Zusammenarbeit mit erfahrenen Maids und Gastronomiearbeitern<br> - Spaß, Stress, Schweiß X''D</p>\n<p>Unsere Voraussetzungen: <br>- Du wohnst in Deutschland, vorzugsweise im NRW Bereich <br> - Du bist bereit 2~3x im Jahr zum Seminar oder Fotoshooting nach NRW zu reisen<br> (Unser Hauptstützpunkt liegt im VRR Bereich, Nähe Düsseldorf)<br> - Du bist freundlich, teamfähig und unterhaltsam<br> - Du bist bereit die Maiderstausstattung zu zahlen (ca. 60,00 €)<br> - Du erklärst Dich damit einverstanden, dass du als Maid auf der Dokomi kein <br> Geld als Bezahlung erhälst. Nur bei gebuchten Events ist es möglich bezahlt zu werden<br> - Du bist mindestens 16 Jahre alt<br> - Du hast einen Facebookaccount</p>\n<p>$UserDefinedForm</p>', NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 12);
 
 -- --------------------------------------------------------
 
@@ -1522,7 +1694,7 @@ CREATE TABLE IF NOT EXISTS `submittedfilefield` (
   `UploadedFileID` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ID`),
   KEY `UploadedFileID` (`UploadedFileID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=43 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=131 ;
 
 --
 -- Daten für Tabelle `submittedfilefield`
@@ -1530,7 +1702,26 @@ CREATE TABLE IF NOT EXISTS `submittedfilefield` (
 
 INSERT INTO `submittedfilefield` (`ID`, `UploadedFileID`) VALUES
 (42, 0),
-(13, 4);
+(88, 0),
+(103, 0),
+(120, 0),
+(121, 0),
+(13, 4),
+(43, 82),
+(50, 83),
+(57, 84),
+(64, 85),
+(71, 86),
+(78, 87),
+(95, 88),
+(102, 89),
+(110, 90),
+(111, 91),
+(112, 92),
+(119, 93),
+(128, 94),
+(129, 95),
+(130, 96);
 
 -- --------------------------------------------------------
 
@@ -1549,7 +1740,26 @@ CREATE TABLE IF NOT EXISTS `submittedform` (
   KEY `SubmittedByID` (`SubmittedByID`),
   KEY `ParentID` (`ParentID`),
   KEY `ClassName` (`ClassName`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+
+--
+-- Daten für Tabelle `submittedform`
+--
+
+INSERT INTO `submittedform` (`ID`, `ClassName`, `Created`, `LastEdited`, `SubmittedByID`, `ParentID`) VALUES
+(1, 'SubmittedForm', '2013-08-22 16:03:07', '2013-08-22 16:03:07', 1, 15),
+(2, 'SubmittedForm', '2013-08-22 16:03:52', '2013-08-22 16:03:52', 1, 15),
+(3, 'SubmittedForm', '2013-08-22 16:04:59', '2013-08-22 16:04:59', 1, 15),
+(4, 'SubmittedForm', '2013-08-22 16:06:42', '2013-08-22 16:06:42', 1, 15),
+(5, 'SubmittedForm', '2013-08-22 16:08:13', '2013-08-22 16:08:13', 1, 15),
+(6, 'SubmittedForm', '2013-08-22 16:09:45', '2013-08-22 16:09:45', 1, 15),
+(7, 'SubmittedForm', '2013-08-23 12:03:18', '2013-08-23 12:03:18', 1, 13),
+(8, 'SubmittedForm', '2013-08-23 12:03:39', '2013-08-23 12:03:39', 1, 15),
+(9, 'SubmittedForm', '2013-08-23 12:04:45', '2013-08-23 12:04:45', 1, 15),
+(10, 'SubmittedForm', '2013-08-23 12:21:13', '2013-08-23 12:21:13', 1, 15),
+(11, 'SubmittedForm', '2013-08-23 12:24:37', '2013-08-23 12:24:37', 1, 15),
+(12, 'SubmittedForm', '2013-08-23 12:26:09', '2013-08-23 12:26:09', 1, 15),
+(13, 'SubmittedForm', '2013-08-23 12:28:11', '2013-08-23 12:28:11', 1, 15);
 
 -- --------------------------------------------------------
 
@@ -1569,7 +1779,7 @@ CREATE TABLE IF NOT EXISTS `submittedformfield` (
   PRIMARY KEY (`ID`),
   KEY `ParentID` (`ParentID`),
   KEY `ClassName` (`ClassName`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=37 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=131 ;
 
 --
 -- Daten für Tabelle `submittedformfield`
@@ -1605,7 +1815,101 @@ INSERT INTO `submittedformfield` (`ID`, `ClassName`, `Created`, `LastEdited`, `N
 (33, 'SubmittedFormField', '2013-08-11 16:26:49', '2013-08-11 16:26:49', 'EditableTextField1', 'Nuros', 'Name', 7),
 (34, 'SubmittedFormField', '2013-08-11 16:26:49', '2013-08-11 16:26:49', 'EditableEmailField2', 'tahu12@web.de', 'E-Mail Adresse', 7),
 (35, 'SubmittedFormField', '2013-08-11 16:26:49', '2013-08-11 16:26:49', 'EditableTextField3', 'wtcge', 'Kommentar', 7),
-(36, 'SubmittedFormField', '2013-08-11 20:16:17', '2013-08-11 20:16:17', 'EditableTextField4', 'André Stenzel', 'Realname', 8);
+(36, 'SubmittedFormField', '2013-08-11 20:16:17', '2013-08-11 20:16:17', 'EditableTextField4', 'André Stenzel', 'Realname', 8),
+(37, 'SubmittedFormField', '2013-08-22 16:03:07', '2013-08-22 16:03:07', 'EditableTextField4', 'erw', 'Realname', 1),
+(38, 'SubmittedFormField', '2013-08-22 16:03:07', '2013-08-22 16:03:07', 'EditableTextField5', 'ewr', 'Maidname', 1),
+(39, 'SubmittedFormField', '2013-08-22 16:03:07', '2013-08-22 16:03:07', 'EditableTextField6', 'erw', 'Alter', 1),
+(40, 'SubmittedFormField', '2013-08-22 16:03:08', '2013-08-22 16:03:08', 'EditableTextField7', 'rwe', 'Wohnort', 1),
+(41, 'SubmittedFormField', '2013-08-22 16:03:08', '2013-08-22 16:03:08', 'EditableEmailField8', 'wer@sdf.de', 'E-Mail Adresse', 1),
+(42, 'SubmittedFormField', '2013-08-22 16:03:08', '2013-08-22 16:03:08', 'EditableTextField9', 'erwerw', 'Über dich', 1),
+(43, 'SubmittedFileField', '2013-08-22 16:03:08', '2013-08-22 16:03:08', 'EditableFileField10', 'Array', 'Bilder ( Bitte Name in der Datei angeben)', 1),
+(44, 'SubmittedFormField', '2013-08-22 16:03:53', '2013-08-22 16:03:53', 'EditableTextField4', 'sefes', 'Realname', 2),
+(45, 'SubmittedFormField', '2013-08-22 16:03:53', '2013-08-22 16:03:53', 'EditableTextField5', 'sef', 'Maidname', 2),
+(46, 'SubmittedFormField', '2013-08-22 16:03:53', '2013-08-22 16:03:53', 'EditableTextField6', 'efs', 'Alter', 2),
+(47, 'SubmittedFormField', '2013-08-22 16:03:53', '2013-08-22 16:03:53', 'EditableTextField7', 'fse', 'Wohnort', 2),
+(48, 'SubmittedFormField', '2013-08-22 16:03:53', '2013-08-22 16:03:53', 'EditableEmailField8', 'wer@sdf.de', 'E-Mail Adresse', 2),
+(49, 'SubmittedFormField', '2013-08-22 16:03:53', '2013-08-22 16:03:53', 'EditableTextField9', 'dwaedeaw', 'Über dich', 2),
+(50, 'SubmittedFileField', '2013-08-22 16:03:53', '2013-08-22 16:03:53', 'EditableFileField10', 'Array', 'Bilder ( Bitte Name in der Datei angeben)', 2),
+(51, 'SubmittedFormField', '2013-08-22 16:04:59', '2013-08-22 16:04:59', 'EditableTextField4', 'esrf', 'Realname', 3),
+(52, 'SubmittedFormField', '2013-08-22 16:04:59', '2013-08-22 16:04:59', 'EditableTextField5', 'rew', 'Maidname', 3),
+(53, 'SubmittedFormField', '2013-08-22 16:04:59', '2013-08-22 16:04:59', 'EditableTextField6', 'erw', 'Alter', 3),
+(54, 'SubmittedFormField', '2013-08-22 16:04:59', '2013-08-22 16:04:59', 'EditableTextField7', 'rwe', 'Wohnort', 3),
+(55, 'SubmittedFormField', '2013-08-22 16:04:59', '2013-08-22 16:04:59', 'EditableEmailField8', 'wer@sdf.de', 'E-Mail Adresse', 3),
+(56, 'SubmittedFormField', '2013-08-22 16:04:59', '2013-08-22 16:04:59', 'EditableTextField9', 'werewrew', 'Über dich', 3),
+(57, 'SubmittedFileField', '2013-08-22 16:05:00', '2013-08-22 16:05:00', 'EditableFileField26', 'Array', 'Bilder ( Bitte Name in der Datei angeben)', 3),
+(58, 'SubmittedFormField', '2013-08-22 16:06:42', '2013-08-22 16:06:42', 'EditableTextField4', 'qwe', 'Realname', 4),
+(59, 'SubmittedFormField', '2013-08-22 16:06:42', '2013-08-22 16:06:42', 'EditableTextField5', 'qwe', 'Maidname', 4),
+(60, 'SubmittedFormField', '2013-08-22 16:06:43', '2013-08-22 16:06:43', 'EditableTextField6', 'eqw', 'Alter', 4),
+(61, 'SubmittedFormField', '2013-08-22 16:06:43', '2013-08-22 16:06:43', 'EditableTextField7', 'weq', 'Wohnort', 4),
+(62, 'SubmittedFormField', '2013-08-22 16:06:43', '2013-08-22 16:06:43', 'EditableEmailField8', 'wer@sdf.de', 'E-Mail Adresse', 4),
+(63, 'SubmittedFormField', '2013-08-22 16:06:43', '2013-08-22 16:06:43', 'EditableTextField9', 'wqeqw', 'Über dich', 4),
+(64, 'SubmittedFileField', '2013-08-22 16:06:43', '2013-08-22 16:06:43', 'EditableFileField26', 'Array', 'Bilder ( Bitte Name in der Datei angeben)', 4),
+(65, 'SubmittedFormField', '2013-08-22 16:08:13', '2013-08-22 16:08:13', 'EditableTextField4', 'adgad', 'Realname', 5),
+(66, 'SubmittedFormField', '2013-08-22 16:08:13', '2013-08-22 16:08:13', 'EditableTextField5', 'adgrarg', 'Maidname', 5),
+(67, 'SubmittedFormField', '2013-08-22 16:08:13', '2013-08-22 16:08:13', 'EditableTextField6', 'arg', 'Alter', 5),
+(68, 'SubmittedFormField', '2013-08-22 16:08:13', '2013-08-22 16:08:13', 'EditableTextField7', 'rrretf', 'Wohnort', 5),
+(69, 'SubmittedFormField', '2013-08-22 16:08:13', '2013-08-22 16:08:13', 'EditableEmailField8', 'wer@sdf.de', 'E-Mail Adresse', 5),
+(70, 'SubmittedFormField', '2013-08-22 16:08:13', '2013-08-22 16:08:13', 'EditableTextField9', 'fwefrewr', 'Über dich', 5),
+(71, 'SubmittedFileField', '2013-08-22 16:08:14', '2013-08-22 16:08:14', 'EditableFileField26', 'Array', 'Bilder ( Bitte Name in der Datei angeben)', 5),
+(72, 'SubmittedFormField', '2013-08-22 16:09:46', '2013-08-22 16:09:46', 'EditableTextField4', 'reawfger', 'Realname', 6),
+(73, 'SubmittedFormField', '2013-08-22 16:09:46', '2013-08-22 16:09:46', 'EditableTextField5', 'ergre', 'Maidname', 6),
+(74, 'SubmittedFormField', '2013-08-22 16:09:46', '2013-08-22 16:09:46', 'EditableTextField6', 'tre', 'Alter', 6),
+(75, 'SubmittedFormField', '2013-08-22 16:09:46', '2013-08-22 16:09:46', 'EditableTextField7', 'ert', 'Wohnort', 6),
+(76, 'SubmittedFormField', '2013-08-22 16:09:46', '2013-08-22 16:09:46', 'EditableEmailField8', 'wer@sdf.de', 'E-Mail Adresse', 6),
+(77, 'SubmittedFormField', '2013-08-22 16:09:46', '2013-08-22 16:09:46', 'EditableTextField9', 'etgret', 'Über dich', 6),
+(78, 'SubmittedFileField', '2013-08-22 16:09:47', '2013-08-22 16:09:47', 'EditableFileField26', 'Array', 'Bilder ( Bitte Name in der Datei angeben)', 6),
+(79, 'SubmittedFormField', '2013-08-23 12:03:19', '2013-08-23 12:03:19', 'EditableTextField1', 'dsf', 'Name', 7),
+(80, 'SubmittedFormField', '2013-08-23 12:03:19', '2013-08-23 12:03:19', 'EditableEmailField2', 'tahu12@web.de', 'E-Mail Adresse', 7),
+(81, 'SubmittedFormField', '2013-08-23 12:03:19', '2013-08-23 12:03:19', 'EditableTextField3', 'dsfds', 'Kommentar', 7),
+(82, 'SubmittedFormField', '2013-08-23 12:03:39', '2013-08-23 12:03:39', 'EditableTextField4', 'dsfds', 'Realname', 8),
+(83, 'SubmittedFormField', '2013-08-23 12:03:39', '2013-08-23 12:03:39', 'EditableTextField5', 'dsfdsf', 'Maidname', 8),
+(84, 'SubmittedFormField', '2013-08-23 12:03:40', '2013-08-23 12:03:40', 'EditableTextField6', 'dsf', 'Alter', 8),
+(85, 'SubmittedFormField', '2013-08-23 12:03:40', '2013-08-23 12:03:40', 'EditableTextField7', 'dsfds', 'Wohnort', 8),
+(86, 'SubmittedFormField', '2013-08-23 12:03:40', '2013-08-23 12:03:40', 'EditableEmailField8', 'tahu12@web.de', 'E-Mail Adresse', 8),
+(87, 'SubmittedFormField', '2013-08-23 12:03:40', '2013-08-23 12:03:40', 'EditableTextField9', 'sdfdsfds', 'Über dich', 8),
+(88, 'SubmittedFileField', '2013-08-23 12:03:40', '2013-08-23 12:03:40', 'EditableFileField26', 'Array', 'Bilder ( Bitte Name in der Datei angeben)', 8),
+(89, 'SubmittedFormField', '2013-08-23 12:04:45', '2013-08-23 12:04:45', 'EditableTextField4', 'dsfds', 'Realname', 9),
+(90, 'SubmittedFormField', '2013-08-23 12:04:45', '2013-08-23 12:04:45', 'EditableTextField5', 'dsfds', 'Maidname', 9),
+(91, 'SubmittedFormField', '2013-08-23 12:04:46', '2013-08-23 12:04:46', 'EditableTextField6', 'dsf', 'Alter', 9),
+(92, 'SubmittedFormField', '2013-08-23 12:04:46', '2013-08-23 12:04:46', 'EditableTextField7', 'dfssd', 'Wohnort', 9),
+(93, 'SubmittedFormField', '2013-08-23 12:04:46', '2013-08-23 12:04:46', 'EditableEmailField8', 'tahu12@web.de', 'E-Mail Adresse', 9),
+(94, 'SubmittedFormField', '2013-08-23 12:04:46', '2013-08-23 12:04:46', 'EditableTextField9', 'sdfdsfds', 'Über dich', 9),
+(95, 'SubmittedFileField', '2013-08-23 12:04:46', '2013-08-23 12:04:46', 'EditableFileField26', 'Array', 'Bilder ( Bitte Name in der Datei angeben)', 9),
+(96, 'SubmittedFormField', '2013-08-23 12:21:13', '2013-08-23 12:21:13', 'EditableTextField4', 'tert', 'Realname', 10),
+(97, 'SubmittedFormField', '2013-08-23 12:21:13', '2013-08-23 12:21:13', 'EditableTextField5', 'retre', 'Maidname', 10),
+(98, 'SubmittedFormField', '2013-08-23 12:21:13', '2013-08-23 12:21:13', 'EditableTextField6', 'ret', 'Alter', 10),
+(99, 'SubmittedFormField', '2013-08-23 12:21:13', '2013-08-23 12:21:13', 'EditableTextField7', 'retgre', 'Wohnort', 10),
+(100, 'SubmittedFormField', '2013-08-23 12:21:13', '2013-08-23 12:21:13', 'EditableEmailField8', 'a.stenzel92@web.de', 'E-Mail Adresse', 10),
+(101, 'SubmittedFormField', '2013-08-23 12:21:13', '2013-08-23 12:21:13', 'EditableTextField9', 'rgrdg', 'Über dich', 10),
+(102, 'SubmittedFileField', '2013-08-23 12:21:14', '2013-08-23 12:21:14', 'EditableFileField26', 'Array', 'Bilder ( Bitte Name in der Datei angeben)', 10),
+(103, 'SubmittedFileField', '2013-08-23 12:21:14', '2013-08-23 12:21:14', 'EditableFileField29', 'Array', NULL, 10),
+(104, 'SubmittedFormField', '2013-08-23 12:24:37', '2013-08-23 12:24:37', 'EditableTextField4', 'ergre', 'Realname', 11),
+(105, 'SubmittedFormField', '2013-08-23 12:24:37', '2013-08-23 12:24:37', 'EditableTextField5', 'ertre', 'Maidname', 11),
+(106, 'SubmittedFormField', '2013-08-23 12:24:37', '2013-08-23 12:24:37', 'EditableTextField6', 'ret', 'Alter', 11),
+(107, 'SubmittedFormField', '2013-08-23 12:24:37', '2013-08-23 12:24:37', 'EditableTextField7', 'ertre', 'Wohnort', 11),
+(108, 'SubmittedFormField', '2013-08-23 12:24:37', '2013-08-23 12:24:37', 'EditableEmailField8', 'a.stenzel92@web.de', 'E-Mail Adresse', 11),
+(109, 'SubmittedFormField', '2013-08-23 12:24:37', '2013-08-23 12:24:37', 'EditableTextField9', 'erertre', 'Über dich', 11),
+(110, 'SubmittedFileField', '2013-08-23 12:24:38', '2013-08-23 12:24:38', 'EditableFileField26', 'Array', 'Bilder (Nicht mehr als 2MB!!)', 11),
+(111, 'SubmittedFileField', '2013-08-23 12:24:38', '2013-08-23 12:24:38', 'EditableFileField29', 'Array', NULL, 11),
+(112, 'SubmittedFileField', '2013-08-23 12:24:39', '2013-08-23 12:24:39', 'EditableFileField30', 'Array', NULL, 11),
+(113, 'SubmittedFormField', '2013-08-23 12:26:10', '2013-08-23 12:26:10', 'EditableTextField4', 'tzrt', 'Realname', 12),
+(114, 'SubmittedFormField', '2013-08-23 12:26:10', '2013-08-23 12:26:10', 'EditableTextField5', 'trz', 'Maidname', 12),
+(115, 'SubmittedFormField', '2013-08-23 12:26:10', '2013-08-23 12:26:10', 'EditableTextField6', 'trz', 'Alter', 12),
+(116, 'SubmittedFormField', '2013-08-23 12:26:10', '2013-08-23 12:26:10', 'EditableTextField7', 'trz', 'Wohnort', 12),
+(117, 'SubmittedFormField', '2013-08-23 12:26:10', '2013-08-23 12:26:10', 'EditableEmailField8', 'a.stenzel92@web.de', 'E-Mail Adresse', 12),
+(118, 'SubmittedFormField', '2013-08-23 12:26:10', '2013-08-23 12:26:10', 'EditableTextField9', 'trztrztrz', 'Über dich', 12),
+(119, 'SubmittedFileField', '2013-08-23 12:26:11', '2013-08-23 12:26:11', 'EditableFileField26', 'Array', 'Bilder (Nicht mehr als 2MB!!)', 12),
+(120, 'SubmittedFileField', '2013-08-23 12:26:11', '2013-08-23 12:26:11', 'EditableFileField29', 'Array', NULL, 12),
+(121, 'SubmittedFileField', '2013-08-23 12:26:11', '2013-08-23 12:26:11', 'EditableFileField30', 'Array', NULL, 12),
+(122, 'SubmittedFormField', '2013-08-23 12:28:11', '2013-08-23 12:28:11', 'EditableTextField4', 'dsf', 'Realname', 13),
+(123, 'SubmittedFormField', '2013-08-23 12:28:11', '2013-08-23 12:28:11', 'EditableTextField5', 'dsfds', 'Maidname', 13),
+(124, 'SubmittedFormField', '2013-08-23 12:28:11', '2013-08-23 12:28:11', 'EditableTextField6', 'fds', 'Alter', 13),
+(125, 'SubmittedFormField', '2013-08-23 12:28:11', '2013-08-23 12:28:11', 'EditableTextField7', 'sdfds', 'Wohnort', 13),
+(126, 'SubmittedFormField', '2013-08-23 12:28:12', '2013-08-23 12:28:12', 'EditableEmailField8', 'a.stenzel92@web.de', 'E-Mail Adresse', 13),
+(127, 'SubmittedFormField', '2013-08-23 12:28:12', '2013-08-23 12:28:12', 'EditableTextField9', 'ewrewr', 'Über dich', 13),
+(128, 'SubmittedFileField', '2013-08-23 12:28:12', '2013-08-23 12:28:12', 'EditableFileField26', 'Array', 'Bilder (Bitte den Namen in Datei angeben)', 13),
+(129, 'SubmittedFileField', '2013-08-23 12:28:12', '2013-08-23 12:28:12', 'EditableFileField29', 'Array', NULL, 13),
+(130, 'SubmittedFileField', '2013-08-23 12:28:13', '2013-08-23 12:28:13', 'EditableFileField30', 'Array', NULL, 13);
 
 -- --------------------------------------------------------
 
@@ -1631,7 +1935,7 @@ CREATE TABLE IF NOT EXISTS `userdefinedform` (
 INSERT INTO `userdefinedform` (`ID`, `SubmitButtonText`, `OnCompleteMessage`, `ShowClearButton`, `DisableSaveSubmissions`, `EnableLiveValidation`, `HideFieldLabels`) VALUES
 (13, NULL, '<p>Thanks, we''ve received your submission.</p>', 0, 0, 1, 0),
 (14, NULL, '<p>Thanks, we''ve received your submission.</p>', 0, 0, 1, 0),
-(15, 'Bewerben', '<p>Thanks, we''ve received your submission.</p>', 0, 0, 1, 0);
+(15, 'Bewerben', '<p>Vielen Dank! Wir haben deine Bewerbung erhalten.</p>\n<p>Deine Bewerbung wird dir zur Bestätigung zugesendet.</p>', 0, 0, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -1659,7 +1963,7 @@ CREATE TABLE IF NOT EXISTS `userdefinedform_emailrecipient` (
   KEY `SendEmailFromFieldID` (`SendEmailFromFieldID`),
   KEY `SendEmailToFieldID` (`SendEmailToFieldID`),
   KEY `ClassName` (`ClassName`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Daten für Tabelle `userdefinedform_emailrecipient`
@@ -1667,8 +1971,9 @@ CREATE TABLE IF NOT EXISTS `userdefinedform_emailrecipient` (
 
 INSERT INTO `userdefinedform_emailrecipient` (`ID`, `ClassName`, `Created`, `LastEdited`, `EmailAddress`, `EmailSubject`, `EmailFrom`, `EmailReplyTo`, `EmailBody`, `SendPlain`, `HideFormData`, `FormID`, `SendEmailFromFieldID`, `SendEmailToFieldID`) VALUES
 (1, 'UserDefinedForm_EmailRecipient', '2013-08-11 16:05:04', '2013-08-11 16:27:19', 'a.stentel@webschmitz.de', 'Kontakt', NULL, NULL, NULL, 0, 0, 13, 2, 0),
-(2, 'UserDefinedForm_EmailRecipient', '2013-08-11 16:11:59', '2013-08-11 16:12:06', 'a.stenzel@webschmitz.de', NULL, NULL, NULL, NULL, 0, 0, 15, 8, 0),
-(3, 'UserDefinedForm_EmailRecipient', '2013-08-11 16:19:47', '2013-08-11 16:19:55', 'a.stenzel@webschmitz.de', 'Buchen', NULL, NULL, NULL, 0, 0, 14, 18, 0);
+(2, 'UserDefinedForm_EmailRecipient', '2013-08-11 16:11:59', '2013-08-23 12:33:18', 'a.stenzel@webschmitz.de', 'Bewerbung', NULL, NULL, 'Eine neue Bewerbung ist eingetroffen:', 0, 0, 15, 8, 0),
+(3, 'UserDefinedForm_EmailRecipient', '2013-08-11 16:19:47', '2013-08-11 16:19:55', 'a.stenzel@webschmitz.de', 'Buchen', NULL, NULL, NULL, 0, 0, 14, 18, 0),
+(4, 'UserDefinedForm_EmailRecipient', '2013-08-22 16:07:25', '2013-08-23 12:32:22', NULL, 'Deine Bewerbung', 'maidcafe@nix.de', NULL, 'Deine Bewerbung ist bei uns angekommen und wir werden uns so schnell wie möglich bei dir zurückmelden <3\r\n\r\nHier nochmals deine Bewerbung:', 0, 0, 15, 0, 8);
 
 -- --------------------------------------------------------
 
@@ -1694,7 +1999,7 @@ CREATE TABLE IF NOT EXISTS `userdefinedform_live` (
 INSERT INTO `userdefinedform_live` (`ID`, `SubmitButtonText`, `OnCompleteMessage`, `ShowClearButton`, `DisableSaveSubmissions`, `EnableLiveValidation`, `HideFieldLabels`) VALUES
 (13, NULL, '<p>Thanks, we''ve received your submission.</p>', 0, 0, 1, 0),
 (14, NULL, '<p>Thanks, we''ve received your submission.</p>', 0, 0, 1, 0),
-(15, 'Bewerben', '<p>Thanks, we''ve received your submission.</p>', 0, 0, 1, 0);
+(15, 'Bewerben', '<p>Vielen Dank! Wir haben deine Bewerbung erhalten.</p>\n<p>Deine Bewerbung wird dir zur Bestätigung zugesendet.</p>', 0, 0, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -1716,7 +2021,7 @@ CREATE TABLE IF NOT EXISTS `userdefinedform_versions` (
   UNIQUE KEY `RecordID_Version` (`RecordID`,`Version`),
   KEY `RecordID` (`RecordID`),
   KEY `Version` (`Version`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
 
 --
 -- Daten für Tabelle `userdefinedform_versions`
@@ -1733,7 +2038,9 @@ INSERT INTO `userdefinedform_versions` (`ID`, `RecordID`, `Version`, `SubmitButt
 (8, 15, 4, 'Bewerben', '<p>Thanks, we''ve received your submission.</p>', 0, 0, 0, 0),
 (9, 15, 5, 'Bewerben', '<p>Thanks, we''ve received your submission.</p>', 0, 0, 1, 0),
 (10, 14, 3, NULL, '<p>Thanks, we''ve received your submission.</p>', 0, 0, 1, 0),
-(11, 13, 3, NULL, '<p>Thanks, we''ve received your submission.</p>', 0, 0, 1, 0);
+(11, 13, 3, NULL, '<p>Thanks, we''ve received your submission.</p>', 0, 0, 1, 0),
+(12, 15, 6, 'Bewerben', '<p>Vielen Dank! Wir haben deine Bewerbung erhalten.</p>\n<p>Deine Bewerbung wird dir zur Bestätigung nochmals an deine E-Mail Adresse gesendet.</p>', 0, 0, 1, 0),
+(13, 15, 7, 'Bewerben', '<p>Vielen Dank! Wir haben deine Bewerbung erhalten.</p>\n<p>Deine Bewerbung wird dir zur Bestätigung zugesendet.</p>', 0, 0, 1, 0);
 
 -- --------------------------------------------------------
 
