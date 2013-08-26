@@ -25,3 +25,17 @@ WHERE "Page_versions"."ID" IS NULL
 							 
 
 Table 'maidcafe.page_versions' doesn't exist (http://localhost/maidcafe/dev/build?flush=1)
+[25-Aug-2013 20:06:34] Error at \framework\model\MySQLDatabase.php line 580: Couldn't run query: 
+
+							
+SELECT COUNT(*)
+FROM "cwsFolderGalleryPage_versions"
+							
+LEFT JOIN "Page_versions" 
+									ON "Page_versions"."RecordID" = "cwsFolderGalleryPage_versions"."RecordID"
+									AND "Page_versions"."Version" = "cwsFolderGalleryPage_versions"."Version"
+							
+WHERE "Page_versions"."ID" IS NULL
+							 
+
+Table 'maidcafe.page_versions' doesn't exist (http://localhost/maidcafe/dev/build?flush=1)

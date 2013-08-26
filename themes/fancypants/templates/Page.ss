@@ -24,9 +24,9 @@
 	   		<div id="nav">
 	   			<% include MainNav %>
 	   		</div>
-	   		<div align="center">
+	   		<!--- <div align="center">
 $SkitterSlidesRecursive
-</div>
+</div> --->
 			</div>
    		</div>
     <div id="outerwrapper">

@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'walt_disney_scriptregular';
+    src: url('wds052801-webfont.eot');
+    src: url('wds052801-webfont.eot?#iefix') format('embedded-opentype'),
+         url('wds052801-webfont.woff') format('woff'),
+         url('wds052801-webfont.ttf') format('truetype'),
+         url('wds052801-webfont.svg#walt_disney_scriptregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 html { background:transparent; }
 body {margin:0;padding:0; }
 #main, #footer{ clear:both;}
@@ -11,7 +23,8 @@ a:visited{color:#a65607 ;}
 /*-----Typography-----*/
 body {background:#FFFFFF; font: 14px/1.6 Georgia, Times, 'Times New Roman', serif; color:#231e15;}
 		
-h1,h2,h3,h4,h5 {font: 14px/18.5px Georgia, Times, 'Times New Roman', serif; color:#313131; margin-bottom: 8px; line-height: 1.35;  text-shadow: 1px 1px 1px #fff;}
+h1,h2,h3,h4,h5 {font: 14px/18.5px Georgia, Times, 'Times New Roman', serif; color:#313131; margin-bottom: 8px; line-height: 1.35;  text-shadow: 1px 1px 1px #fff;
+font-family: 'Buxton Sketch';}
 h2 {font-size: 28px; margin-bottom: 30px}
 h3 {font-size: 20px; margin-bottom: 16	px}
 h4 {font-size: 16px; font-weight: bold;}
@@ -59,7 +72,7 @@ blockquote { margin:0 0 0 0; padding-left:16px; font-size: 16px; line-height: 22
 
 #branding {padding-top:10px; text-align: center;}
 #branding h1 {width: 940px; margin:0 auto;}
-#branding h1 a {font-size:24px; font-family: 'Buxton Sketch'; color:#190707; text-shadow: 1px 1px 1px #000; text-transform:uppercase; letter-spacing: 7px; border-bottom: 1px solid #605b51; padding:0 50px 4px}
+#branding h1 a {font-size:24px; font-family: 'walt_disney_scriptregular'; color:#190707; text-shadow: 1px 1px 1px #000; text-transform:uppercase; letter-spacing: 7px; border-bottom: 1px solid #605b51; padding:0 50px 4px}
 #branding h1 a:hover {color:#fff;}
 #branding h1 a:active, #branding h1 a:focus { position:inherit; top:0; }
 #branding h1.tagline {font-size: 14px;color:#e9e3d6; text-shadow: 1px 1px 1px #000; margin-top: 8px;}
@@ -93,7 +106,7 @@ box-shadow: 3px 3px 3px #000;
 #secondarynav ul { text-indent:none;margin:0; padding:0;margin:0; border-top: 1px solid #c0bbb0;}
 #secondarynav ul li {text-indent:none; list-style: none; padding:0;margin:0;}
 #secondarynav ul li a {margin:0; padding:0; border-bottom: 1px solid #c0bbb0; display:block; padding:8px 0;}
-#secondarynav ul li a:hover {background:url(../images/post.jpg);}
+#secondarynav ul li a:hover {background:#ded8cc;}
 #secondarynav ul li.current, #secondarynav ul li.section { color:#313131;text-shadow:1px 1px 1px #cbc5ba;}
 #secondarynav ul li.current a, #secondarynav ul li.section a{color:#313131; background:#c0bbb0;}
 #secondarynav ul li.current a:hover, #secondarynav ul li.section a:hover{background:#aea99f;}
@@ -108,13 +121,13 @@ box-shadow: 3px 3px 3px #000;
 
 
 
-#pagetitle {text-align:center; padding:30px 0 0;}
-#pagetitle h2{margin:0; padding:0 55px 0 55px; font-size: 54px; display:inline; }
+#pagetitle {text-align:center; height: 290px; padding:30px 0 0;background:url(../images/banner.png) no-repeat;background-size: 50% auto;background-position: center 15px;}
+#pagetitle h2{margin:0; padding:0 55px 0 55px; font-size: 54px; display:inline; text-align: center;}
 #pagetitle h2 span{padding:0 55px 0 0; }
 
 
 /*-----footer-----*/
-#footer{ width:1200px; margin:0 auto; background:#2c261a; display:block; padding: 0px 0;}
+#footer{ width:1200px; margin:0 auto; background:#fd8fc0; display:block; padding: 0px 0;border-style: dotted; border-color: black; border-width: thin }
 #footernav{width:530px; float:left; padding:0; margin:0; margin-left:50px;}
 #footernav p {font-size: 12px; text-align:left; line-height: 12px; padding-top:12px; font-family: Helvetica, Arial; color:#a79b82; text-shadow: none; }
 #footernav p imp {font-size: 20px;}
