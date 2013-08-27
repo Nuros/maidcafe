@@ -4,17 +4,19 @@
 	<div class="maidProfilePreview column-{$Modulus(3)}">
 	<div class="previewContent">
 	
-							<div align="center">
+							<div align="center" style="border-style:  double;height: 370px;overflow: hidden;border-width:10px;border-color:$mcolour;">
 							<div class="headline">
-                        <a href="$Link"><h1>$Title</h1></a>
+                        <a href="$Link" style="border-bottom: dotted;border-color:$mcolour;color: $mcolour">$Title</a>
 </div>
                     
-                        <a href="$Link">
+                        <a href="$Link" >
 			$maidphoto.SetWidth(150)
 			</a>
 						
-						<p>$Type</p>
-						<p>$aboutme.FirstSentence</p>
+						<div id="rang" style="border-color:$mcolour;">
+						$Type
+						</div>
+						$aboutme.FirstSentence
 						</div>
 						
 						</div>
