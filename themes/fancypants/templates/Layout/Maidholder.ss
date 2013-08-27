@@ -14,7 +14,9 @@
 			</a>
 						
 						<p>$Type</p>
+						<p>$aboutme.FirstSentence</p>
 						</div>
+						
 						</div>
                     
 

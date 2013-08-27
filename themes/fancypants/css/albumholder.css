@@ -1,0 +1,34 @@
+#album {
+        position: relative;
+	float: left;
+	width: 167px;	/* _config/settings.yml:THUMBNAIL_IMAGE_WIDTH + 15px left margin + 2px border for album cover image */
+	height: 177px;	/* _config/settings.yml:THUMBNAIL_IMAGE_HEIGHT + 2px border for album cover image + 60 px for album description */
+	background: #ae9f82 url(../images/album-background.png) repeat-y 0 ;
+	border: 2px solid #7b6b4a;
+	border-color: #7b6b4a #574d2a #574d2a #7b6b4a;
+	margin: 0.8em 0.8em 0 0;
+	padding: 5px;
+	overflow: hidden;
+}
+#album:hover {
+	border: 2px solid #610;
+}
+#album a {
+     display: block ;
+    height: 100% ;
+}
+#album a h1 {
+   margin-top: 5px;
+    text-align: center ;
+}
+#muffin {
+
+position: absolute;
+bottom: 20px;
+left: 40px;
+
+
+    width: 100px;
+    height:100px;
+    background: url(../images/muffin.png) no-repeat;
+}

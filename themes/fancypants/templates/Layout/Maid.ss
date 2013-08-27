@@ -9,7 +9,7 @@
 			<div align="center">
 			
 				<div id="profilbild" >
-					<div style="width:400px;outline-style:double;outline-width:30px;outline-color:$mcolour;">
+					<div style="width:400px;border-style:double;border-width:30px;border-color:$mcolour;">
 					$maidphoto.SetWidth(400)
 					</div>
 			
