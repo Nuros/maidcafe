@@ -1,10 +1,11 @@
 <div id="MainContent">
 	<!-- Content -->
 	<% loop Children %>
-	<div class="maidProfilePreview column-{$Modulus(3)}">
+	<div class="maidProfilePreview">
 	<div class="previewContent">
 	
-							<div align="center" style="border-style:  double;height: 370px;overflow: hidden;border-width:10px;border-color:$mcolour;">
+							<!--- <div align="center" style="border-style:  double;height: 385px;overflow: hidden;border-width:10px;border-color:$mcolour;"> --->
+							<div id="center" align="center" style="height: 420px;width:250px;overflow: hidden;">
 							<div class="headline">
                         <a href="$Link" style="border-bottom: dotted;border-color:$mcolour;color: $mcolour">$Title</a>
 </div>
@@ -16,7 +17,8 @@
 						<div id="rang" style="border-color:$mcolour;">
 						$Type
 						</div>
-						$aboutme.FirstSentence
+						
+						<div id="about" style="height: 85px; width: 200px; overflow:hidden;" >$aboutme.FirstSentence</div>
 						</div>
 						
 						</div>

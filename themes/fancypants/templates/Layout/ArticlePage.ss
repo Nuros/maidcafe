@@ -3,11 +3,24 @@
 <div id="primaryContent" class="clearfix">
 		<div class="innerpad">
 	
-$Title
+	<div id="newspage">
+		<img src="$ThemeDir/images/$Parent.Title$newsicon" alt="Homepage image" />
+	<div class="newsheader">
+	
+	
+		$Title
+		$Author
+		$Date.Long
+	</div>
+	
+	<div id="paper">$Content
+	
 
-$Date.Long  $Author 
-
-        $Content
+        </div>
+	
+	
+ 
+	</div>
 	</div>
 	
 </div>

@@ -1,0 +1,36 @@
+#newspage{
+	position: relative;
+
+margin-bottom: 30px;
+
+width: 100%;
+
+}
+img{
+	position: relative;
+	z-index: 2;	
+}
+.newsheader{
+	width:685px;
+		height: 32px;
+		position: absolute;
+		top: 19px;
+		padding-top: 2px;
+		padding-left: 85px;
+	
+	background: yellow;
+	z-index: 1;
+}
+
+#paper {
+	position: relative;
+	width: 600px;
+	left: 100px;
+	padding: 40px 20px 15px;
+	background: red;
+	margin-top: -19px;
+	outline-style: double;
+	outline-top: none;
+	outline-width: 5px;
+	
+}

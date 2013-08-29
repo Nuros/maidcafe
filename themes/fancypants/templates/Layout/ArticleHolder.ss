@@ -3,19 +3,29 @@
 	<div id="primaryContent" class="clearfix">
     			<div class="innerpad">
     	
-    		<div id="primaryContent" class="clearfix">
-    		        <ul id="NewsList" class="typography">
+    		
+    	$Content
         <% loop $PaginatedNews %>
-           
-            
-                $Title
+	<div id="newspage">
+		<img src="$ThemeDir/images/$Parent.Title$newsicon" alt="Homepage image" />
+	<div class="newsheader">
+	
+	
+		$Title
 		$Author
-               $Date.Long
-		$Content
+		$Date.Long
+	</div>
+	
+	<div id="paper" style="outline-color: $categorycolour;">$Content.LimitWordCount(30)
+	
+	<div><a href="$Link" title="Mehr von &quot;{$Title}&quot sehen:">Weiterlesen &gt;&gt;</a></div>
+        </div>
+	
+	
  
-
+	</div>
         <% end_loop %>
-        </ul>
+        
         <div id="PageNumbers">
             <% if $PaginatedNews.MoreThanOnePage %>
                 <p class="pageNumbers">
@@ -42,7 +52,7 @@
             <% end_if %>
         </div>
     		</div>
-    			</div>
+    			
     		</div>
                 
                 

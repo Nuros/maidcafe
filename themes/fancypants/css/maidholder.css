@@ -12,9 +12,9 @@
 
 #MainContent .maidProfilePreview{
 	display: inline-block;
-	width: 380px;
-	margin: 0 11.3px 22.6px;
-	height: 390px;
+	width: 300px;
+	margin: 0 00px 22.6px 50px;
+	height: 420px;
 	vertical-align: top;
 	
 }
@@ -30,7 +30,7 @@
 	.previewContent{
 		
 		width: 230px;
-		height: 390px;
+		height: 420px;
 		padding: 0 50px;
 		overflow: hidden;
 		
@@ -61,4 +61,12 @@
 		
 #rang {
  border-bottom: dotted;
+ font-family: 'leckerlioneregular';
+ font-size: 15px;
+ width: 220px;
+}
+#center{
+	background:url(../images/maidrahmen.png);
+	background-size: 250px 420px;
+	
 }

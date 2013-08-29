@@ -56,7 +56,7 @@ blockquote { margin:0 0 0 0; padding-left:16px; font-size: 16px; line-height: 22
 #primaryContent {clear:both;float:left;position:relative;}
 #primaryContent2 {clear:both;float:left;position:relative;}
 
-#secondaryContent {float:left;width:330px;margin:0 0 0 -100px;display:none;}
+#secondaryContent {float:right;width:330px;margin:0 0 0 -100px;display:none;}
 	
 #primaryContent {width:800px;margin:0 70px 0 0;}
 #primaryContent2 {width:1200px;margin:0 330px 0 0;}

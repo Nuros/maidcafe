@@ -10,3 +10,61 @@ FROM "SiteConfig"
 LIMIT 1 
 
 Unknown column 'SiteConfig.maxskitter_interval' in 'field list' (http://localhost/maidcafe/)
+[28-Aug-2013 13:47:54] Error at \framework\core\Object.php line 675: Uncaught Exception: Object->__call(): the method 'fortemplate' does not exist on 'ArticleCategory' (http://localhost/maidcafe/index.php/news/)
+[29-Aug-2013 18:26:47] Error at \framework\model\MySQLDatabase.php line 580: Couldn't run query: 
+SELECT DISTINCT RAND() AS "_SortColumn0", "File"."ClassName", "File"."Created", "File"."LastEdited", "File"."Name", "File"."Title", "File"."Filename", "File"."Content", "File"."ShowInSearch", "File"."ParentID", "File"."OwnerID", "File"."ID", CASE WHEN "File"."ClassName" IS NOT NULL THEN "File"."ClassName" ELSE 'File' END AS "RecordClassName"
+FROM "File"
+WHERE (ClassName <>
+"Folder" AND ParentID = 
+SELECT ID
+FROM File
+WHERE ClassName = "Folder"
+AND Name = "Cafe Banner")) AND ("File"."ClassName" IN ('Image','Image_Cached'))
+ORDER BY "_SortColumn0" ASC
+LIMIT 5 
+
+Unknown column 'Folder' in 'where clause' (http://localhost/maidcafe/index.php/)
+[29-Aug-2013 18:26:59] Error at \framework\model\MySQLDatabase.php line 580: Couldn't run query: 
+SELECT DISTINCT RAND() AS "_SortColumn0", "File"."ClassName", "File"."Created", "File"."LastEdited", "File"."Name", "File"."Title", "File"."Filename", "File"."Content", "File"."ShowInSearch", "File"."ParentID", "File"."OwnerID", "File"."ID", CASE WHEN "File"."ClassName" IS NOT NULL THEN "File"."ClassName" ELSE 'File' END AS "RecordClassName"
+FROM "File"
+WHERE (ClassName <>
+"Folder" AND ParentID = 
+SELECT ID
+FROM File
+WHERE ClassName = "Folder"
+AND Name = "Cafe Banner")) AND ("File"."ClassName" IN ('Image','Image_Cached'))
+ORDER BY "_SortColumn0" ASC
+LIMIT 5 
+
+Unknown column 'Folder' in 'where clause' (http://localhost/maidcafe/index.php/)
+[29-Aug-2013 18:27:04] Error at \framework\model\MySQLDatabase.php line 580: Couldn't run query: 
+SELECT DISTINCT RAND() AS "_SortColumn0", "File"."ClassName", "File"."Created", "File"."LastEdited", "File"."Name", "File"."Title", "File"."Filename", "File"."Content", "File"."ShowInSearch", "File"."ParentID", "File"."OwnerID", "File"."ID", CASE WHEN "File"."ClassName" IS NOT NULL THEN "File"."ClassName" ELSE 'File' END AS "RecordClassName"
+FROM "File"
+WHERE (ClassName <>
+"Folder" AND ParentID = 
+SELECT ID
+FROM File
+WHERE ClassName = "Folder"
+AND Name = "Cafe Banner")) AND ("File"."ClassName" IN ('Image','Image_Cached'))
+ORDER BY "_SortColumn0" ASC
+LIMIT 5 
+
+Unknown column 'Folder' in 'where clause' (http://localhost/maidcafe/index.php/)
+[29-Aug-2013 18:28:40] Error at \framework\model\MySQLDatabase.php line 580: Couldn't run query: 
+SELECT DISTINCT RAND() AS "_SortColumn0", "File"."ClassName", "File"."Created", "File"."LastEdited", "File"."Name", "File"."Title", "File"."Filename", "File"."Content", "File"."ShowInSearch", "File"."ParentID", "File"."OwnerID", "File"."ID", CASE WHEN "File"."ClassName" IS NOT NULL THEN "File"."ClassName" ELSE 'File' END AS "RecordClassName"
+FROM "File"
+WHERE (ClassName <>
+"Folder" AND ParentID = 
+SELECT ID
+FROM File
+WHERE ClassName = "Folder"
+AND Name = "Cafe Banner")) AND ("File"."ClassName" IN ('Image','Image_Cached'))
+ORDER BY "_SortColumn0" ASC
+LIMIT 5 
+
+Unknown column 'Folder' in 'where clause' (http://localhost/maidcafe/index.php/)
+[29-Aug-2013 18:31:26] Error at \framework\view\SSTemplateParser.php line 3799: Uncaught SSTemplateParseException: Parse error in template on line 7. Error was: Malformed opening block tag control. Perhaps you have tried to use operators? (http://localhost/maidcafe/)
+[29-Aug-2013 18:31:30] Error at \framework\view\SSTemplateParser.php line 3799: Uncaught SSTemplateParseException: Parse error in template on line 7. Error was: Malformed opening block tag control. Perhaps you have tried to use operators? (http://localhost/maidcafe/index.php/)
+[29-Aug-2013 18:31:43] Error at \framework\view\SSTemplateParser.php line 3799: Uncaught SSTemplateParseException: Parse error in template on line 7. Error was: Malformed opening block tag control. Perhaps you have tried to use operators? (http://localhost/maidcafe/index.php/)
+[29-Aug-2013 18:32:00] Error at \framework\view\SSTemplateParser.php line 3799: Uncaught SSTemplateParseException: Parse error in template on line 7. Error was: Malformed opening block tag control. Perhaps you have tried to use operators? (http://localhost/maidcafe/index.php/)
+[29-Aug-2013 18:35:58] Error at \framework\view\SSTemplateParser.php line 3799: Uncaught SSTemplateParseException: Parse error in template on line 7. Error was: Malformed opening block tag control. Perhaps you have tried to use operators? (http://localhost/maidcafe/)

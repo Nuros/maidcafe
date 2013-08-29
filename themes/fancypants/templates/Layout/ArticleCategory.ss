@@ -4,17 +4,24 @@
 		<div class="innerpad">
 <ul id="NewsList" class="typography">
             <% loop $PaginatedNews %>
-
-$Title
-                    $Date.Long
-		    $Author
-
-                
-
- $Content
-
-                
-            </li>
+<div id="newspage">
+		<img src="$ThemeDir/images/$Parent.Title$newsicon" alt="Homepage image" />
+	<div class="newsheader">
+	
+	
+		$Title
+		$Author
+		$Date.Long
+	</div>
+	
+	<div id="paper">$Content.LimitWordCount(30)
+	
+	<div><a href="$Link" title="Mehr von &quot;{$Title}&quot sehen:">Weiterlesen &gt;&gt;</a></div>
+        </div>
+	
+	
+ 
+	</div>
             <% end_loop %>
         </ul>
 		

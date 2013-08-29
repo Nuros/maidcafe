@@ -4,10 +4,18 @@ class ArticleCategory extends Page{
 
 	
 	static $db = array(
+		'categorycolour' => 'Text',
 	);
 	static $has_one = array(
 	);
 	static $allowed_children = array('ArticlePage');
+	
+	public function getCMSFields() {
+	$fields = parent::getCMSFields();
+	$fields->addFieldToTab('Root.Main', new TextField('categorycolour', 'Kategoriefarbe'));
+	
+	return $fields;
+    }
 }
         
 class ArticleCategory_Controller extends Page_Controller{

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 27. Aug 2013 um 20:56
+-- Erstellungszeit: 29. Aug 2013 um 20:27
 -- Server Version: 5.6.12-log
 -- PHP-Version: 5.4.16
 
@@ -25,6 +25,71 @@ USE `maidcafe`;
 -- --------------------------------------------------------
 
 --
+-- Tabellenstruktur für Tabelle `articlecategory`
+--
+
+CREATE TABLE IF NOT EXISTS `articlecategory` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `categorycolour` mediumtext CHARACTER SET utf8,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
+
+--
+-- Daten für Tabelle `articlecategory`
+--
+
+INSERT INTO `articlecategory` (`ID`, `categorycolour`) VALUES
+(17, '#1E37FF'),
+(18, '#00FF40');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `articlecategory_live`
+--
+
+CREATE TABLE IF NOT EXISTS `articlecategory_live` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `categorycolour` mediumtext CHARACTER SET utf8,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
+
+--
+-- Daten für Tabelle `articlecategory_live`
+--
+
+INSERT INTO `articlecategory_live` (`ID`, `categorycolour`) VALUES
+(17, '#1E37FF'),
+(18, '#00FF40');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `articlecategory_versions`
+--
+
+CREATE TABLE IF NOT EXISTS `articlecategory_versions` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `RecordID` int(11) NOT NULL DEFAULT '0',
+  `Version` int(11) NOT NULL DEFAULT '0',
+  `categorycolour` mediumtext CHARACTER SET utf8,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `RecordID_Version` (`RecordID`,`Version`),
+  KEY `RecordID` (`RecordID`),
+  KEY `Version` (`Version`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Daten für Tabelle `articlecategory_versions`
+--
+
+INSERT INTO `articlecategory_versions` (`ID`, `RecordID`, `Version`, `categorycolour`) VALUES
+(1, 17, 3, '#1E37FF'),
+(2, 18, 3, '#00FF40');
+
+-- --------------------------------------------------------
+
+--
 -- Tabellenstruktur für Tabelle `articlepage`
 --
 
@@ -36,14 +101,15 @@ CREATE TABLE IF NOT EXISTS `articlepage` (
   `newstype` mediumtext CHARACTER SET utf8,
   PRIMARY KEY (`ID`),
   KEY `IconID` (`IconID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=37 ;
 
 --
 -- Daten für Tabelle `articlepage`
 --
 
 INSERT INTO `articlepage` (`ID`, `Date`, `Author`, `IconID`, `newstype`) VALUES
-(19, NULL, NULL, 0, 'Allgemein');
+(19, NULL, NULL, 0, 'Allgemein'),
+(36, '2012-01-10', 'Jenny', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -59,14 +125,15 @@ CREATE TABLE IF NOT EXISTS `articlepage_live` (
   `newstype` mediumtext CHARACTER SET utf8,
   PRIMARY KEY (`ID`),
   KEY `IconID` (`IconID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=37 ;
 
 --
 -- Daten für Tabelle `articlepage_live`
 --
 
 INSERT INTO `articlepage_live` (`ID`, `Date`, `Author`, `IconID`, `newstype`) VALUES
-(19, NULL, NULL, 0, 'Allgemein');
+(19, NULL, NULL, 0, 'Allgemein'),
+(36, '2012-01-10', 'Jenny', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -87,7 +154,7 @@ CREATE TABLE IF NOT EXISTS `articlepage_versions` (
   KEY `RecordID` (`RecordID`),
   KEY `Version` (`Version`),
   KEY `IconID` (`IconID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Daten für Tabelle `articlepage_versions`
@@ -98,7 +165,9 @@ INSERT INTO `articlepage_versions` (`ID`, `RecordID`, `Version`, `Date`, `Author
 (2, 19, 2, NULL, NULL, 0, NULL),
 (3, 19, 3, NULL, NULL, 0, NULL),
 (4, 19, 4, NULL, NULL, 0, 'Gewinnspiel'),
-(5, 19, 5, NULL, NULL, 0, 'Allgemein');
+(5, 19, 5, NULL, NULL, 0, 'Allgemein'),
+(6, 36, 1, NULL, NULL, 0, NULL),
+(7, 36, 2, '2012-01-10', 'Jenny', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -999,7 +1068,7 @@ CREATE TABLE IF NOT EXISTS `maid` (
 --
 
 INSERT INTO `maid` (`ID`, `Type`, `colour`, `since`, `maidreason`, `BDay`, `zodiac`, `size`, `hobbys`, `favfood`, `favsweet`, `favanimal`, `pokemon`, `anime`, `animelocation`, `magicalgirl`, `funfairlocation`, `wish`, `aboutme`, `mcolour`, `maidphotoID`) VALUES
-(21, 'Organisator', 'og', 0, 'hiök', NULL, 'lgvbhulzhfv', '.jkbjhbhi', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Ich bin die Neko und ich liebe Süßigkeiten <3. Am liebsten mit Erdbeer-geschmack, klassisch ist aber auch toll! Ich bin ein bisschen schüchtern, aber ich strenge mich an! Dann mag ich auch noch total gerne diese Lakritzpandas, ich glaube die heißen Tapsis oder so. Die sind so lecker! Kinderriegel sind auch toll. Aber am besten ist es im Sommer abends oder Nachts in Japan in einen Conbini zu gehen und sich dort Yukimi-Daifuku zu kaufen! Es ist so ein schönes Gefühl den Daifuku zu essen der langsam schön weich wird, innen aber noch total kalt ist und den Zikaden zuzuhören. ', '#0404B4', 16),
+(21, 'Organisator', 'og', 0, 'hiök', NULL, 'lgvbhulzhfv', '.jkbjhbhi', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Ich bin die Neko und ich liebe Süßigkeiten <3 Am liebsten mit Erdbeer-geschmack. Klassisch ist aber auch toll! Ich bin ein bisschen schüchtern, aber ich strenge mich an! Dann mag ich auch noch total gerne diese Lakritzpandas, ich glaube die heißen Tapsis oder so. Die sind so lecker! Kinderriegel sind auch toll. Aber am besten ist es im Sommer abends oder Nachts in Japan in einen Conbini zu gehen und sich dort Yukimi-Daifuku zu kaufen! Es ist so ein schönes Gefühl den Daifuku zu essen der langsam schön weich wird, innen aber noch total kalt ist und den Zikaden zuzuhören. ', '#0404B4', 16),
 (33, 'Homepage', NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '#FF00FF', 16),
 (34, 'Entertainment', NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '#00FA9A', 16),
 (35, 'Maid', NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '#FFD700', 16);
@@ -1041,7 +1110,7 @@ CREATE TABLE IF NOT EXISTS `maid_live` (
 --
 
 INSERT INTO `maid_live` (`ID`, `Type`, `colour`, `since`, `maidreason`, `BDay`, `zodiac`, `size`, `hobbys`, `favfood`, `favsweet`, `favanimal`, `pokemon`, `anime`, `animelocation`, `magicalgirl`, `funfairlocation`, `wish`, `aboutme`, `mcolour`, `maidphotoID`) VALUES
-(21, 'Organisator', 'og', 0, 'hiök', NULL, 'lgvbhulzhfv', '.jkbjhbhi', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Ich bin die Neko und ich liebe Süßigkeiten <3. Am liebsten mit Erdbeer-geschmack, klassisch ist aber auch toll! Ich bin ein bisschen schüchtern, aber ich strenge mich an! Dann mag ich auch noch total gerne diese Lakritzpandas, ich glaube die heißen Tapsis oder so. Die sind so lecker! Kinderriegel sind auch toll. Aber am besten ist es im Sommer abends oder Nachts in Japan in einen Conbini zu gehen und sich dort Yukimi-Daifuku zu kaufen! Es ist so ein schönes Gefühl den Daifuku zu essen der langsam schön weich wird, innen aber noch total kalt ist und den Zikaden zuzuhören. ', '#0404B4', 16),
+(21, 'Organisator', 'og', 0, 'hiök', NULL, 'lgvbhulzhfv', '.jkbjhbhi', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Ich bin die Neko und ich liebe Süßigkeiten <3 Am liebsten mit Erdbeer-geschmack. Klassisch ist aber auch toll! Ich bin ein bisschen schüchtern, aber ich strenge mich an! Dann mag ich auch noch total gerne diese Lakritzpandas, ich glaube die heißen Tapsis oder so. Die sind so lecker! Kinderriegel sind auch toll. Aber am besten ist es im Sommer abends oder Nachts in Japan in einen Conbini zu gehen und sich dort Yukimi-Daifuku zu kaufen! Es ist so ein schönes Gefühl den Daifuku zu essen der langsam schön weich wird, innen aber noch total kalt ist und den Zikaden zuzuhören. ', '#0404B4', 16),
 (33, 'Homepage', NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '#FF00FF', 16),
 (34, 'Entertainment', NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '#00FA9A', 16),
 (35, 'Maid', NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '#FFD700', 16);
@@ -1081,7 +1150,7 @@ CREATE TABLE IF NOT EXISTS `maid_versions` (
   KEY `RecordID` (`RecordID`),
   KEY `Version` (`Version`),
   KEY `maidphotoID` (`maidphotoID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
 
 --
 -- Daten für Tabelle `maid_versions`
@@ -1108,7 +1177,9 @@ INSERT INTO `maid_versions` (`ID`, `RecordID`, `Version`, `Type`, `colour`, `sin
 (18, 35, 2, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 16),
 (19, 34, 4, 'Entertainment', NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '#00FA9A', 16),
 (20, 33, 3, 'Homepage', NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '#FF00FF', 16),
-(21, 35, 3, 'Maid', NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '#FFD700', 16);
+(21, 35, 3, 'Maid', NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '#FFD700', 16),
+(22, 21, 12, 'Organisator', 'og', 0, 'hiök', NULL, 'lgvbhulzhfv', '.jkbjhbhi', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Ich bin die Neko und ich liebe Süßigkeiten <3 Am liebsten mit Erdbeer-geschmack, klassisch ist aber auch toll! Ich bin ein bisschen schüchtern, aber ich strenge mich an! Dann mag ich auch noch total gerne diese Lakritzpandas, ich glaube die heißen Tapsis oder so. Die sind so lecker! Kinderriegel sind auch toll. Aber am besten ist es im Sommer abends oder Nachts in Japan in einen Conbini zu gehen und sich dort Yukimi-Daifuku zu kaufen! Es ist so ein schönes Gefühl den Daifuku zu essen der langsam schön weich wird, innen aber noch total kalt ist und den Zikaden zuzuhören. ', '#0404B4', 16),
+(23, 21, 13, 'Organisator', 'og', 0, 'hiök', NULL, 'lgvbhulzhfv', '.jkbjhbhi', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Ich bin die Neko und ich liebe Süßigkeiten <3 Am liebsten mit Erdbeer-geschmack. Klassisch ist aber auch toll! Ich bin ein bisschen schüchtern, aber ich strenge mich an! Dann mag ich auch noch total gerne diese Lakritzpandas, ich glaube die heißen Tapsis oder so. Die sind so lecker! Kinderriegel sind auch toll. Aber am besten ist es im Sommer abends oder Nachts in Japan in einen Conbini zu gehen und sich dort Yukimi-Daifuku zu kaufen! Es ist so ein schönes Gefühl den Daifuku zu essen der langsam schön weich wird, innen aber noch total kalt ist und den Zikaden zuzuhören. ', '#0404B4', 16);
 
 -- --------------------------------------------------------
 
@@ -1149,7 +1220,7 @@ CREATE TABLE IF NOT EXISTS `member` (
 --
 
 INSERT INTO `member` (`ID`, `ClassName`, `Created`, `LastEdited`, `FirstName`, `Surname`, `Email`, `Password`, `RememberLoginToken`, `NumVisit`, `LastVisited`, `Bounced`, `AutoLoginHash`, `AutoLoginExpired`, `PasswordEncryption`, `Salt`, `PasswordExpiry`, `LockedOutUntil`, `Locale`, `FailedLoginCount`, `DateFormat`, `TimeFormat`) VALUES
-(1, 'Member', '2013-08-21 12:48:05', '2013-08-27 17:38:27', 'Standardadmin', NULL, 'admin', '$2y$10$effe9adc22281361577d4OOcChlOi./7IG4Pu7rJ9HT3igcGBojW6', '$2y$10$effe9adc22281361577d4OHedkkurK/5vgBSFO4nsRu9Cq3qhBfe6', 13, '2013-08-27 22:53:55', 0, NULL, NULL, 'blowfish', '10$effe9adc22281361577d4b', NULL, NULL, 'de_DE', 0, NULL, NULL);
+(1, 'Member', '2013-08-21 12:48:05', '2013-08-29 15:09:08', 'Standardadmin', NULL, 'admin', '$2y$10$effe9adc22281361577d4OOcChlOi./7IG4Pu7rJ9HT3igcGBojW6', '$2y$10$effe9adc22281361577d4O5OrsChXnSxiTrTDXkpPAH8Zo.t16VsO', 15, '2013-08-29 21:20:56', 0, NULL, NULL, 'blowfish', '10$effe9adc22281361577d4b', NULL, NULL, 'de_DE', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1397,7 +1468,7 @@ CREATE TABLE IF NOT EXISTS `siteconfig_viewergroups` (
 
 CREATE TABLE IF NOT EXISTS `sitetree` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
-  `ClassName` enum('ErrorPage','HomePage','ContactPage','Page2','UserDefinedForm','ArticleCategory','ArticleHolder','ArticlePage','Maid','MaidHolder','Albumholder','GalleryPage','SiteTree','Page','RedirectorPage','VirtualPage') CHARACTER SET utf8 DEFAULT 'ErrorPage',
+  `ClassName` enum('ErrorPage','HomePage','ContactPage','Page2','UserDefinedForm','ArticleCategory','ArticleHolder','ArticlePage','Maid','MaidHolder','Albumholder','GalleryPage','Page','SiteTree','RedirectorPage','VirtualPage') CHARACTER SET utf8 DEFAULT 'ErrorPage',
   `Created` datetime DEFAULT NULL,
   `LastEdited` datetime DEFAULT NULL,
   `URLSegment` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
@@ -1422,7 +1493,7 @@ CREATE TABLE IF NOT EXISTS `sitetree` (
   KEY `ParentID` (`ParentID`),
   KEY `URLSegment` (`URLSegment`),
   KEY `ClassName` (`ClassName`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=36 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=37 ;
 
 --
 -- Daten für Tabelle `sitetree`
@@ -1437,19 +1508,20 @@ INSERT INTO `sitetree` (`ID`, `ClassName`, `Created`, `LastEdited`, `URLSegment`
 (13, 'UserDefinedForm', '2013-08-22 12:26:01', '2013-08-22 12:46:49', 'kontakt', 'Kontakt', NULL, '<p>Wenn dir etwas ganz besonders am Herzen liegt, schick uns einfach deine Nachricht :) Ob allgemeine Fragen, Feedback, Verbesserungsvorschläge bezüglich unseres Maidcafes, etc. - wir freuen uns immer auf deine Meinung :D!</p>\n<p>$UserDefinedForm</p>', NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 3, 12),
 (14, 'UserDefinedForm', '2013-08-22 12:26:15', '2013-08-22 12:46:23', 'buchen', 'Buchen', NULL, '<p>Bucht das Lucky Chocolate Team jetzt für eure Convention, Firmenfeier oder andere Events!<br>Wir leiten oder sind Teil eures Maid Cafes, können frei in der Bedienung oder Küche einsetzbar sein.<br>Ihr braucht noch Werbestände für eure Convention? Wir kommen gerne bei euch vorbei um zu werben!<br>Auch auf der Bühne sind wir einsetzbar! Wir lernen jedes Jahr einen Maidtanz für die DoKomi, den wir auch bei euch präsentieren können! Andere Ideen? Schreibe in das freie Feld einfach deine Wünsche an uns!<br>Du möchtest bestimmte Maids? Frage nach ob unsere Maids für dein Event frei sind und buche deine Traummaids!<br>Wir bitten darum besonders bei Conventions anzugeben, ob es ein Budget für Fahrtkosten, Eintrittskarten, Übernachtung und Leistung geben wird.<br>Da wir uns selber finanzieren, ist es uns sonst evtl. nicht möglich euch euren Maidwunsch zu erfüllen! &lt;3<br>Liebe Grüße, euer Maidteam<br><br></p>\n<p>$UserDefinedForm</p>', NULL, NULL, NULL, NULL, 1, 1, 2, 0, 0, NULL, 'Inherit', 'Inherit', 3, 12),
 (15, 'UserDefinedForm', '2013-08-22 12:26:31', '2013-08-23 12:31:13', 'bewerben', 'Bewerben', NULL, '<p>Du wolltest schon immer mal in einem Maid Cafe arbeiten?<br> Dann bist du bei uns genau richtig!<br><br>Wir bieten Dir:<br>- ein großes, freundliches Cafe auf der Dokomi mit Terasse<br> - ein süßes Team, das zwar etwas chaotisch aber total liebenswert ist<br> - von Zeit zur Zeit Jobangebote für Privatfirmen oder andere Conventions<br> - aktive Mitarbeit im Internet für unser Cafe<br> - Lernseminare, Besprechungsseminare, Fotoshootings und frei Kuchen ;D<br> - ein Wochenendticket für die Dokomi und Vergünstigungen beim Hotel<br> - eine gute Zusammenarbeit mit unserem Host Cafe der Dokomi<br> - die Gelegenheit auf der Bühne und im Cafe vor Publikum zu performen<br> - Zusammenarbeit mit erfahrenen Maids und Gastronomiearbeitern<br> - Spaß, Stress, Schweiß X''D</p>\n<p>Unsere Voraussetzungen: <br>- Du wohnst in Deutschland, vorzugsweise im NRW Bereich <br> - Du bist bereit 2~3x im Jahr zum Seminar oder Fotoshooting nach NRW zu reisen<br> (Unser Hauptstützpunkt liegt im VRR Bereich, Nähe Düsseldorf)<br> - Du bist freundlich, teamfähig und unterhaltsam<br> - Du bist bereit die Maiderstausstattung zu zahlen (ca. 60,00 €)<br> - Du erklärst Dich damit einverstanden, dass du als Maid auf der Dokomi kein <br> Geld als Bezahlung erhälst. Nur bei gebuchten Events ist es möglich bezahlt zu werden<br> - Du bist mindestens 16 Jahre alt<br> - Du hast einen Facebookaccount</p>\n<p>$UserDefinedForm</p>', NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 7, 12),
-(16, 'ArticleHolder', '2013-08-23 13:16:05', '2013-08-26 21:05:25', 'news', 'News', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 2, 0, 0, NULL, 'Inherit', 'Inherit', 3, 0),
-(17, 'ArticleCategory', '2013-08-23 13:16:28', '2013-08-23 13:17:05', 'allgemein', 'Allgemein', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 2, 16),
-(18, 'ArticleCategory', '2013-08-23 13:16:41', '2013-08-23 13:17:20', 'neue-article-category-2', 'Gewinnspiel', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 2, 0, 0, NULL, 'Inherit', 'Inherit', 2, 16),
+(16, 'ArticleHolder', '2013-08-23 13:16:05', '2013-08-29 15:23:27', 'news', 'News', NULL, '<p>Hier unsere Neuigkeiten:</p>', NULL, NULL, NULL, NULL, 1, 1, 2, 0, 0, NULL, 'Inherit', 'Inherit', 4, 0),
+(17, 'ArticleCategory', '2013-08-23 13:16:28', '2013-08-29 17:59:45', 'allgemein', 'Allgemein', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 3, 16),
+(18, 'ArticleCategory', '2013-08-23 13:16:41', '2013-08-29 17:59:55', 'neue-article-category-2', 'Gewinnspiel', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 2, 0, 0, NULL, 'Inherit', 'Inherit', 3, 16),
 (19, 'ArticlePage', '2013-08-23 13:37:41', '2013-08-23 13:42:19', 'dokomi-2013-eine-leicht-verspaetete-berichterstattung-3-', 'Dokomi 2013 ! Eine leicht verspätete Berichterstattung <3 ', NULL, '<p><strong>Hallo Goushujin-sama und Ojou-sama!!</strong></p>\n<div>Es mag vielleicht ein wenig spät sein, aber besser zu spt als gar nicht:</div>\n<div><strong>hier kommt der offizielle Maidreport der Dokomi 2013 mit exklusiven Behind-the-scene-Fotos &lt;3</strong></div>\n<div>Dieses Jahr war die Dokomi noch toller, es waren noch viiiiel mehr Gäste zu Besuch und natürlich haben auch wir ausgebaut!</div>\n<div>Hier also unser Bericht der Dokomi 2013 mit vielen Fotos!</div>\n<p style="text-align: center;"> </p>\n<div style="text-align: center;"><img class="center" title="" src="http://www.luckychocolate.de/assets/_resampled/resizedimage600401-P1140021.JPG" alt="" height="401" width="600"></div>\n<div style="font-size: 10px;">Vor dem ganzen Ansturm ersrmal eine kurze Besprechung... schön zuhören Maids, auch wenn es für einige langweilig erscheinen mag &lt;3</div>\n<p> </p>\n<p style="text-align: center;"><img class="center" title="" src="http://www.luckychocolate.de/assets/_resampled/resizedimage600401-P1140022_2.JPG" alt="" height="401" width="600"></p>\n<div style="text-align: center;">Neue Leckereien auf der Karte mussten natürlich auch festgehalten werden :3</div>\n<p style="text-align: center;"><img class="center" title="" src="http://www.luckychocolate.de/assets/_resampled/resizedimage600401-P1130927.JPG" alt="" height="401" width="600"></p>\n<p style="text-align: center;"><img class="center" title="" src="http://www.luckychocolate.de/assets/_resampled/resizedimage600401-P1140069.JPG" alt="" height="401" width="600"></p>\n<p style="text-align: center;"><img class="center" title="" src="http://www.luckychocolate.de/assets/_resampled/resizedimage600401-P1140071.JPG" alt="" height="401" width="600"></p>\n<div style="text-align: center;">Unsere suße Maid Tecky in der Küche - eine kleine Erfrischung bevor es weiter geht &lt;3</div>\n<p style="text-align: center;"><img class="center" title="" src="http://www.luckychocolate.de/assets/_resampled/resizedimage401600-P1140097.JPG" alt="" height="600" width="401"></p>\n<div style="text-align: center;">Maid Arina und Maid Yui</div>\n<p style="text-align: center;"><img class="center" title="" src="http://www.luckychocolate.de/assets/_resampled/resizedimage401600-P1130996_2.JPG" alt="" height="600" width="401"></p>\n<div style="text-align: center;">Maid Yui und Maid Umi mit Host Momo</div>\n<p style="text-align: center;"><img class="center" title="" src="http://www.luckychocolate.de/assets/_resampled/resizedimage401600-P1130991_2.JPG" alt="" height="600" width="401"></p>\n<div style="text-align: center;">Maid Jenny und Maid May</div>\n<p style="text-align: center;"><img class="center" title="" src="http://www.luckychocolate.de/assets/_resampled/resizedimage401600-P1140086_2.JPG" alt="" height="600" width="401"></p>\n<div style="text-align: center;">Maid Momo beim Aufnehmen einer Bestellung ... in unserer gemütlichen Teeecke ! (Auch neu bei uns :3)</div>\n<p style="text-align: center;"><img class="center" title="" src="http://www.luckychocolate.de/assets/_resampled/resizedimage600401-P1140074_2.JPG" alt="" height="401" width="600"></p>\n<div style="text-align: center;">Maid Jacky bei der Arbeit :D</div>\n<p style="text-align: center;"><img class="center" title="" src="http://www.luckychocolate.de/assets/_resampled/resizedimage600401-P1140080_2.JPG" alt="" height="401" width="600"></p>\n<div style="text-align: center;">Maid May - immer bereit für ein hübsches Foto &lt;3</div>\n<p style="text-align: center;"><img class="center" title="" src="http://www.luckychocolate.de/assets/_resampled/resizedimage600401-P1140081_2.JPG" alt="" height="401" width="600"></p>\n<div>Scheint als ob der Bericht sich dem Ende naht... ich hoffe, euch hat die Dokomi 2013 mindestens so gut wir uns gefallen und das man sich auf der Dokomi 2014 wieder sieht?  Ich muss sagen, es ist einfach toll, in einer so großen Gruppe an Menschen zu arbeiten, die unterschiedlicher nicht sein könnten, aber dennoch ein gleiches Interesse bzw. Hobby miteinander teilen! Es macht super viel Spaß zusammen zu arbeiten, euch zu bedienen, mit euch zu spielen  etc. &lt;3 Deshalb können wir jedes Mal kaum abwarten, bis die Dokomi wieder ansteht. Bis zur Dokomi 2014 dauert es zwar noch... aber das Planen beginnt bei uns bereits jetzt! Bis bald wieder &lt;3</div>', NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 5, 17),
 (20, 'MaidHolder', '2013-08-23 13:39:35', '2013-08-23 13:40:14', 'maids', 'Maids', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 3, 0, 0, NULL, 'Inherit', 'Inherit', 3, 0),
-(21, 'Maid', '2013-08-23 13:40:31', '2013-08-27 19:18:43', 'neue-maid', 'Yusei', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 11, 20),
+(21, 'Maid', '2013-08-23 13:40:31', '2013-08-27 21:43:49', 'neue-maid', 'Yusei', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 13, 20),
 (29, 'Albumholder', '2013-08-26 21:06:07', '2013-08-27 17:44:26', 'medien', 'Medien', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 4, 0, 0, NULL, 'Inherit', 'Inherit', 5, 0),
 (30, 'GalleryPage', '2013-08-26 21:08:19', '2013-08-27 15:51:46', 'banner', 'Banner', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 2, 29),
 (31, 'GalleryPage', '2013-08-26 21:08:32', '2013-08-26 21:08:39', 'neue-photo-gallery-2', 'Neue Photo Gallery', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 2, 0, 0, NULL, 'Inherit', 'Inherit', 1, 29),
-(32, 'Page', '2013-08-27 19:20:15', '2013-08-27 20:51:30', 'neue-seite', 'To Do', NULL, '<p>News:</p>\n<p>ersten paar zeilen mit Button "Weiterlesen"</p>\n<p>Möglicher Rahmen um Subnav</p>\n<p> </p>\n<p>bild für anzahl der jahre in Maidholder</p>', NULL, NULL, NULL, NULL, 0, 0, 11, 0, 0, NULL, 'Inherit', 'Inherit', 6, 0),
+(32, 'Page', '2013-08-27 19:20:15', '2013-08-27 21:01:14', 'to-do', 'To Do', NULL, '<p>News:</p>\n<p>ersten paar zeilen mit Button "Weiterlesen"</p>\n<p>Möglicher Rahmen um Subnav</p>\n<p> </p>\n<p>bild für anzahl der jahre in Maidholder</p>', NULL, NULL, NULL, NULL, 0, 0, 11, 0, 0, NULL, 'Inherit', 'Inherit', 7, 0),
 (33, 'Maid', '2013-08-27 19:27:00', '2013-08-27 19:42:26', 'neue-maid-2', 'Neue Maid', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 2, 0, 0, NULL, 'Inherit', 'Inherit', 3, 20),
 (34, 'Maid', '2013-08-27 19:27:09', '2013-08-27 19:41:58', 'neue-maid-4', 'Neue Maid', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 4, 20),
-(35, 'Maid', '2013-08-27 19:27:22', '2013-08-27 19:42:44', 'neue-maid-3', 'Neue Maid', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 3, 0, 0, NULL, 'Inherit', 'Inherit', 3, 20);
+(35, 'Maid', '2013-08-27 19:27:22', '2013-08-27 19:42:44', 'neue-maid-3', 'Neue Maid', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 3, 0, 0, NULL, 'Inherit', 'Inherit', 3, 20),
+(36, 'ArticlePage', '2013-08-29 15:10:15', '2013-08-29 15:11:04', 'neujahrs-gruesse-and-gewinner-des-adventskalenders', 'Neujahrs Grüße & Gewinner des Adventskalenders', NULL, '<p>HAPPY NEW YEAR, Goshujin-sama und Ojou-sama!! Wieder einmal ist ein Jahr um und auch in diesem Jahr werden wir versuchen, unser Café weiter auszubauen, um euch den Besuch im Lucky Chocolate noch schöner zu machen. Wir Maids freuen uns schon soooo sehr auf dieses Jahr &lt;3 Es sind zwar noch knapp 5 Monate bis zur DoKoMi 2012, die ja im <a title="Congress Center Düsseldorf" href="http://www.dokomi.de/veranstaltung/die-veranstaltungshalle/" target="_blank">Congress Center Düsseldorf </a>stattfinden wird, aber die Vorbereitungen laufen bereits auf Hochtouren!<br><br>Und nun kommen wir zum Adventskalender:<br><br>Jetzt wo Weihnachten vorbei ist, ist der Adventskalender auch schon völlig enthüllt. Wir hoffen aber, dass euch die Inhalte hinter den Türchen gefallen haben :) So erlebt man uns Maids ja nicht, wenn wir im Maidcafé arbeiten :D!<br>Leider, leider wird der Adventskalender in den nächsten Tagen von unserer Homepage weichen... <br>Aber dafür darf ich euch ganz offiziell die Gewinner unserer Adventskalender Gewinnspiele bekannt geben! <br><br><br><span style="text-decoration: underline;">~And the winners are...~</span></p>\n<p>Ein Gutschein für 1 x Mastermenü + ein Getränk im Lucky Chocolate Maidcafé geht an:<br>    Dominik P. aus Lübbecke <br><br>Je ein Manga Überraschungspaket geht an:<br>    Daniel S. aus Dortmund <br>    Ronja M. aus Kreuzwertheim <br>    Alexander T. aus Wuppertal <br> &amp; Anke M. aus Lasserg <br><br>Über ein Dokomi Ticket kann sich freuen:<br>    Sarah S. aus Essen <br><br>Herzlichen Glückwunsch an alle Gewinner und vielen Dank fürs Teilnehmen an alle &lt;3  <br><br><br>Moe Moe Kyun!</p>', NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 2, 18);
 
 -- --------------------------------------------------------
 
@@ -1506,7 +1578,7 @@ CREATE TABLE IF NOT EXISTS `sitetree_linktracking` (
 
 CREATE TABLE IF NOT EXISTS `sitetree_live` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
-  `ClassName` enum('ErrorPage','HomePage','ContactPage','Page2','UserDefinedForm','ArticleCategory','ArticleHolder','ArticlePage','Maid','MaidHolder','Albumholder','GalleryPage','SiteTree','Page','RedirectorPage','VirtualPage') CHARACTER SET utf8 DEFAULT 'ErrorPage',
+  `ClassName` enum('ErrorPage','HomePage','ContactPage','Page2','UserDefinedForm','ArticleCategory','ArticleHolder','ArticlePage','Maid','MaidHolder','Albumholder','GalleryPage','Page','SiteTree','RedirectorPage','VirtualPage') CHARACTER SET utf8 DEFAULT 'ErrorPage',
   `Created` datetime DEFAULT NULL,
   `LastEdited` datetime DEFAULT NULL,
   `URLSegment` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
@@ -1531,7 +1603,7 @@ CREATE TABLE IF NOT EXISTS `sitetree_live` (
   KEY `ParentID` (`ParentID`),
   KEY `URLSegment` (`URLSegment`),
   KEY `ClassName` (`ClassName`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=36 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=37 ;
 
 --
 -- Daten für Tabelle `sitetree_live`
@@ -1546,19 +1618,20 @@ INSERT INTO `sitetree_live` (`ID`, `ClassName`, `Created`, `LastEdited`, `URLSeg
 (13, 'UserDefinedForm', '2013-08-22 12:26:01', '2013-08-22 12:46:49', 'kontakt', 'Kontakt', NULL, '<p>Wenn dir etwas ganz besonders am Herzen liegt, schick uns einfach deine Nachricht :) Ob allgemeine Fragen, Feedback, Verbesserungsvorschläge bezüglich unseres Maidcafes, etc. - wir freuen uns immer auf deine Meinung :D!</p>\n<p>$UserDefinedForm</p>', NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 3, 12),
 (14, 'UserDefinedForm', '2013-08-22 12:26:15', '2013-08-22 12:46:25', 'buchen', 'Buchen', NULL, '<p>Bucht das Lucky Chocolate Team jetzt für eure Convention, Firmenfeier oder andere Events!<br>Wir leiten oder sind Teil eures Maid Cafes, können frei in der Bedienung oder Küche einsetzbar sein.<br>Ihr braucht noch Werbestände für eure Convention? Wir kommen gerne bei euch vorbei um zu werben!<br>Auch auf der Bühne sind wir einsetzbar! Wir lernen jedes Jahr einen Maidtanz für die DoKomi, den wir auch bei euch präsentieren können! Andere Ideen? Schreibe in das freie Feld einfach deine Wünsche an uns!<br>Du möchtest bestimmte Maids? Frage nach ob unsere Maids für dein Event frei sind und buche deine Traummaids!<br>Wir bitten darum besonders bei Conventions anzugeben, ob es ein Budget für Fahrtkosten, Eintrittskarten, Übernachtung und Leistung geben wird.<br>Da wir uns selber finanzieren, ist es uns sonst evtl. nicht möglich euch euren Maidwunsch zu erfüllen! &lt;3<br>Liebe Grüße, euer Maidteam<br><br></p>\n<p>$UserDefinedForm</p>', NULL, NULL, NULL, NULL, 1, 1, 2, 0, 0, NULL, 'Inherit', 'Inherit', 3, 12),
 (15, 'UserDefinedForm', '2013-08-22 12:26:31', '2013-08-23 12:31:15', 'bewerben', 'Bewerben', NULL, '<p>Du wolltest schon immer mal in einem Maid Cafe arbeiten?<br> Dann bist du bei uns genau richtig!<br><br>Wir bieten Dir:<br>- ein großes, freundliches Cafe auf der Dokomi mit Terasse<br> - ein süßes Team, das zwar etwas chaotisch aber total liebenswert ist<br> - von Zeit zur Zeit Jobangebote für Privatfirmen oder andere Conventions<br> - aktive Mitarbeit im Internet für unser Cafe<br> - Lernseminare, Besprechungsseminare, Fotoshootings und frei Kuchen ;D<br> - ein Wochenendticket für die Dokomi und Vergünstigungen beim Hotel<br> - eine gute Zusammenarbeit mit unserem Host Cafe der Dokomi<br> - die Gelegenheit auf der Bühne und im Cafe vor Publikum zu performen<br> - Zusammenarbeit mit erfahrenen Maids und Gastronomiearbeitern<br> - Spaß, Stress, Schweiß X''D</p>\n<p>Unsere Voraussetzungen: <br>- Du wohnst in Deutschland, vorzugsweise im NRW Bereich <br> - Du bist bereit 2~3x im Jahr zum Seminar oder Fotoshooting nach NRW zu reisen<br> (Unser Hauptstützpunkt liegt im VRR Bereich, Nähe Düsseldorf)<br> - Du bist freundlich, teamfähig und unterhaltsam<br> - Du bist bereit die Maiderstausstattung zu zahlen (ca. 60,00 €)<br> - Du erklärst Dich damit einverstanden, dass du als Maid auf der Dokomi kein <br> Geld als Bezahlung erhälst. Nur bei gebuchten Events ist es möglich bezahlt zu werden<br> - Du bist mindestens 16 Jahre alt<br> - Du hast einen Facebookaccount</p>\n<p>$UserDefinedForm</p>', NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 7, 12),
-(16, 'ArticleHolder', '2013-08-23 13:16:05', '2013-08-23 13:16:18', 'news', 'News', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 2, 0, 0, NULL, 'Inherit', 'Inherit', 2, 0),
-(17, 'ArticleCategory', '2013-08-23 13:16:28', '2013-08-23 13:17:05', 'allgemein', 'Allgemein', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 2, 16),
-(18, 'ArticleCategory', '2013-08-23 13:16:41', '2013-08-23 13:17:20', 'neue-article-category-2', 'Gewinnspiel', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 2, 0, 0, NULL, 'Inherit', 'Inherit', 2, 16),
+(16, 'ArticleHolder', '2013-08-23 13:16:05', '2013-08-29 15:23:27', 'news', 'News', NULL, '<p>Hier unsere Neuigkeiten:</p>', NULL, NULL, NULL, NULL, 1, 1, 2, 0, 0, NULL, 'Inherit', 'Inherit', 4, 0),
+(17, 'ArticleCategory', '2013-08-23 13:16:28', '2013-08-29 17:59:46', 'allgemein', 'Allgemein', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 3, 16),
+(18, 'ArticleCategory', '2013-08-23 13:16:41', '2013-08-29 17:59:56', 'neue-article-category-2', 'Gewinnspiel', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 2, 0, 0, NULL, 'Inherit', 'Inherit', 3, 16),
 (19, 'ArticlePage', '2013-08-23 13:37:41', '2013-08-23 13:42:19', 'dokomi-2013-eine-leicht-verspaetete-berichterstattung-3-', 'Dokomi 2013 ! Eine leicht verspätete Berichterstattung <3 ', NULL, '<p><strong>Hallo Goushujin-sama und Ojou-sama!!</strong></p>\n<div>Es mag vielleicht ein wenig spät sein, aber besser zu spt als gar nicht:</div>\n<div><strong>hier kommt der offizielle Maidreport der Dokomi 2013 mit exklusiven Behind-the-scene-Fotos &lt;3</strong></div>\n<div>Dieses Jahr war die Dokomi noch toller, es waren noch viiiiel mehr Gäste zu Besuch und natürlich haben auch wir ausgebaut!</div>\n<div>Hier also unser Bericht der Dokomi 2013 mit vielen Fotos!</div>\n<p style="text-align: center;"> </p>\n<div style="text-align: center;"><img class="center" title="" src="http://www.luckychocolate.de/assets/_resampled/resizedimage600401-P1140021.JPG" alt="" height="401" width="600"></div>\n<div style="font-size: 10px;">Vor dem ganzen Ansturm ersrmal eine kurze Besprechung... schön zuhören Maids, auch wenn es für einige langweilig erscheinen mag &lt;3</div>\n<p> </p>\n<p style="text-align: center;"><img class="center" title="" src="http://www.luckychocolate.de/assets/_resampled/resizedimage600401-P1140022_2.JPG" alt="" height="401" width="600"></p>\n<div style="text-align: center;">Neue Leckereien auf der Karte mussten natürlich auch festgehalten werden :3</div>\n<p style="text-align: center;"><img class="center" title="" src="http://www.luckychocolate.de/assets/_resampled/resizedimage600401-P1130927.JPG" alt="" height="401" width="600"></p>\n<p style="text-align: center;"><img class="center" title="" src="http://www.luckychocolate.de/assets/_resampled/resizedimage600401-P1140069.JPG" alt="" height="401" width="600"></p>\n<p style="text-align: center;"><img class="center" title="" src="http://www.luckychocolate.de/assets/_resampled/resizedimage600401-P1140071.JPG" alt="" height="401" width="600"></p>\n<div style="text-align: center;">Unsere suße Maid Tecky in der Küche - eine kleine Erfrischung bevor es weiter geht &lt;3</div>\n<p style="text-align: center;"><img class="center" title="" src="http://www.luckychocolate.de/assets/_resampled/resizedimage401600-P1140097.JPG" alt="" height="600" width="401"></p>\n<div style="text-align: center;">Maid Arina und Maid Yui</div>\n<p style="text-align: center;"><img class="center" title="" src="http://www.luckychocolate.de/assets/_resampled/resizedimage401600-P1130996_2.JPG" alt="" height="600" width="401"></p>\n<div style="text-align: center;">Maid Yui und Maid Umi mit Host Momo</div>\n<p style="text-align: center;"><img class="center" title="" src="http://www.luckychocolate.de/assets/_resampled/resizedimage401600-P1130991_2.JPG" alt="" height="600" width="401"></p>\n<div style="text-align: center;">Maid Jenny und Maid May</div>\n<p style="text-align: center;"><img class="center" title="" src="http://www.luckychocolate.de/assets/_resampled/resizedimage401600-P1140086_2.JPG" alt="" height="600" width="401"></p>\n<div style="text-align: center;">Maid Momo beim Aufnehmen einer Bestellung ... in unserer gemütlichen Teeecke ! (Auch neu bei uns :3)</div>\n<p style="text-align: center;"><img class="center" title="" src="http://www.luckychocolate.de/assets/_resampled/resizedimage600401-P1140074_2.JPG" alt="" height="401" width="600"></p>\n<div style="text-align: center;">Maid Jacky bei der Arbeit :D</div>\n<p style="text-align: center;"><img class="center" title="" src="http://www.luckychocolate.de/assets/_resampled/resizedimage600401-P1140080_2.JPG" alt="" height="401" width="600"></p>\n<div style="text-align: center;">Maid May - immer bereit für ein hübsches Foto &lt;3</div>\n<p style="text-align: center;"><img class="center" title="" src="http://www.luckychocolate.de/assets/_resampled/resizedimage600401-P1140081_2.JPG" alt="" height="401" width="600"></p>\n<div>Scheint als ob der Bericht sich dem Ende naht... ich hoffe, euch hat die Dokomi 2013 mindestens so gut wir uns gefallen und das man sich auf der Dokomi 2014 wieder sieht?  Ich muss sagen, es ist einfach toll, in einer so großen Gruppe an Menschen zu arbeiten, die unterschiedlicher nicht sein könnten, aber dennoch ein gleiches Interesse bzw. Hobby miteinander teilen! Es macht super viel Spaß zusammen zu arbeiten, euch zu bedienen, mit euch zu spielen  etc. &lt;3 Deshalb können wir jedes Mal kaum abwarten, bis die Dokomi wieder ansteht. Bis zur Dokomi 2014 dauert es zwar noch... aber das Planen beginnt bei uns bereits jetzt! Bis bald wieder &lt;3</div>', NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 5, 17),
 (20, 'MaidHolder', '2013-08-23 13:39:35', '2013-08-23 13:40:15', 'maids', 'Maids', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 3, 0, 0, NULL, 'Inherit', 'Inherit', 3, 0),
-(21, 'Maid', '2013-08-23 13:40:31', '2013-08-27 19:18:44', 'neue-maid', 'Yusei', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 11, 20),
+(21, 'Maid', '2013-08-23 13:40:31', '2013-08-27 21:43:49', 'neue-maid', 'Yusei', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 13, 20),
 (29, 'Albumholder', '2013-08-26 21:06:07', '2013-08-27 17:44:27', 'medien', 'Medien', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 4, 0, 0, NULL, 'Inherit', 'Inherit', 5, 0),
 (30, 'GalleryPage', '2013-08-26 21:08:19', '2013-08-27 15:51:47', 'banner', 'Banner', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 2, 29),
 (31, 'GalleryPage', '2013-08-26 21:08:32', '2013-08-26 21:08:40', 'neue-photo-gallery-2', 'Neue Photo Gallery', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 2, 0, 0, NULL, 'Inherit', 'Inherit', 1, 29),
-(32, 'Page', '2013-08-27 19:20:15', '2013-08-27 20:51:30', 'neue-seite', 'To Do', NULL, '<p>News:</p>\n<p>ersten paar zeilen mit Button "Weiterlesen"</p>\n<p>Möglicher Rahmen um Subnav</p>\n<p> </p>\n<p>bild für anzahl der jahre in Maidholder</p>', NULL, NULL, NULL, NULL, 0, 0, 11, 0, 0, NULL, 'Inherit', 'Inherit', 6, 0),
+(32, 'Page', '2013-08-27 19:20:15', '2013-08-27 21:01:14', 'to-do', 'To Do', NULL, '<p>News:</p>\n<p>ersten paar zeilen mit Button "Weiterlesen"</p>\n<p>Möglicher Rahmen um Subnav</p>\n<p> </p>\n<p>bild für anzahl der jahre in Maidholder</p>', NULL, NULL, NULL, NULL, 0, 0, 11, 0, 0, NULL, 'Inherit', 'Inherit', 7, 0),
 (33, 'Maid', '2013-08-27 19:27:00', '2013-08-27 19:42:27', 'neue-maid-2', 'Neue Maid', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 2, 0, 0, NULL, 'Inherit', 'Inherit', 3, 20),
 (34, 'Maid', '2013-08-27 19:27:09', '2013-08-27 19:41:59', 'neue-maid-4', 'Neue Maid', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 4, 20),
-(35, 'Maid', '2013-08-27 19:27:22', '2013-08-27 19:42:45', 'neue-maid-3', 'Neue Maid', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 3, 0, 0, NULL, 'Inherit', 'Inherit', 3, 20);
+(35, 'Maid', '2013-08-27 19:27:22', '2013-08-27 19:42:45', 'neue-maid-3', 'Neue Maid', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 3, 0, 0, NULL, 'Inherit', 'Inherit', 3, 20),
+(36, 'ArticlePage', '2013-08-29 15:10:15', '2013-08-29 15:11:04', 'neujahrs-gruesse-and-gewinner-des-adventskalenders', 'Neujahrs Grüße & Gewinner des Adventskalenders', NULL, '<p>HAPPY NEW YEAR, Goshujin-sama und Ojou-sama!! Wieder einmal ist ein Jahr um und auch in diesem Jahr werden wir versuchen, unser Café weiter auszubauen, um euch den Besuch im Lucky Chocolate noch schöner zu machen. Wir Maids freuen uns schon soooo sehr auf dieses Jahr &lt;3 Es sind zwar noch knapp 5 Monate bis zur DoKoMi 2012, die ja im <a title="Congress Center Düsseldorf" href="http://www.dokomi.de/veranstaltung/die-veranstaltungshalle/" target="_blank">Congress Center Düsseldorf </a>stattfinden wird, aber die Vorbereitungen laufen bereits auf Hochtouren!<br><br>Und nun kommen wir zum Adventskalender:<br><br>Jetzt wo Weihnachten vorbei ist, ist der Adventskalender auch schon völlig enthüllt. Wir hoffen aber, dass euch die Inhalte hinter den Türchen gefallen haben :) So erlebt man uns Maids ja nicht, wenn wir im Maidcafé arbeiten :D!<br>Leider, leider wird der Adventskalender in den nächsten Tagen von unserer Homepage weichen... <br>Aber dafür darf ich euch ganz offiziell die Gewinner unserer Adventskalender Gewinnspiele bekannt geben! <br><br><br><span style="text-decoration: underline;">~And the winners are...~</span></p>\n<p>Ein Gutschein für 1 x Mastermenü + ein Getränk im Lucky Chocolate Maidcafé geht an:<br>    Dominik P. aus Lübbecke <br><br>Je ein Manga Überraschungspaket geht an:<br>    Daniel S. aus Dortmund <br>    Ronja M. aus Kreuzwertheim <br>    Alexander T. aus Wuppertal <br> &amp; Anke M. aus Lasserg <br><br>Über ein Dokomi Ticket kann sich freuen:<br>    Sarah S. aus Essen <br><br>Herzlichen Glückwunsch an alle Gewinner und vielen Dank fürs Teilnehmen an alle &lt;3  <br><br><br>Moe Moe Kyun!</p>', NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 2, 18);
 
 -- --------------------------------------------------------
 
@@ -1573,7 +1646,7 @@ CREATE TABLE IF NOT EXISTS `sitetree_versions` (
   `WasPublished` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `AuthorID` int(11) NOT NULL DEFAULT '0',
   `PublisherID` int(11) NOT NULL DEFAULT '0',
-  `ClassName` enum('ErrorPage','HomePage','ContactPage','Page2','UserDefinedForm','ArticleCategory','ArticleHolder','ArticlePage','Maid','MaidHolder','Albumholder','GalleryPage','SiteTree','Page','RedirectorPage','VirtualPage') CHARACTER SET utf8 DEFAULT 'ErrorPage',
+  `ClassName` enum('ErrorPage','HomePage','ContactPage','Page2','UserDefinedForm','ArticleCategory','ArticleHolder','ArticlePage','Maid','MaidHolder','Albumholder','GalleryPage','Page','SiteTree','RedirectorPage','VirtualPage') CHARACTER SET utf8 DEFAULT 'ErrorPage',
   `Created` datetime DEFAULT NULL,
   `LastEdited` datetime DEFAULT NULL,
   `URLSegment` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
@@ -1602,7 +1675,7 @@ CREATE TABLE IF NOT EXISTS `sitetree_versions` (
   KEY `ParentID` (`ParentID`),
   KEY `URLSegment` (`URLSegment`),
   KEY `ClassName` (`ClassName`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=99 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=107 ;
 
 --
 -- Daten für Tabelle `sitetree_versions`
@@ -1707,7 +1780,15 @@ INSERT INTO `sitetree_versions` (`ID`, `RecordID`, `Version`, `WasPublished`, `A
 (95, 34, 4, 1, 1, 1, 'Maid', '2013-08-27 19:27:09', '2013-08-27 19:41:58', 'neue-maid-4', 'Neue Maid', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 20),
 (96, 33, 3, 1, 1, 1, 'Maid', '2013-08-27 19:27:00', '2013-08-27 19:42:26', 'neue-maid-2', 'Neue Maid', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 2, 0, 0, NULL, 'Inherit', 'Inherit', 20),
 (97, 35, 3, 1, 1, 1, 'Maid', '2013-08-27 19:27:22', '2013-08-27 19:42:44', 'neue-maid-3', 'Neue Maid', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 3, 0, 0, NULL, 'Inherit', 'Inherit', 20),
-(98, 32, 6, 1, 1, 1, 'Page', '2013-08-27 19:20:15', '2013-08-27 19:53:19', 'neue-seite', 'To Do', NULL, '<p>News:</p>\n<p>ersten paar zeilen mit Button "Weiterlesen"</p>\n<p>Möglicher Rahmen um Subnav</p>\n<p> </p>\n<p>bild für anzahl der jahre in Maidholder</p>', NULL, NULL, NULL, NULL, 0, 0, 11, 0, 0, NULL, 'Inherit', 'Inherit', 0);
+(98, 32, 6, 1, 1, 1, 'Page', '2013-08-27 19:20:15', '2013-08-27 19:53:19', 'neue-seite', 'To Do', NULL, '<p>News:</p>\n<p>ersten paar zeilen mit Button "Weiterlesen"</p>\n<p>Möglicher Rahmen um Subnav</p>\n<p> </p>\n<p>bild für anzahl der jahre in Maidholder</p>', NULL, NULL, NULL, NULL, 0, 0, 11, 0, 0, NULL, 'Inherit', 'Inherit', 0),
+(99, 32, 7, 1, 1, 1, 'Page', '2013-08-27 19:20:15', '2013-08-27 21:01:14', 'to-do', 'To Do', NULL, '<p>News:</p>\n<p>ersten paar zeilen mit Button "Weiterlesen"</p>\n<p>Möglicher Rahmen um Subnav</p>\n<p> </p>\n<p>bild für anzahl der jahre in Maidholder</p>', NULL, NULL, NULL, NULL, 0, 0, 11, 0, 0, NULL, 'Inherit', 'Inherit', 0),
+(100, 21, 12, 1, 1, 1, 'Maid', '2013-08-23 13:40:31', '2013-08-27 21:01:27', 'neue-maid', 'Yusei', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 20),
+(101, 21, 13, 1, 1, 1, 'Maid', '2013-08-23 13:40:31', '2013-08-27 21:43:49', 'neue-maid', 'Yusei', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 20),
+(102, 36, 1, 0, 1, 0, 'ArticlePage', '2013-08-29 15:10:15', '2013-08-29 15:10:15', 'neue-article-page', 'Neue Article Page', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 18),
+(103, 36, 2, 1, 1, 1, 'ArticlePage', '2013-08-29 15:10:15', '2013-08-29 15:11:04', 'neujahrs-gruesse-and-gewinner-des-adventskalenders', 'Neujahrs Grüße & Gewinner des Adventskalenders', NULL, '<p>HAPPY NEW YEAR, Goshujin-sama und Ojou-sama!! Wieder einmal ist ein Jahr um und auch in diesem Jahr werden wir versuchen, unser Café weiter auszubauen, um euch den Besuch im Lucky Chocolate noch schöner zu machen. Wir Maids freuen uns schon soooo sehr auf dieses Jahr &lt;3 Es sind zwar noch knapp 5 Monate bis zur DoKoMi 2012, die ja im <a title="Congress Center Düsseldorf" href="http://www.dokomi.de/veranstaltung/die-veranstaltungshalle/" target="_blank">Congress Center Düsseldorf </a>stattfinden wird, aber die Vorbereitungen laufen bereits auf Hochtouren!<br><br>Und nun kommen wir zum Adventskalender:<br><br>Jetzt wo Weihnachten vorbei ist, ist der Adventskalender auch schon völlig enthüllt. Wir hoffen aber, dass euch die Inhalte hinter den Türchen gefallen haben :) So erlebt man uns Maids ja nicht, wenn wir im Maidcafé arbeiten :D!<br>Leider, leider wird der Adventskalender in den nächsten Tagen von unserer Homepage weichen... <br>Aber dafür darf ich euch ganz offiziell die Gewinner unserer Adventskalender Gewinnspiele bekannt geben! <br><br><br><span style="text-decoration: underline;">~And the winners are...~</span></p>\n<p>Ein Gutschein für 1 x Mastermenü + ein Getränk im Lucky Chocolate Maidcafé geht an:<br>    Dominik P. aus Lübbecke <br><br>Je ein Manga Überraschungspaket geht an:<br>    Daniel S. aus Dortmund <br>    Ronja M. aus Kreuzwertheim <br>    Alexander T. aus Wuppertal <br> &amp; Anke M. aus Lasserg <br><br>Über ein Dokomi Ticket kann sich freuen:<br>    Sarah S. aus Essen <br><br>Herzlichen Glückwunsch an alle Gewinner und vielen Dank fürs Teilnehmen an alle &lt;3  <br><br><br>Moe Moe Kyun!</p>', NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 18),
+(104, 16, 4, 1, 1, 1, 'ArticleHolder', '2013-08-23 13:16:05', '2013-08-29 15:23:27', 'news', 'News', NULL, '<p>Hier unsere Neuigkeiten:</p>', NULL, NULL, NULL, NULL, 1, 1, 2, 0, 0, NULL, 'Inherit', 'Inherit', 0),
+(105, 17, 3, 1, 1, 1, 'ArticleCategory', '2013-08-23 13:16:28', '2013-08-29 17:59:45', 'allgemein', 'Allgemein', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 1, 0, 0, NULL, 'Inherit', 'Inherit', 16),
+(106, 18, 3, 1, 1, 1, 'ArticleCategory', '2013-08-23 13:16:41', '2013-08-29 17:59:55', 'neue-article-category-2', 'Gewinnspiel', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 2, 0, 0, NULL, 'Inherit', 'Inherit', 16);
 
 -- --------------------------------------------------------
 

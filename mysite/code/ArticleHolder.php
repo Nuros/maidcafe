@@ -4,13 +4,14 @@ class ArticleHolder extends Page {
 
 }
 class ArticleHolder_Controller extends Page_Controller{
-    function rss() {
-        $rss = new RSSFeed($this->Children(), $this->Link(), "Lucky Chocolate News");
-        $rss->outputToBrowser();
-    }
+  public function rss() {
+    $rss = new RSSFeed($this->Children(), $this->Link(), "Lucky Chocolate MaidCafé");
+    return $rss->outputToBrowser();
+}
 
-    function init() {
+    public function init() {
         Requirements::css('themes/fancypants/css/news.css');
+        RSSFeed::linkToFeed($this->Link() . "rss");   
         parent::init();
     }
 
