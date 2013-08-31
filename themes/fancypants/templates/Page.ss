@@ -25,12 +25,14 @@
 	   		<div id="nav">
 	   			<% include MainNav %>
 	   		</div>
-	   		<div align="center">
-$SkitterSlidesRecursive
-</div> 
+<div align="center" style="">
+			<div style="width: 700px;height: 300px; position: absolute;margin-left: 200px;margin-top: 10px;" >
+				$FlexSlider(1,850,400)
+				</div>
+			</div> 
 			</div>
-   		</div>
-    <div id="outerwrapper">
+   		
+  
     <div id="wrapper">
 	$Layout
    </div>

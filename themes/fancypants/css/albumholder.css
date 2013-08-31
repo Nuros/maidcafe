@@ -6,7 +6,7 @@
 	background: #ae9f82 url(../images/album-background.png) repeat-y 0 ;
 	border: 2px solid #7b6b4a;
 	border-color: #7b6b4a #574d2a #574d2a #7b6b4a;
-	margin: 0.8em 0.8em 0 0;
+	margin: 0.8em 0.8em 10px 0;
 	padding: 5px;
 	overflow: hidden;
 }

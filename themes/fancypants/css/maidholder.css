@@ -10,7 +10,7 @@
 
 }
 
-#MainContent .maidProfilePreview{
+#primaryContent2 .maidProfilePreview{
 	display: inline-block;
 	width: 300px;
 	margin: 0 00px 22.6px 50px;
@@ -18,10 +18,10 @@
 	vertical-align: top;
 	
 }
-	#MainContent .column-1{
+	#primaryContent2 .column-1{
 		margin-left: 0;
 	}
-	#MainContent .column-0{
+	#primaryContent2 .column-0{
 		margin-right: 0;
 	}
 

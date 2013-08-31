@@ -26,3 +26,4 @@ i18n::set_locale('de_DE');
 if (class_exists('SiteTree')) SiteTree::enable_nested_urls();
 
 SS_Log::add_writer(new SS_LogFileWriter('ss_errors.txt'), SS_Log::ERR);
+Object::add_extension('Page', 'FlexSliderExtension');

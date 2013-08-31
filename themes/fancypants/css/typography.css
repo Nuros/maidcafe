@@ -70,15 +70,15 @@ blockquote { margin:0 0 0 0; padding-left:16px; font-size: 16px; line-height: 22
 #secondaryContenthp {display:block;}
 
 /*-----Column 'padding'-----*/
-#primaryContent div.innerpad { margin:50px;font-family: 'Gisha'; }
-#primaryContent2 div.innerpad { margin:50px;font-family: 'Gisha'; }
+#primaryContent div.innerpad { margin:50px;margin-top: 20px;font-family: 'Gisha'; }
+#primaryContent2 div.innerpad { margin:50px;margin-top: 20px;font-family: 'Gisha'; }
 #secondaryContent div.innerpad { margin:60px 40px 50px 40px; }
-#primaryContenthp div.innerpad { margin:50px; font-family: 'Gisha';}
+#primaryContenthp div.innerpad { margin:50px; margin-top: 20px; font-family: 'Gisha';}
 #secondaryContenthp div.innerpad { margin:60px 40px 50px 40px; }
 
 /*-----Header-----*/
 #outerheader{width:100%;background: url(../images/sternchen.jpg) top repeat}
-#header{width:1200px; text-align:center; margin:0 auto; background: #221d14 url(../images/background.jpg) top left repeat-y; height:403px; border-bottom:0px double #FF0000;}
+#header{width:1200px; height:465px; text-align:center; margin:0 auto; background: #221d14 url(../images/background.jpg) top left repeat-y;  border-bottom:0px double #FF0000;}
 
 #branding {padding-top:10px; text-align: center;}
 #branding h1 {width: 940px; margin:0 auto;}
@@ -97,7 +97,7 @@ text-shadow: -1px 0 #FD8DBF, 0 1px #FD8DBF,
 #secondaryContent .callout p.readmore {margin:0; padding: 0 14px 0 0; background: url(../images/readmore_ornament.png) 100% 50% no-repeat; display: inline;}
 
 /*-----Navigation-----*/
-#nav {display: block; width:960px; text-align: center; margin: 0 auto; padding: 0; }
+#nav {display: block; width:960px; text-align: center; margin: 0 auto 20px; padding: 0; }
 #nav ul {list-style:none; margin:0; padding:0; width:960px; height:57px;}
 #nav ul li { list-style:inherit; display:-moz-inline-box; display:inline-block; /*ie6 hackery*/ *display:inline; font:12px Tahoma, Helvetica, Arial; /*text-transform: uppercase;*/ text-shadow: 1px 1px 1px #000;   margin:0; padding:0 6px;}
 #nav ul li a{letter-spacing: 2px;color:#190707; padding:16px 16px 26px 16px;  display:-moz-inline-box; display:inline-block; *display:inline; margin:0 0;font-family: 'leckerlioneregular'; font-size: 15px;}
@@ -134,7 +134,7 @@ box-shadow: 3px 3px 3px #000;
 
 
 
-#pagetitle {text-align:center; height: 290px; padding:30px 0 0;background:url(../images/banner.png) no-repeat;background-size: 50% auto;background-position: center 15px;}
+#pagetitle {text-align:center; height: 170px; padding:1px 0 0;background:url(../images/banner.png) no-repeat;background-size: 50% auto;background-position: center 0px;}
 #pagetitle h2{margin:0; padding:0 55px 0 55px; font-size: 54px; display:inline; text-align: center;font-family: 'leckerlioneregular';}
 #pagetitle h2 span{padding:0 55px 0 0; }
 

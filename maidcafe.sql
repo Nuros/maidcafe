@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 29. Aug 2013 um 20:27
+-- Erstellungszeit: 31. Aug 2013 um 10:50
 -- Server Version: 5.6.12-log
 -- PHP-Version: 5.4.16
 
@@ -733,7 +733,7 @@ CREATE TABLE IF NOT EXISTS `file` (
   KEY `ParentID` (`ParentID`),
   KEY `OwnerID` (`OwnerID`),
   KEY `ClassName` (`ClassName`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=105 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=110 ;
 
 --
 -- Daten für Tabelle `file`
@@ -843,7 +843,82 @@ INSERT INTO `file` (`ID`, `ClassName`, `Created`, `LastEdited`, `Name`, `Title`,
 (101, 'Image', '2013-08-27 15:51:03', '2013-08-27 15:51:03', 'gruppe4.jpg', 'gruppe4', 'assets/Banner/gruppe4.jpg', NULL, 1, 100, 1),
 (102, 'Image', '2013-08-27 15:51:04', '2013-08-27 15:51:04', 'gruppe2.jpg', 'gruppe2', 'assets/Banner/gruppe2.jpg', NULL, 1, 100, 1),
 (103, 'Image', '2013-08-27 15:51:06', '2013-08-27 15:51:06', 'gruppe3.jpg', 'gruppe3', 'assets/Banner/gruppe3.jpg', NULL, 1, 100, 1),
-(104, 'Image', '2013-08-27 15:51:07', '2013-08-27 15:51:07', 'gruppe1.jpg', 'gruppe1', 'assets/Banner/gruppe1.jpg', NULL, 1, 100, 1);
+(104, 'Image', '2013-08-27 15:51:07', '2013-08-27 15:51:07', 'gruppe1.jpg', 'gruppe1', 'assets/Banner/gruppe1.jpg', NULL, 1, 100, 1),
+(105, 'Folder', '2013-08-31 10:01:00', '2013-08-31 10:01:00', 'FlexSlides', 'FlexSlides', 'assets/FlexSlides/', NULL, 1, 0, 1),
+(106, 'Image', '2013-08-31 10:02:17', '2013-08-31 10:02:17', '533073-374508955935096-182032275182766-1060690-1986726524-n.jpg', '533073 374508955935096 182032275182766 1060690 1986726524 n', 'assets/FlexSlides/533073-374508955935096-182032275182766-1060690-1986726524-n.jpg', NULL, 1, 105, 1),
+(107, 'Image', '2013-08-31 10:02:40', '2013-08-31 10:02:40', '934858-510745458973951-944725009-n.jpg', '934858 510745458973951 944725009 n', 'assets/FlexSlides/934858-510745458973951-944725009-n.jpg', NULL, 1, 105, 1),
+(108, 'Image', '2013-08-31 10:03:00', '2013-08-31 10:03:00', '1010592-308091309336124-1462444265-n.jpg', '1010592 308091309336124 1462444265 n', 'assets/FlexSlides/1010592-308091309336124-1462444265-n.jpg', NULL, 1, 105, 1),
+(109, 'Image', '2013-08-31 10:03:19', '2013-08-31 10:03:19', 'DSC-5133.JPG', 'DSC 5133', 'assets/FlexSlides/DSC-5133.JPG', NULL, 1, 105, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `flexslide`
+--
+
+CREATE TABLE IF NOT EXISTS `flexslide` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `ClassName` enum('FlexSlide') CHARACTER SET utf8 DEFAULT 'FlexSlide',
+  `Created` datetime DEFAULT NULL,
+  `LastEdited` datetime DEFAULT NULL,
+  `Position` int(11) NOT NULL DEFAULT '2',
+  `SlideTitle` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `SlideDescription` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `ExternalLink` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `isEnabled` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `FlexSliderID` int(11) NOT NULL DEFAULT '0',
+  `PictureID` int(11) NOT NULL DEFAULT '0',
+  `InternalLinkID` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`ID`),
+  KEY `FlexSliderID` (`FlexSliderID`),
+  KEY `PictureID` (`PictureID`),
+  KEY `InternalLinkID` (`InternalLinkID`),
+  KEY `ClassName` (`ClassName`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Daten für Tabelle `flexslide`
+--
+
+INSERT INTO `flexslide` (`ID`, `ClassName`, `Created`, `LastEdited`, `Position`, `SlideTitle`, `SlideDescription`, `ExternalLink`, `isEnabled`, `FlexSliderID`, `PictureID`, `InternalLinkID`) VALUES
+(1, 'FlexSlide', '2013-08-31 10:00:55', '2013-08-31 10:02:20', 0, NULL, NULL, NULL, 1, 1, 106, 0),
+(2, 'FlexSlide', '2013-08-31 10:02:32', '2013-08-31 10:02:45', 0, NULL, NULL, NULL, 1, 1, 107, 0),
+(3, 'FlexSlide', '2013-08-31 10:02:55', '2013-08-31 10:03:01', 0, NULL, NULL, NULL, 1, 1, 108, 0),
+(4, 'FlexSlide', '2013-08-31 10:03:13', '2013-08-31 10:03:28', 0, NULL, NULL, NULL, 1, 1, 109, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `flexslider`
+--
+
+CREATE TABLE IF NOT EXISTS `flexslider` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `ClassName` enum('FlexSlider') CHARACTER SET utf8 DEFAULT 'FlexSlider',
+  `Created` datetime DEFAULT NULL,
+  `LastEdited` datetime DEFAULT NULL,
+  `Title` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `animation` enum('slide','fade') CHARACTER SET utf8 DEFAULT 'slide',
+  `easing` enum('linear','swing','easeInQuad','easeOutQuad','easeOutExpo') CHARACTER SET utf8 DEFAULT 'linear',
+  `direction` enum('horizontal','vertical') CHARACTER SET utf8 DEFAULT 'horizontal',
+  `reverse` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `dynamicLoading` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `animationLoop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `slideshow` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `slideshowSpeed` int(11) NOT NULL DEFAULT '7000',
+  `animationSpeed` int(11) NOT NULL DEFAULT '600',
+  `randomize` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `showControlNav` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`ID`),
+  KEY `ClassName` (`ClassName`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Daten für Tabelle `flexslider`
+--
+
+INSERT INTO `flexslider` (`ID`, `ClassName`, `Created`, `LastEdited`, `Title`, `animation`, `easing`, `direction`, `reverse`, `dynamicLoading`, `animationLoop`, `slideshow`, `slideshowSpeed`, `animationSpeed`, `randomize`, `showControlNav`) VALUES
+(1, 'FlexSlider', '2013-08-31 10:00:40', '2013-08-31 10:10:27', 'Mainslide', 'slide', 'linear', 'horizontal', 0, 0, 1, 1, 7000, 600, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1220,7 +1295,7 @@ CREATE TABLE IF NOT EXISTS `member` (
 --
 
 INSERT INTO `member` (`ID`, `ClassName`, `Created`, `LastEdited`, `FirstName`, `Surname`, `Email`, `Password`, `RememberLoginToken`, `NumVisit`, `LastVisited`, `Bounced`, `AutoLoginHash`, `AutoLoginExpired`, `PasswordEncryption`, `Salt`, `PasswordExpiry`, `LockedOutUntil`, `Locale`, `FailedLoginCount`, `DateFormat`, `TimeFormat`) VALUES
-(1, 'Member', '2013-08-21 12:48:05', '2013-08-29 15:09:08', 'Standardadmin', NULL, 'admin', '$2y$10$effe9adc22281361577d4OOcChlOi./7IG4Pu7rJ9HT3igcGBojW6', '$2y$10$effe9adc22281361577d4O5OrsChXnSxiTrTDXkpPAH8Zo.t16VsO', 15, '2013-08-29 21:20:56', 0, NULL, NULL, 'blowfish', '10$effe9adc22281361577d4b', NULL, NULL, 'de_DE', 0, NULL, NULL);
+(1, 'Member', '2013-08-21 12:48:05', '2013-08-31 09:46:20', 'Standardadmin', NULL, 'admin', '$2y$10$effe9adc22281361577d4OOcChlOi./7IG4Pu7rJ9HT3igcGBojW6', NULL, 17, '2013-08-31 12:45:48', 0, NULL, NULL, 'blowfish', '10$effe9adc22281361577d4b', NULL, NULL, 'de_DE', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
