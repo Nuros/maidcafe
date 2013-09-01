@@ -9,6 +9,7 @@
     font-style: normal;
 
 }
+
 @font-face {
     font-family: 'leckerlioneregular';
     src: url('leckerlione-regular.eot');
@@ -70,15 +71,17 @@ blockquote { margin:0 0 0 0; padding-left:16px; font-size: 16px; line-height: 22
 #secondaryContenthp {display:block;}
 
 /*-----Column 'padding'-----*/
-#primaryContent div.innerpad { margin:50px;margin-top: 20px;font-family: 'Gisha'; }
+#primaryContent div.innerpad { margin:50px;margin-top: 20px;font-family: 'Gisha';}
 #primaryContent2 div.innerpad { margin:50px;margin-top: 20px;font-family: 'Gisha'; }
 #secondaryContent div.innerpad { margin:60px 40px 50px 40px; }
 #primaryContenthp div.innerpad { margin:50px; margin-top: 20px; font-family: 'Gisha';}
-#secondaryContenthp div.innerpad { margin:60px 40px 50px 40px; }
+#secondaryContenthp div.innerpad { margin:10px 40px 50px 40px; }
 
 /*-----Header-----*/
 #outerheader{width:100%;background: url(../images/sternchen.jpg) top repeat}
-#header{width:1200px; height:465px; text-align:center; margin:0 auto; background: #221d14 url(../images/background.jpg) top left repeat-y;  border-bottom:0px double #FF0000;}
+#header{width:1200px; height:589px; text-align:center; margin:0 auto; background: #221d14 url(../images/background.jpg) top left repeat-y;  border-bottom:0px double #FF0000;}
+#header2{width:1200px; height:155px; text-align:center; margin:0 auto; background: #221d14 url(../images/background.jpg) top left repeat-y;  border-bottom:0px double #FF0000;}
+#slidebg {width:740px;height: 420px;background: url(../images/slideshowrahmen.png);padding-top: 20px}
 
 #branding {padding-top:10px; text-align: center;}
 #branding h1 {width: 940px; margin:0 auto;}

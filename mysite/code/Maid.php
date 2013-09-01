@@ -1,5 +1,5 @@
 <?php
-class Maid extends Page {
+class Maid extends Page2 {
     static $db = array(
         'Type' => 'Text',
         'colour' => 'Text',
@@ -90,7 +90,7 @@ class Maid extends Page {
         return $fields;
     }
 }
- class Maid_Controller extends Page_Controller {
+ class Maid_Controller extends Page2_Controller {
       	public function init() {
 		parent::init();
 		Requirements::themedCSS('maid'); 

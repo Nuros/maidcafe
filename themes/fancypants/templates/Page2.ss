@@ -18,7 +18,7 @@
 	</head>
 	<body>
 		<div id="outerheader">
-   		<div id="header" class="clearfix">
+   		<div id="header2" class="clearfix">
 			<div id="branding">
 	   			<h1><a href="#">$SiteConfig.Title</a></h1>
 	   			<h1 class="tagline">$SiteConfig.Tagline</h1>
@@ -26,14 +26,7 @@
 	   		<div id="nav">
 	   			<% include MainNav %>
 	   		</div>
-			<div align="center">
-			<div id="slidebg" align="center" style="" >
-
-			<div style="width: 700px;height: 400px; " >
-				$FlexSlider(1,700,400)
-				</div>
-			</div> 
-			</div>
+			
 		</div>
    		
   
@@ -46,7 +39,7 @@
 		    	 <p>Design & Code by Nuros</p>
 		    	 	    	</div>	    		
 	    	<div id="footernav">
-				<p><imp>ยง<a href="/maidcafe/Impressum">Impressum</a></imp></p>
+				<p><imp>ง<a href="/maidcafe/Impressum">Impressum</a></imp></p>
 	    	</div>
     	</div>
     </div>

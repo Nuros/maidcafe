@@ -14,12 +14,15 @@ img{
 	width:685px;
 		height: 32px;
 		position: absolute;
-		top: 19px;
-		padding-top: 2px;
+		top: 10px;
+		padding-top: 10px;
 		padding-left: 85px;
 	
-	background: yellow;
+	background: url(../images/newsheader.jpg) no-repeat;
+	background-size: 700px 32px;
+	background-position: right;
 	z-index: 1;
+	
 }
 
 #paper {
@@ -27,7 +30,7 @@ img{
 	width: 600px;
 	left: 100px;
 	padding: 40px 20px 15px;
-	background: red;
+	background: url(../images/newshg1.jpg);
 	margin-top: -19px;
 	outline-style: double;
 	outline-top: none;
