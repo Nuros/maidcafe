@@ -12,8 +12,8 @@
 	
 	
 		$Title
-		$Author
-		$Date.Long
+		
+		$Date
 	</div>
 	
 	<div id="paper" style="outline-color: $categorycolour;">$Content.LimitWordCount(30)

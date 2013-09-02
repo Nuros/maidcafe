@@ -21,6 +21,17 @@
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'kitsu';
+    src: url('kitsu_xd.eot');
+    src: url('kitsu_xd.eot?#iefix') format('embedded-opentype'),
+         url('kitsu_xd.woff') format('woff'),
+         url('kitsu_xd.ttf') format('truetype'),
+         url('kitsu_xd.svg#kitsu_xdregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 html { background:transparent; }
 body {margin:0;padding:0; }
@@ -33,9 +44,10 @@ a:active, a:focus { position : relative; top : 1px; }
 a:visited{color:#a65607 ;}
 
 /*-----Typography-----*/
-body {background:#FFFFFF; font: 14px/1.6 Georgia, Times, 'Times New Roman', serif; color:#231e15;}
+body {background:#FFFFFF; font: 17px/1.6 Georgia, Times, 'Times New Roman', serif; color:#231e15;}
 		
 h1,h2,h3,h4,h5 {font: 14px/18.5px Georgia, Times, 'Times New Roman', serif; color:#313131; margin-bottom: 8px; line-height: 1.35;  text-shadow: 1px 1px 1px #fff;}
+h1 {font-size: 28px;}
 h2 {font-size: 28px; margin-bottom: 30px}
 h3 {font-size: 20px; margin-bottom: 16px}
 h4 {font-size: 16px; font-weight: bold;}
@@ -71,10 +83,10 @@ blockquote { margin:0 0 0 0; padding-left:16px; font-size: 16px; line-height: 22
 #secondaryContenthp {display:block;}
 
 /*-----Column 'padding'-----*/
-#primaryContent div.innerpad { margin:50px;margin-top: 20px;font-family: 'Gisha';}
-#primaryContent2 div.innerpad { margin:50px;margin-top: 20px;font-family: 'Gisha'; }
+#primaryContent div.innerpad { margin:50px;margin-top: 20px;font-family: 'kitsu';}
+#primaryContent2 div.innerpad { margin:50px;margin-top: 20px;font-family: 'kitsu'; }
 #secondaryContent div.innerpad { margin:60px 40px 50px 40px; }
-#primaryContenthp div.innerpad { margin:50px; margin-top: 20px; font-family: 'Gisha';}
+#primaryContenthp div.innerpad { margin:50px; margin-top: 20px; font-family: 'kitsu';}
 #secondaryContenthp div.innerpad { margin:10px 40px 50px 40px; }
 
 /*-----Header-----*/

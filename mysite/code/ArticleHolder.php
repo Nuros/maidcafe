@@ -5,10 +5,13 @@ class ArticleHolder extends Page {
 }
 class ArticleHolder_Controller extends Page_Controller{
   public function rss() {
-    $rss = new RSSFeed($this->Children(), $this->Link(), "Lucky Chocolate MaidCafé");
+    $rss = new RSSFeed($this->LatestUpdates(), $this->Link(), "Lucky Chocolate MaidCafé");
     return $rss->outputToBrowser();
 }
-
+function LatestUpdates() {
+        // 10 is the number of pages
+        return DataObject::get("ArticlePage", "", "Date DESC", "" );
+    } 
     public function init() {
         Requirements::css('themes/fancypants/css/news.css');
         RSSFeed::linkToFeed($this->Link() . "rss");   

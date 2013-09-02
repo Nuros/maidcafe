@@ -31,6 +31,7 @@ img{
 	left: 100px;
 	padding: 40px 20px 15px;
 	background: url(../images/newshg1.jpg);
+	background-size: 640px auto;
 	margin-top: -19px;
 	outline-style: double;
 	outline-top: none;

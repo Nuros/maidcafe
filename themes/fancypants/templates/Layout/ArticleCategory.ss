@@ -10,7 +10,7 @@
 	
 	
 		$Title
-		$Author
+		
 		$Date.Long
 	</div>
 	

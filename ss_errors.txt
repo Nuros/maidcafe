@@ -68,3 +68,39 @@ Unknown column 'Folder' in 'where clause' (http://localhost/maidcafe/index.php/)
 [29-Aug-2013 18:31:43] Error at \framework\view\SSTemplateParser.php line 3799: Uncaught SSTemplateParseException: Parse error in template on line 7. Error was: Malformed opening block tag control. Perhaps you have tried to use operators? (http://localhost/maidcafe/index.php/)
 [29-Aug-2013 18:32:00] Error at \framework\view\SSTemplateParser.php line 3799: Uncaught SSTemplateParseException: Parse error in template on line 7. Error was: Malformed opening block tag control. Perhaps you have tried to use operators? (http://localhost/maidcafe/index.php/)
 [29-Aug-2013 18:35:58] Error at \framework\view\SSTemplateParser.php line 3799: Uncaught SSTemplateParseException: Parse error in template on line 7. Error was: Malformed opening block tag control. Perhaps you have tried to use operators? (http://localhost/maidcafe/)
+[02-Sep-2013 18:33:41] Error at \framework\model\MySQLDatabase.php line 580: Couldn't run query: 
+SELECT DISTINCT "SiteTree_Live"."ClassName", "SiteTree_Live"."Created", "SiteTree_Live"."LastEdited", "SiteTree_Live"."URLSegment", "SiteTree_Live"."Title", "SiteTree_Live"."MenuTitle", "SiteTree_Live"."Content", "SiteTree_Live"."MetaTitle", "SiteTree_Live"."MetaDescription", "SiteTree_Live"."MetaKeywords", "SiteTree_Live"."ExtraMeta", "SiteTree_Live"."ShowInMenus", "SiteTree_Live"."ShowInSearch", "SiteTree_Live"."Sort", "SiteTree_Live"."HasBrokenFile", "SiteTree_Live"."HasBrokenLink", "SiteTree_Live"."ReportClass", "SiteTree_Live"."CanViewType", "SiteTree_Live"."CanEditType", "SiteTree_Live"."Version", "SiteTree_Live"."ParentID", "SiteTree_Live"."ID", CASE WHEN "SiteTree_Live"."ClassName" IS NOT NULL THEN "SiteTree_Live"."ClassName" ELSE 'SiteTree' END AS "RecordClassName", "Date"
+FROM "SiteTree_Live"
+WHERE ("SiteTree_Live"."ClassName" IN ('Page','Albumholder','ArticleCategory','ArticleHolder','ArticlePage','ContactPage','HomePage','MaidHolder','Page2','Maid','GalleryPage','ErrorPage','RedirectorPage','VirtualPage','UserDefinedForm'))
+ORDER BY Date DESC 
+
+Unknown column 'Date' in 'field list' (http://localhost/maidcafe/index.php/neuigkeiten/rss)
+[02-Sep-2013 18:34:03] Error at \framework\model\MySQLDatabase.php line 580: Couldn't run query: 
+SELECT DISTINCT "SiteTree_Live"."ClassName", "SiteTree_Live"."Created", "SiteTree_Live"."LastEdited", "SiteTree_Live"."URLSegment", "SiteTree_Live"."Title", "SiteTree_Live"."MenuTitle", "SiteTree_Live"."Content", "SiteTree_Live"."MetaTitle", "SiteTree_Live"."MetaDescription", "SiteTree_Live"."MetaKeywords", "SiteTree_Live"."ExtraMeta", "SiteTree_Live"."ShowInMenus", "SiteTree_Live"."ShowInSearch", "SiteTree_Live"."Sort", "SiteTree_Live"."HasBrokenFile", "SiteTree_Live"."HasBrokenLink", "SiteTree_Live"."ReportClass", "SiteTree_Live"."CanViewType", "SiteTree_Live"."CanEditType", "SiteTree_Live"."Version", "SiteTree_Live"."ParentID", "SiteTree_Live"."ID", CASE WHEN "SiteTree_Live"."ClassName" IS NOT NULL THEN "SiteTree_Live"."ClassName" ELSE 'SiteTree' END AS "RecordClassName", "Date"
+FROM "SiteTree_Live"
+WHERE ("SiteTree_Live"."ClassName" IN ('Page','Albumholder','ArticleCategory','ArticleHolder','ArticlePage','ContactPage','HomePage','MaidHolder','Page2','Maid','GalleryPage','ErrorPage','RedirectorPage','VirtualPage','UserDefinedForm'))
+ORDER BY Date DESC 
+
+Unknown column 'Date' in 'field list' (http://localhost/maidcafe/index.php/neuigkeiten/rss)
+[02-Sep-2013 18:36:09] Error at \framework\model\MySQLDatabase.php line 580: Couldn't run query: 
+SELECT DISTINCT "SiteTree_Live"."ClassName", "SiteTree_Live"."Created", "SiteTree_Live"."LastEdited", "SiteTree_Live"."URLSegment", "SiteTree_Live"."Title", "SiteTree_Live"."MenuTitle", "SiteTree_Live"."Content", "SiteTree_Live"."MetaTitle", "SiteTree_Live"."MetaDescription", "SiteTree_Live"."MetaKeywords", "SiteTree_Live"."ExtraMeta", "SiteTree_Live"."ShowInMenus", "SiteTree_Live"."ShowInSearch", "SiteTree_Live"."Sort", "SiteTree_Live"."HasBrokenFile", "SiteTree_Live"."HasBrokenLink", "SiteTree_Live"."ReportClass", "SiteTree_Live"."CanViewType", "SiteTree_Live"."CanEditType", "SiteTree_Live"."Version", "SiteTree_Live"."ParentID", "SiteTree_Live"."ID", CASE WHEN "SiteTree_Live"."ClassName" IS NOT NULL THEN "SiteTree_Live"."ClassName" ELSE 'SiteTree' END AS "RecordClassName", "Date"
+FROM "SiteTree_Live"
+WHERE ("SiteTree_Live"."ClassName" IN ('Page','Albumholder','ArticleCategory','ArticleHolder','ArticlePage','ContactPage','HomePage','MaidHolder','Page2','Maid','GalleryPage','ErrorPage','RedirectorPage','VirtualPage','UserDefinedForm'))
+ORDER BY Date DESC 
+
+Unknown column 'Date' in 'field list' (http://localhost/maidcafe/index.php/neuigkeiten/rss)
+[02-Sep-2013 18:37:05] Error at \framework\model\MySQLDatabase.php line 580: Couldn't run query: 
+SELECT DISTINCT "SiteTree_Live"."ClassName", "SiteTree_Live"."Created", "SiteTree_Live"."LastEdited", "SiteTree_Live"."URLSegment", "SiteTree_Live"."Title", "SiteTree_Live"."MenuTitle", "SiteTree_Live"."Content", "SiteTree_Live"."MetaTitle", "SiteTree_Live"."MetaDescription", "SiteTree_Live"."MetaKeywords", "SiteTree_Live"."ExtraMeta", "SiteTree_Live"."ShowInMenus", "SiteTree_Live"."ShowInSearch", "SiteTree_Live"."Sort", "SiteTree_Live"."HasBrokenFile", "SiteTree_Live"."HasBrokenLink", "SiteTree_Live"."ReportClass", "SiteTree_Live"."CanViewType", "SiteTree_Live"."CanEditType", "SiteTree_Live"."Version", "SiteTree_Live"."ParentID", "SiteTree_Live"."ID", CASE WHEN "SiteTree_Live"."ClassName" IS NOT NULL THEN "SiteTree_Live"."ClassName" ELSE 'SiteTree' END AS "RecordClassName", "Date"
+FROM "SiteTree_Live"
+WHERE ("SiteTree_Live"."ClassName" IN ('Page','Albumholder','ArticleCategory','ArticleHolder','ArticlePage','ContactPage','HomePage','MaidHolder','Page2','Maid','GalleryPage','ErrorPage','RedirectorPage','VirtualPage','UserDefinedForm'))
+ORDER BY Date DESC 
+
+Unknown column 'Date' in 'field list' (http://localhost/maidcafe/index.php/neuigkeiten/rss)
+[02-Sep-2013 18:37:13] Error at \framework\model\MySQLDatabase.php line 580: Couldn't run query: 
+SELECT DISTINCT "SiteTree_Live"."ClassName", "SiteTree_Live"."Created", "SiteTree_Live"."LastEdited", "SiteTree_Live"."URLSegment", "SiteTree_Live"."Title", "SiteTree_Live"."MenuTitle", "SiteTree_Live"."Content", "SiteTree_Live"."MetaTitle", "SiteTree_Live"."MetaDescription", "SiteTree_Live"."MetaKeywords", "SiteTree_Live"."ExtraMeta", "SiteTree_Live"."ShowInMenus", "SiteTree_Live"."ShowInSearch", "SiteTree_Live"."Sort", "SiteTree_Live"."HasBrokenFile", "SiteTree_Live"."HasBrokenLink", "SiteTree_Live"."ReportClass", "SiteTree_Live"."CanViewType", "SiteTree_Live"."CanEditType", "SiteTree_Live"."Version", "SiteTree_Live"."ParentID", "SiteTree_Live"."ID", CASE WHEN "SiteTree_Live"."ClassName" IS NOT NULL THEN "SiteTree_Live"."ClassName" ELSE 'SiteTree' END AS "RecordClassName", "Date"
+FROM "SiteTree_Live"
+WHERE ("SiteTree_Live"."ClassName" IN ('Page','Albumholder','ArticleCategory','ArticleHolder','ArticlePage','ContactPage','HomePage','MaidHolder','Page2','Maid','GalleryPage','ErrorPage','RedirectorPage','VirtualPage','UserDefinedForm'))
+ORDER BY Date DESC
+LIMIT 10 
+
+Unknown column 'Date' in 'field list' (http://localhost/maidcafe/index.php/neuigkeiten/rss)

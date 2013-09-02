@@ -20,7 +20,7 @@ public function getCMSFields() {
         return $fields;
     }
 	    function newsicon() {
-    return ".png";
+    return ".jpg";
     }
     
 
