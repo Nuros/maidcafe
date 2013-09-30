@@ -48,29 +48,14 @@ class Maid extends Page2 {
         
         
         $fields->addFieldToTab('Root.Main', new TextField('Title', 'Maidname'), 'MenuTitle');
-        $fields->addFieldToTab(
-            'Root.Main', 
-            new OptionsetField(
-                "Type",
-                "Typ",
-                array(
-                    "Organisator" =>  "Organisator",
-                    "K&uumlchenchef" => "K&uumlchenchef",
-                    "Entertainment" => "Entertainment",
-                    "Design" => "Design",
-                    "Facebook" => "Facebook",
-                    "Homepage" => "Homepage",
-                    "Maid" => "Maid",
-                ),
-                "1"
-            )
-        );
-        $fields->addFieldToTab('Root.Main', new TextField('colour', 'Lieblingsfarbe:'));
+        $fields->addFieldToTab('Root.Main', new TextField('Type','Position'));
         $fields->addFieldToTab('Root.Main', new TextField('since', 'Dabei seit:'));
         $fields->addFieldToTab('Root.Main', new TextField('maidreason', 'Warum ich Maid geworden bin:'));
         $fields->addFieldToTab('Root.Main', $dateField = new DateField('BDay', 'Geburtstag:'));
-        $dateField->setConfig('showcalendar', true);
-        $dateField->setConfig('dateformat', 'dd.MM.YYYY');
+        $dateField->setLocale('de_DE');
+	$dateField->setConfig('showcalendar', true);
+	$dateField->setConfig('dateformat', 'dd.MMMM YYYY');
+	
         
         $fields->addFieldToTab('Root.Main', new TextField('zodiac', 'Sternzeichen:'));
         $fields->addFieldToTab('Root.Main', new TextField('size', 'Gr&ouml&szlige:'));
@@ -79,7 +64,6 @@ class Maid extends Page2 {
         $fields->addFieldToTab('Root.Main', new TextField('favsweet', 'Lieblingss&uuml&szligigkeit:'));
         $fields->addFieldToTab('Root.Main', new TextField('favanimal', 'Lieblingstier:'));
         $fields->addFieldToTab('Root.Main', new TextField('pokemon', 'Was f&uumlr ein Pok&eacutemon w&aumlre ich und warum?'));
-        $fields->addFieldToTab('Root.Main', new TextField('anime', 'Lieblingsanime/manga:'));
         $fields->addFieldToTab('Root.Main', new TextField('animelocation', 'In welcher Anime/Mangawelt w&uumlrde ich gerne leben?'));
         $fields->addFieldToTab('Root.Main', new TextField('magicalgirl', 'Welches Magicalgirl w&aumlre ich und wieso?'));
         $fields->addFieldToTab('Root.Main', new TextField('funfairlocation', 'An welchem Ort w&uumlrde man mich in einem Vergn&uumlgungspark finden?'));

@@ -23,15 +23,12 @@
 			
 				<h5>Dabei seit:</h5>
 				<p>$since</p>
-
-				<h5>Lieblingsfarbe:</h5>
-                                <p>$colour</p>
 				
 				<h5>Warum ich Maid geworden bin:</h5>
 				<p>$maidreason</p>
 				
 				<h5>Geburstdatum:</h5>
-				<p>$BDay</p>
+				<p>$BDay.format(d F)</p>
 				
 				<h5>Sternzeichen:</h5>
 				<p>$zodiac</p>
@@ -53,9 +50,6 @@
 				
 				<h5>Was f&uumlr ein Pok&eacutemon w&aumlre ich und warum?</h5>
 				<p>$pokemon</p>
-				
-				<h5>Lieblingsanime/manga:</h5>
-				<p>$anime</p>
 				
 				<h5>In welcher Anime/Mangawelt w&uumlrde ich gerne leben?</h5>
 				<p>$animelocation</p>

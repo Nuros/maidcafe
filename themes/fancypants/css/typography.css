@@ -32,10 +32,22 @@
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'ray_of_sunshineregular';
+    src: url('kgrayofsunshine-webfont.eot');
+    src: url('kgrayofsunshine-webfont.eot?#iefix') format('embedded-opentype'),
+         url('kgrayofsunshine-webfont.woff') format('woff'),
+         url('kgrayofsunshine-webfont.ttf') format('truetype'),
+         url('kgrayofsunshine-webfont.svg#kg_ray_of_sunshineregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
-html { background:transparent; }
-body {margin:0;padding:0; }
+}
+
+html { background:transparent; width: 100%; height: 100%; }
+body {margin:0;padding:0; width: 100%; height: 100%;}
 #main, #footer{ clear:both;}
+* {margin:0px; padding:0px;}
 
 /*Links*/
 a {color:#a65607; text-decoration: none; } 
@@ -44,9 +56,9 @@ a:active, a:focus { position : relative; top : 1px; }
 a:visited{color:#a65607 ;}
 
 /*-----Typography-----*/
-body {background:#FFFFFF; font: 17px/1.6 Georgia, Times, 'Times New Roman', serif; color:#231e15;}
+body {background:#FFFFFF; font: 18px/1.6 Georgia, Times, 'Times New Roman', serif; color:#231e15;}
 		
-h1,h2,h3,h4,h5 {font: 14px/18.5px Georgia, Times, 'Times New Roman', serif; color:#313131; margin-bottom: 8px; line-height: 1.35;  text-shadow: 1px 1px 1px #fff;}
+h1,h2,h3,h4,h5 {font: 18px/18.5px 'kitsu', color:#313131; margin-bottom: 8px; line-height: 1.35;  text-shadow: 1px 1px 1px #fff;}
 h1 {font-size: 28px;}
 h2 {font-size: 28px; margin-bottom: 30px}
 h3 {font-size: 20px; margin-bottom: 16px}
@@ -63,7 +75,7 @@ strong {font-weight: bold;}
 blockquote { margin:0 0 0 0; padding-left:16px; font-size: 16px; line-height: 22px; border-left:1px dotted #4e4e4e;}
 
 #outerwrapper {width:100%;background: url(../images/sternchen.jpg) top repeat}
-#wrapper {width:1200px; margin:0 auto;background:url(../images/background.jpg) repeat-y;}
+#wrapper {position: relative; width:1200px; margin:0 auto;background:url(../images/background.jpg) repeat-y;min-height: 100% }
 
 /*-----Columns-----*/
 #primaryContent {clear:both;float:left;position:relative;}
@@ -71,7 +83,7 @@ blockquote { margin:0 0 0 0; padding-left:16px; font-size: 16px; line-height: 22
 
 #secondaryContent {float:right;width:330px;margin:0 0 0 -100px;display:none;}
 	
-#primaryContent {width:800px;margin:0 70px 0 0;}
+#primaryContent {width:800px;margin:0 70px 0 0;min-height: 100%}
 #primaryContent2 {width:1200px;margin:0 330px 0 0;}
 #secondaryContent {display:block;}
 
@@ -83,14 +95,14 @@ blockquote { margin:0 0 0 0; padding-left:16px; font-size: 16px; line-height: 22
 #secondaryContenthp {display:block;}
 
 /*-----Column 'padding'-----*/
-#primaryContent div.innerpad { margin:50px;margin-top: 20px;font-family: 'kitsu';}
-#primaryContent2 div.innerpad { margin:50px;margin-top: 20px;font-family: 'kitsu'; }
+#primaryContent div.innerpad { margin:50px;margin-top: 20px;font-family: 'ray_of_sunshineregular';}
+#primaryContent2 div.innerpad { margin:50px;margin-top: 20px;font-family: 'ray_of_sunshineregular'; }
 #secondaryContent div.innerpad { margin:60px 40px 50px 40px; }
-#primaryContenthp div.innerpad { margin:50px; margin-top: 20px; font-family: 'kitsu';}
+#primaryContenthp div.innerpad { margin:50px; margin-top: 20px; font-family: 'ray_of_sunshineregular';}
 #secondaryContenthp div.innerpad { margin:10px 40px 50px 40px; }
 
 /*-----Header-----*/
-#outerheader{width:100%;background: url(../images/sternchen.jpg) top repeat}
+#outerheader{width:100%;background: url(../images/sternchen.jpg) top repeat; min-height: 100%;position: relative; }
 #header{width:1200px; height:589px; text-align:center; margin:0 auto; background: #221d14 url(../images/background.jpg) top left repeat-y;  border-bottom:0px double #FF0000;}
 #header2{width:1200px; height:155px; text-align:center; margin:0 auto; background: #221d14 url(../images/background.jpg) top left repeat-y;  border-bottom:0px double #FF0000;}
 #slidebg {width:740px;height: 420px;background: url(../images/slideshowrahmen.png);padding-top: 20px}
@@ -155,7 +167,8 @@ box-shadow: 3px 3px 3px #000;
 
 
 /*-----footer-----*/
-#footer{ width:1200px; margin:0 auto; background:#916e50; display:block; padding: 0px 0;border-style: dotted; border-color: black; border-width: thin }
+#footer{ width:1200px; margin:0 auto; background:#916e50; display:block; padding: 0px 0;border-style: dotted; border-color: black; border-width: thin; clear: both; height: 85px;
+margin-bottom: -50px;}
 #footernav{width:530px; float:left; padding:0; margin:0; margin-left:50px;}
 #footernav p {font-size: 12px; text-align:left; line-height: 12px; padding-top:12px; font-family: Helvetica, Arial; color:#a79b82; text-shadow: none; }
 #footernav p imp {font-size: 20px;}
@@ -173,7 +186,7 @@ box-shadow: 3px 3px 3px #000;
 .suitedescription h3 {margin-top: 0;}
 
 /* image floats */
-img.left, img.right, img.center { padding:8px; background:#fff9eb; border-bottom:1px solid #a3a3a3; border-right:1px solid #a3a3a3;}
+img.left, img.right, img.center { padding:8px; background: transparent; border-bottom:1px solid #a3a3a3; border-right:1px solid #a3a3a3;}
 img.left { float:left; margin:0 12px 12px 0;}
 img.right { float:right; margin:0 0 12px 12px; }
 img.center { margin:0 auto 16px;}

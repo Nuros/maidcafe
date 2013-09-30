@@ -20,7 +20,7 @@
 		<div id="outerheader">
    		<div id="header" class="clearfix">
 			<div id="branding">
-	   			<h1><a href="#">$SiteConfig.Title</a></h1>
+	   			<h1><a href="$BaseHref">$SiteConfig.Title</a></h1>
 	   			<h1 class="tagline">$SiteConfig.Tagline</h1>
 	   		</div>	
 	   		<div id="nav">
@@ -41,7 +41,7 @@
 	$Layout
    </div>
   
-    	<div id="footer" class="clearfix">
+    	<div id="footer"  >
 	    	<div id="credits">
 		    	 <p>Design & Code by Nuros</p>
 		    	 	    	</div>	    		

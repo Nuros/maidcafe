@@ -8,13 +8,13 @@ $Content
 <div align="center">
 <div id="contact">
 <div class="mail">
-<a href="http://localhost/maidcafe/kontakt/kontakt">Kontakt</a>
+<a href="/kontakt/kontakt">Kontakt</a>
 </div>
 <div class="mail">
- <a href="http://localhost/maidcafe/kontakt/bewerben">Bewerben</a>
+ <a href="/kontakt/bewerben">Bewerben</a>
 </div>
 <div class="mail">
- <a href="http://localhost/maidcafe/kontakt/buchen">Buchen</a>
+ <a href="/kontakt/buchen">Buchen</a>
 </div>
 </div>
 </div>

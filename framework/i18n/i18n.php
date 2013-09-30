@@ -71,7 +71,7 @@ class i18n extends Object implements TemplateGlobalProvider {
 	/**
 	 * @var string
 	 */
-	protected static $default_locale = 'en_US';
+	protected static $default_locale = 'de_DE';
 	
 	/**
 	 * @var boolean

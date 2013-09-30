@@ -20,7 +20,7 @@
 		<div id="outerheader">
    		<div id="header2" class="clearfix">
 			<div id="branding">
-	   			<h1><a href="#">$SiteConfig.Title</a></h1>
+	   			<h1><a href="$BaseHref">$SiteConfig.Title</a></h1>
 	   			<h1 class="tagline">$SiteConfig.Tagline</h1>
 	   		</div>	
 	   		<div id="nav">
