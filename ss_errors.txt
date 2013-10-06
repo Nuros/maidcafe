@@ -104,3 +104,5 @@ ORDER BY Date DESC
 LIMIT 10 
 
 Unknown column 'Date' in 'field list' (http://localhost/maidcafe/index.php/neuigkeiten/rss)
+[05-Oct-2013 18:19:52] Error at \framework\model\MySQLDatabase.php line 580: Couldn't connect to MySQL database | Access denied for user 'web-luckychocola'@'localhost' (using password: YES) (http://localhost/maidcafeonline/)
+[05-Oct-2013 18:20:57] Error at \framework\model\MySQLDatabase.php line 580: Couldn't connect to MySQL database | Access denied for user 'web-luckychocola'@'localhost' (using password: YES) (http://localhost/maidcafeonline/)

@@ -7,9 +7,9 @@ global $databaseConfig;
 $databaseConfig = array(
 	"type" => 'MySQLDatabase',
 	"server" => 'localhost',
-	"username" => 'web-luckychocola',
-	"password" => 'IY9bkphWuof06nWx',
-	"database" => 'web-luckychocola_www.luckychocolate.de_silverstripe',
+	"username" => 'root',
+	"password" => '',
+	"database" => 'maidcafeonline',
 	"path" => '',
 );
 
