@@ -19,6 +19,8 @@
 	<body>
 		<div id="outerheader">
    		<div id="header" class="clearfix">
+			<div id="logo1"></div>
+			<div id="logo2"></div>
 			<div id="branding">
 	   			<h1><a href="$BaseHref">$SiteConfig.Title</a></h1>
 	   			<h1 class="tagline">$SiteConfig.Tagline</h1>
