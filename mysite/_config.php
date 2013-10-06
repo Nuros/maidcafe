@@ -21,6 +21,7 @@ SSViewer::set_theme('simple');
 
 // Set the site locale
 i18n::set_locale('de_DE');
+setlocale (LC_ALL, 'de_DE@euro', 'de_DE.UTF-8', 'de_DE', 'de', 'ge');
 
 // Enable nested URLs for this site (e.g. page/sub-page/)
 if (class_exists('SiteTree')) SiteTree::enable_nested_urls();
