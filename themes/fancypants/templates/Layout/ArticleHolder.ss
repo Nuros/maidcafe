@@ -7,14 +7,16 @@
     	$Content
         <% loop $PaginatedNews %>
 	<div id="newspage">
-		<img src="$ThemeDir/images/$Parent.Title$newsicon" alt="Homepage image" />
 	<div class="newsheader">
-	
-	
-		$Title
+		<div class="icon">
+		<img src="$ThemeDir/images/$Parent.Title$newsicon" alt="Homepage image" />
+		</div>
+				$Title
+				<div class="date">
+		$Date.Long
+		</div>
 		
-		$Date
-	</div>
+		</div>
 	
 	<div id="paper" style="outline-color: $categorycolour;">$Content.LimitWordCount(30)
 	

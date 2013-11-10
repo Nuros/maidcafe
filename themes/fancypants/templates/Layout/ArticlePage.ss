@@ -4,14 +4,17 @@
 		<div class="innerpad">
 	
 	<div id="newspage">
-		<img src="$ThemeDir/images/$Parent.Title$newsicon" alt="Homepage image" />
-	<div class="newsheader">
-	
-	
-		$Title
 		
+		<div class="newsheader">
+		<div class="icon">
+		<img src="$ThemeDir/images/$Parent.Title$newsicon" alt="Homepage image" />
+		</div>
+				$Title
+				<div class="date">
 		$Date.Long
-	</div>
+		</div>
+		
+		</div>
 	
 	<div id="paper">$Content
 	

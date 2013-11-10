@@ -6,14 +6,16 @@ margin-bottom: 30px;
 width: 100%;
 
 }
-img{
-	position: relative;
+.icon{
+	position: absolute;
+	left: 0;
+	top: -10px;
 	z-index: 2;	
 }
 .newsheader{
 	width:685px;
 		height: 32px;
-		position: absolute;
+		position: relative;
 		top: 10px;
 		padding-top: 10px;
 		padding-left: 85px;
@@ -24,9 +26,16 @@ img{
 	z-index: 1;
 	
 }
+.date{
+position: absolute;
+right: 0;
+top: 10px;
+padding-right: 10px;
+}
 
 #paper {
 	position: relative;
+	top: 29px;
 	width: 600px;
 	left: 100px;
 	padding: 40px 20px 15px;

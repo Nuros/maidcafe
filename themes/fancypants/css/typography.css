@@ -75,36 +75,34 @@ strong {font-weight: bold;}
 blockquote { margin:0 0 0 0; padding-left:16px; font-size: 16px; line-height: 22px; border-left:1px dotted #4e4e4e;}
 
 #outerwrapper {width:100%;background: url(../images/sternchen.jpg) top repeat}
-#wrapper {position: relative; width:1200px; margin:0 auto;background:url(../images/background.jpg) repeat-y;min-height: 100% }
+#wrapper {position: relative; width:1200px; margin:0 auto;background:url(../images/background.png) repeat-y;min-height: 100%;}
 
 /*-----Columns-----*/
 #primaryContent {clear:both;float:left;position:relative;}
 #primaryContent2 {clear:both;float:left;position:relative;}
-
-#secondaryContent {float:right;width:330px;margin:0 0 0 -100px;display:none;}
-	
-#primaryContent {width:800px;margin:0 70px 0 0;min-height: 100%}
-#primaryContent2 {width:1200px;margin:0 330px 0 0;}
-#secondaryContent {display:block;}
-
 #primaryContenthp {clear:both;float:left;position:relative;}
 
-#secondaryContenthp {float:left;width:330px;margin:0 0 0 -150px;display:none;}
-	
-#primaryContenthp {width:630px;margin:0 330px 0 0;}
+#primaryContent {width:800px;margin:0 0 0 0;}
+#primaryContent2 {width:1200px;margin:0 0 0 0;}
+#primaryContenthp {width:800px;margin:0 0 0 0;}
+
+#secondaryContent {float:right;width:330px;margin:0 10px 0 0px;display:none;}
+#secondaryContent {display:block;}
+
+#secondaryContenthp {float:right;width:330px;margin:0 60px 0 0;display:none;}
 #secondaryContenthp {display:block;}
 
 /*-----Column 'padding'-----*/
-#primaryContent div.innerpad { margin:50px;margin-top: 20px;font-family: 'ray_of_sunshineregular';}
-#primaryContent2 div.innerpad { margin:50px;margin-top: 20px;font-family: 'ray_of_sunshineregular'; }
+#primaryContent div.innerpad { margin-left:50px;margin-top: 20px;margin-bottom: 50px; font-family: 'ray_of_sunshineregular';}
+#primaryContent2 div.innerpad { margin-left:50px;margin-top: 20px;margin-bottom: 50px;font-family: 'ray_of_sunshineregular'; }
+#primaryContenthp div.innerpad { margin-left: 50px; margin-top: 20px;margin-bottom: 50px; font-family: 'ray_of_sunshineregular';}
 #secondaryContent div.innerpad { margin:60px 40px 50px 40px; }
-#primaryContenthp div.innerpad { margin:50px; margin-top: 20px; font-family: 'ray_of_sunshineregular';}
 #secondaryContenthp div.innerpad { margin:10px 40px 50px 40px; }
 
 /*-----Header-----*/
 #outerheader{position: relative; width:100%;background: url(../images/sternchen.jpg) top repeat; min-height: 100%;position: relative; }
-#header{position: relative; width:1200px; height:589px; text-align:center; margin:0 auto; background: #221d14 url(../images/background.jpg) top left repeat-y;  border-bottom:0px double #FF0000;}
-#header2{position: relative; width:1200px; height:155px; text-align:center; margin:0 auto; background: #221d14 url(../images/background.jpg) top left repeat-y;  border-bottom:0px double #FF0000;}
+#header{position: relative; width:1200px; height:600px; text-align:center; margin:0 auto; background: #221d14 url(../images/background.png) top left repeat-y;  border-bottom:0px double #FF0000;}
+#header2{position: relative; width:1200px; height:150px; text-align:center; margin:0 auto; background: #221d14 url(../images/background.png) top left repeat-y;  border-bottom:0px double #FF0000;}
 #slidebg {width:740px;height: 420px;background: url(../images/slideshowrahmen.png);padding-top: 20px}
 
 #branding {padding-top:10px; text-align: center;}
@@ -132,6 +130,25 @@ height: 110px;
 width: 180px;
 background: url(../images/hplogo2.png) no-repeat;
 background-size: 180px;
+}
+
+#schleife1{
+position: absolute;
+top: 250px;
+right: 72px;
+width: 140px;
+height: 161px;
+background: url(../images/schleife.png) no-repeat;
+background-size: 140px;
+}
+#schleife2{
+position: absolute;
+top: 250px;
+left: 72px;
+width: 140px;
+height: 161px;
+background: url(../images/schleife2.png) no-repeat;
+background-size: 140px;
 }
 
 /*----- callouts -----*/
@@ -203,7 +220,7 @@ margin-bottom: -50px;}
 .suitedescription h3 {margin-top: 0;}
 
 /* image floats */
-img.left, img.right, img.center { padding:8px; background: transparent; border-bottom:1px solid #a3a3a3; border-right:1px solid #a3a3a3;}
+img.left, img.right, img.center { padding:8px; background: transparent; }
 img.left { float:left; margin:0 12px 12px 0;}
 img.right { float:right; margin:0 0 12px 12px; }
 img.center { margin:0 auto 16px;}

@@ -5,14 +5,16 @@
 <ul id="NewsList" class="typography">
             <% loop $PaginatedNews %>
 <div id="newspage">
-		<img src="$ThemeDir/images/$Parent.Title$newsicon" alt="Homepage image" />
 	<div class="newsheader">
-	
-	
-		$Title
-		
+		<div class="icon">
+		<img src="$ThemeDir/images/$Parent.Title$newsicon" alt="Homepage image" />
+		</div>
+				$Title
+				<div class="date">
 		$Date.Long
-	</div>
+		</div>
+		
+		</div>
 	
 	<div id="paper">$Content.LimitWordCount(30)
 	

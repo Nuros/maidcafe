@@ -36,7 +36,7 @@
 	$Layout
    </div>
   
-    	<div id="footer" class="clearfix">
+    	<div id="footer"  >
 	    	<div id="credits">
 		    	 <p>Design & Code by Nuros</p>
 		    	 	    	</div>	    		

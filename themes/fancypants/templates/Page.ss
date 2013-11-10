@@ -28,7 +28,10 @@
 	   		<div id="nav">
 	   			<% include MainNav %>
 	   		</div>
+
 			<div align="center">
+							<div id="schleife1"></div>
+<div id="schleife2"></div>
 			<div id="slidebg" align="center" style="" >
 
 			<div style="width: 700px;height: 400px; " >
