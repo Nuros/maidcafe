@@ -48,9 +48,6 @@
 				<h5>Lieblingstier:</h5>
 				<p>$favanimal</p>
 				
-				<h5>Was f&uumlr ein Pok&eacutemon w&aumlre ich und warum?</h5>
-				<p>$pokemon</p>
-				
 				<h5>In welcher Anime/Mangawelt w&uumlrde ich gerne leben?</h5>
 				<p>$animelocation</p>
 				

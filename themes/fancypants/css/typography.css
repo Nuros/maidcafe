@@ -171,7 +171,7 @@ box-shadow: 3px 3px 3px #000;
 
 #contact {display: inline;width:900px; height: 208px; margin:0 auto;background:url(../images/post.jp);text-align:center; display: inline;}
 #contact div.mail {display: inline-block; width:200px; height:139px;background: url(../images/post.jpg) no-repeat;  background-size: contain; padding-right: 40px;}
-#contact div.mail a {display:block; padding:16px 0; font-size: x-large; font-family: 'Buxton Sketch';}
+#contact div.mail a {display:block; padding:12px 0; font-size: x-large; font-family: 'Buxton Sketch';}
 
 
 

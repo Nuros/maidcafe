@@ -63,7 +63,6 @@ class Maid extends Page2 {
         $fields->addFieldToTab('Root.Main', new TextField('favfood', 'Lieblingsessen:'));
         $fields->addFieldToTab('Root.Main', new TextField('favsweet', 'Lieblingss&uuml&szligigkeit:'));
         $fields->addFieldToTab('Root.Main', new TextField('favanimal', 'Lieblingstier:'));
-        $fields->addFieldToTab('Root.Main', new TextField('pokemon', 'Was f&uumlr ein Pok&eacutemon w&aumlre ich und warum?'));
         $fields->addFieldToTab('Root.Main', new TextField('animelocation', 'In welcher Anime/Mangawelt w&uumlrde ich gerne leben?'));
         $fields->addFieldToTab('Root.Main', new TextField('magicalgirl', 'Welches Magicalgirl w&aumlre ich und wieso?'));
         $fields->addFieldToTab('Root.Main', new TextField('funfairlocation', 'An welchem Ort w&uumlrde man mich in einem Vergn&uumlgungspark finden?'));

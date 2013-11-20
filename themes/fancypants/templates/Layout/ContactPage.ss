@@ -16,6 +16,9 @@ $Content
 <div class="mail">
  <a href="/kontakt/buchen">Buchen</a>
 </div>
+<div class="mail">
+ <a href="/kontakt/briefkasten">Briefkasten</a>
+</div>
 </div>
 </div>
 

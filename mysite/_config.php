@@ -10,7 +10,7 @@ $databaseConfig = array(
 	"username" => 'root',
 	"password" => '',
 	"database" => 'maidcafeonline',
-	"path" => '',
+	"path" => 'maidcafeonline',
 );
 
 MySQLDatabase::set_connection_charset('utf8');
